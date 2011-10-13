@@ -1,0 +1,1 @@
+/home/aldi/Ubuntu One/dot/vimrc
