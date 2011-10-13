@@ -1,0 +1,9 @@
+[user]
+	name = Aldiantoro Nugroho
+	email = kriwil@gmail.com
+[color]
+	ui = true
+[alias]
+	cancel = reset –soft HEAD^
+	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+	oneline = log --pretty=oneline

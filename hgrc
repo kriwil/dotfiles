@@ -1,0 +1,8 @@
+[ui]
+username = Aldiantoro Nugroho <kriwil@gmail.com>
+
+[extensions]
+color =
+graphlog =
+progress =
+prompt = /home/aldi/src/hg-prompt/prompt.py
