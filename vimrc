@@ -1,3 +1,10 @@
+"   __plugin__ https://github.com/kevinw/pyflakes-vim.git
+"   __plugin__ https://github.com/mattn/zencoding-vim.git
+"   __plugin__ https://github.com/mhz/vim-matchit.git
+"   __plugin__ https://github.com/nanotech/jellybeans.vim.git
+"   __plugin__ https://github.com/scrooloose/nerdtree.git
+"   __plugin__ https://github.com/vim-scripts/python.vim--Vasiliev.git
+
 call pathogen#infect()
 call pathogen#helptags()
 
