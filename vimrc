@@ -50,16 +50,28 @@ endif
 "" sets python file to convert tab to space
 "autocmd FileType python setlocal expandtab
 
-" toggle set list
+" toggles set list
 nmap <leader>l :set list!<CR>
 
-" Use the same symbols as TextMate for tabstops and EOLs
+" Uses the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
-" allow to use :w!! if we forgot to use sudo vim file
+" allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
 
-" auto convert less file to css by running lessc command against the file
+" auto converts less file to css by running lessc command against the file
 au BufNewFile,BufRead *.less set filetype=less
 autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>')) . ' ' . shellescape(expand('<afile>:r')) . '.css'
 
+" surrounds a word in double quotes
+:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
+" exits insert mode
+:inoremap jj <esc>
+
+" disables normal exit
+:inoremap <esc> <nop>
+
+" commands the current line
+:autocmd FileType javascript nnoremap <buffer> <localleader>c I//
+:autocmd FileType python     nnoremap <buffer> <localleader>c I#
