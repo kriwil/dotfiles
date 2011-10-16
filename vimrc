@@ -67,7 +67,7 @@ autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>'
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 " exits insert mode
-:inoremap jj <esc>
+:inoremap jk <esc>
 
 " disables normal exit
 :inoremap <esc> <nop>
