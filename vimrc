@@ -12,6 +12,17 @@ colorscheme jellybeans
 filetype plugin indent on
 syntax on                           " syntax hightlighting
 
+" gvim
+if has('gui_gtk2')
+    set guifont=Envy\ Code\ R\ 11   " the coolest font. ever.
+    set guioptions-=r               " removes right-hand scroll bar
+    set guioptions-=l               " removes left-hand scroll bar
+    set guioptions-=R               " removes right-hand scroll bar when splitted
+    set guioptions-=L               " removes left-hand scroll bar when splitted
+    set guioptions-=m               " removes menu bar
+    set guioptions-=T               " removes toolbar
+endif
+
 map <down> <nop>                    " disable down
 map <left> <nop>                    " disable left
 map <right> <nop>                   " disable right
@@ -27,6 +38,11 @@ map tp :tabprev<CR>                 " tab prev shortcut
 map tc :tabclose<CR>                " tab close shortcut
 map tw :tabnew<CR>                  " tab new shortcut
 
+" FuzzyFinder
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
 set background=dark                 " dark background
 set colorcolumn=80                  " sets a color marker in col 80
 set expandtab                       " converts tab to space
@@ -36,16 +52,8 @@ set nobackup                        " doesn't create backup
 set shiftwidth=4                    " column count when doing reindent << >>
 set tabstop=4                       " column each tab pressed
 
-" gvim
-if has('gui_gtk2')
-    set guifont=Envy\ Code\ R\ 11   " the coolest font. ever.
-    set guioptions-=r               " removes right-hand scroll bar
-    set guioptions-=l               " removes left-hand scroll bar
-    set guioptions-=R               " removes right-hand scroll bar when splitted
-    set guioptions-=L               " removes left-hand scroll bar when splitted
-    set guioptions-=m               " removes menu bar
-    set guioptions-=T               " removes toolbar
-endif
+" Save when losing focus
+au FocusLost * :wa
 
 "" sets python file to convert tab to space
 "autocmd FileType python setlocal expandtab
