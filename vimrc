@@ -48,6 +48,7 @@ set colorcolumn=80                  " sets a color marker in col 80
 set expandtab                       " converts tab to space
 set number                          " line number
 set hlsearch                        " highlight the search
+set list                            " whitespace sign
 set nobackup                        " doesn't create backup
 set shiftwidth=4                    " column count when doing reindent << >>
 set tabstop=4                       " column each tab pressed
