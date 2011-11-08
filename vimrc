@@ -43,6 +43,10 @@ nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
+" lcd
+map lcdt lcd ~/Temp<CR>
+map lcdw lcd ~/Workspace<CR>
+
 set background=dark                 " dark background
 set colorcolumn=80                  " sets a color marker in col 80
 set expandtab                       " converts tab to space
@@ -73,14 +77,21 @@ au BufNewFile,BufRead *.less set filetype=less
 autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>')) . ' ' . shellescape(expand('<afile>:r')) . '.css'
 
 " surrounds a word in double quotes
-:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 " exits insert mode
-:inoremap jk <esc>
+inoremap jk <esc>
 
 " disables normal exit
-:inoremap <esc> <nop>
+inoremap <esc> <nop>
 
 " commands the current line
-:autocmd FileType javascript nnoremap <buffer> <localleader>c I//
-:autocmd FileType python     nnoremap <buffer> <localleader>c I#
+autocmd FileType javascript nnoremap <buffer> <localleader>c I//
+autocmd FileType python     nnoremap <buffer> <localleader>c I#
+
+
+com Hescardev lcd /home/aldi/Workspace/hescar_django/development/
+
+" vim
+"autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
