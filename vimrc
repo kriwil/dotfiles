@@ -1,3 +1,4 @@
+"   TODO: update these
 "   __plugin__ https://github.com/kevinw/pyflakes-vim.git
 "   __plugin__ https://github.com/mattn/zencoding-vim.git
 "   __plugin__ https://github.com/mhz/vim-matchit.git
@@ -8,19 +9,33 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-colorscheme jellybeans
+set t_Co=256
+set background=dark                 " dark background
+" colorscheme desert
+" colorscheme jellybeans
+" solarized
+" let g:solarized_termcolors=16
+" set t_Co=16
+colorscheme solarized
+
+" vim-powerlline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+
 filetype plugin indent on
 syntax on                           " syntax hightlighting
 
 " gvim
 if has('gui_gtk2')
-    set guifont=Envy\ Code\ R\ 11   " the coolest font. ever.
-    set guioptions-=r               " removes right-hand scroll bar
-    set guioptions-=l               " removes left-hand scroll bar
-    set guioptions-=R               " removes right-hand scroll bar when splitted
-    set guioptions-=L               " removes left-hand scroll bar when splitted
-    set guioptions-=m               " removes menu bar
-    set guioptions-=T               " removes toolbar
+    colorscheme solarized
+
+    set guifont=Envy\ Code\ R\ 11  " the coolest font. ever.
+    set guioptions-=r              " removes right-hand scroll bar
+    set guioptions-=l              " removes left-hand scroll bar
+    set guioptions-=R              " removes right-hand scroll bar when splitted
+    set guioptions-=L              " removes left-hand scroll bar when splitted
+    set guioptions-=m              " removes menu bar
+    set guioptions-=T              " removes toolbar
 endif
 
 map <down> <nop>                    " disable down
@@ -39,11 +54,15 @@ map tc :tabclose<CR>                " tab close shortcut
 map tw :tabnew<CR>                  " tab new shortcut
 
 " FuzzyFinder
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
+"nmap <leader>f :FufFileWithCurrentBufferDir **/<CR>
+nmap <leader>f :FufFile<CR>
+nmap <leader>g :FufFileWithCurrentBufferDir<CR>
+nmap <leader>b :FufBuffer<CR>
+nmap <leader>t :FufTaggedFile<CR>
 
-set background=dark                 " dark background
+let g:fuf_file_exclude = '\v\~$|\.pyc$|\.orig$|\.bak$|\.swp|\.swo$'
+"let g:fuf_keyComplete = <Tab>
+
 set colorcolumn=80                  " sets a color marker in col 80
 set expandtab                       " converts tab to space
 set number                          " line number
@@ -73,14 +92,21 @@ au BufNewFile,BufRead *.less set filetype=less
 autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>')) . ' ' . shellescape(expand('<afile>:r')) . '.css'
 
 " surrounds a word in double quotes
-:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 " exits insert mode
-:inoremap jk <esc>
+inoremap jk <esc>
 
 " disables normal exit
-:inoremap <esc> <nop>
+inoremap <esc> <nop>
 
 " commands the current line
-:autocmd FileType javascript nnoremap <buffer> <localleader>c I//
-:autocmd FileType python     nnoremap <buffer> <localleader>c I#
+autocmd FileType javascript nnoremap <buffer> <localleader>c I//
+autocmd FileType python     nnoremap <buffer> <localleader>c I#
+
+" rope
+source /home/aldi/lib/ropevim/rope.vim
+
+" shortcut
+command Littlemed lcd /home/aldi/Workspace/littlemed/littlemed/
+command Hescardev lcd /home/aldi/Workspace/hescar_django/development/
