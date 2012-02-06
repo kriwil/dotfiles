@@ -64,11 +64,13 @@ let g:fuf_file_exclude = '\v\~$|\.pyc$|\.orig$|\.bak$|\.swp|\.swo$'
 "let g:fuf_keyComplete = <Tab>
 
 set colorcolumn=80                  " sets a color marker in col 80
+set exrc                            " enable per-directory .vimrc files
 set expandtab                       " converts tab to space
 set number                          " line number
 set hlsearch                        " highlight the search
 set list                            " whitespace sign
 set nobackup                        " doesn't create backup
+set secure                          " disable unsafe commands in local .vimrc files
 set shiftwidth=4                    " column count when doing reindent << >>
 set tabstop=4                       " column each tab pressed
 
