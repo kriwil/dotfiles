@@ -18,8 +18,8 @@ set background=dark                 " dark background
 colorscheme plain_dark
 
 " vim-powerlline
-let g:Powerline_symbols = 'fancy'
-set laststatus=2
+" let g:Powerline_symbols = 'fancy'
+" set laststatus=2
 
 filetype plugin indent on
 syntax on                           " syntax hightlighting
@@ -108,11 +108,6 @@ autocmd FileType python     nnoremap <buffer> <localleader>c I#
 " rope
 source /home/aldi/lib/ropevim/rope.vim
 
-" shortcut
-command Littlemed lcd /home/aldi/Workspace/littlemed/littlemed/
-command Hescardev lcd /home/aldi/Workspace/hescar_django/development/
-
-
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -121,5 +116,3 @@ function! <SID>SynStack()
     endif
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-
-
