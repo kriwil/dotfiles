@@ -13,10 +13,9 @@ set t_Co=256
 set background=dark                 " dark background
 " colorscheme desert
 " colorscheme jellybeans
-" solarized
-" let g:solarized_termcolors=16
-" set t_Co=16
-colorscheme solarized
+" colorscheme blackboard
+" colorscheme solarized
+colorscheme plain_dark
 
 " vim-powerlline
 let g:Powerline_symbols = 'fancy'
@@ -27,7 +26,7 @@ syntax on                           " syntax hightlighting
 
 " gvim
 if has('gui_gtk2')
-    colorscheme solarized
+    "colorscheme solarized
 
     set guifont=Envy\ Code\ R\ 11  " the coolest font. ever.
     set guioptions-=r              " removes right-hand scroll bar
@@ -112,3 +111,15 @@ source /home/aldi/lib/ropevim/rope.vim
 " shortcut
 command Littlemed lcd /home/aldi/Workspace/littlemed/littlemed/
 command Hescardev lcd /home/aldi/Workspace/hescar_django/development/
+
+
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+
