@@ -1,8 +1,0 @@
-# https://github.com/bsl/obviousmode.git
-https://github.com/kevinw/pyflakes-vim.git
-https://github.com/mattn/zencoding-vim.git
-https://github.com/mhz/vim-matchit.git
-https://github.com/nanotech/jellybeans.vim.git
-https://github.com/othree/html5.vim
-https://github.com/scrooloose/nerdtree.git
-https://github.com/vim-scripts/python.vim--Vasiliev.git

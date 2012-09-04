@@ -1,1 +1,0 @@
-/home/aldi/Dropbox/linux/dotfiles/vim

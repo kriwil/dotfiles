@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/aldi/Workspace/hescar_django/development/apps/faqs/tests'
-let g:netrw_dirhist_2='/home/aldi/Workspace/easyuni/development/apps'
-let g:netrw_dirhist_3='/home/aldi/Workspace/easyuni/bitbucket/static-dev'
-let g:netrw_dirhist_4='/home/aldi/Workspace/showcase/temp/myproject'
-let g:netrw_dirhist_5='/home/aldi/Dropbox/linux/bin'
-let g:netrw_dirhist_6='/home/aldi/Workspace/littlemed/littlemed/frontend'
-let g:netrw_dirhist_7='/home/aldi/Workspace/littlemed/littlemed/templates'
