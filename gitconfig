@@ -8,4 +8,11 @@
 	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
 	oneline = log --pretty=oneline
 [core]
-	excludesfile = /home/aldi/.gitexclude
+	excludesfile = /Users/aldi/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

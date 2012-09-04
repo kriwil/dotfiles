@@ -1,118 +1,171 @@
-"   TODO: update these
-"   __plugin__ https://github.com/kevinw/pyflakes-vim.git
-"   __plugin__ https://github.com/mattn/zencoding-vim.git
-"   __plugin__ https://github.com/mhz/vim-matchit.git
-"   __plugin__ https://github.com/nanotech/jellybeans.vim.git
-"   __plugin__ https://github.com/scrooloose/nerdtree.git
-"   __plugin__ https://github.com/vim-scripts/python.vim--Vasiliev.git
+set nocompatible
+filetype off
 
-call pathogen#infect()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-set t_Co=256
-set background=dark                 " dark background
-" colorscheme desert
-" colorscheme jellybeans
-" colorscheme blackboard
-" colorscheme solarized
-colorscheme plain_dark
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
 
-" vim-powerlline
-" let g:Powerline_symbols = 'fancy'
-" set laststatus=2
+" Bundle 'kevinw/pyflakes-vim'
+" Bundle 'mhz/vim-matchit'
+" Bundle 'sontek/rope-vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'groenewege/vim-less'
+Bundle 'hdima/vim-scripts'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kikijump/tslime.vim'
+Bundle 'klen/python-mode'
+Bundle 'ludovicchabant/vim-lawrencium'
+Bundle 'majutsushi/tagbar'
+Bundle 'mattn/zencoding-vim'
+Bundle 'mikewest/vimroom'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'othree/html5.vim'
+Bundle 'peterhoeg/vim-qml'
+Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tejr/sahara'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'tristen/superman'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'w0ng/vim-hybrid'
 
-filetype plugin indent on
-syntax on                           " syntax hightlighting
+" vim-scripts
+" Bundle 'python.vim'
+" Bundle 'python.vim--Vasiliev'
+Bundle 'Lucius'
+Bundle 'MatchTag'
 
-" gvim
-if has('gui_gtk2')
-    "colorscheme solarized
-
-    set guifont=Envy\ Code\ R\ 11  " the coolest font. ever.
-    set guioptions-=r              " removes right-hand scroll bar
-    set guioptions-=l              " removes left-hand scroll bar
-    set guioptions-=R              " removes right-hand scroll bar when splitted
-    set guioptions-=L              " removes left-hand scroll bar when splitted
-    set guioptions-=m              " removes menu bar
-    set guioptions-=T              " removes toolbar
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=r
 endif
 
-map <down> <nop>                    " disable down
-map <left> <nop>                    " disable left
-map <right> <nop>                   " disable right
-map <up> <nop>                      " disable up 
+filetype plugin indent on
 
-imap <down> <nop>                   " disable down in insert mode
-imap <left> <nop>                   " disable left in insert mode
-imap <right> <nop>                  " disable right in insert mode
-imap <up> <nop>                     " disable up  in insert mode
+set background=dark
+set encoding=utf-8
+set laststatus=2
+set mouse=a
+set t_Co=256
 
-map tn :tabnext<CR>                 " tab next shortcut
-map tp :tabprev<CR>                 " tab prev shortcut
-map tc :tabclose<CR>                " tab close shortcut
-map tw :tabnew<CR>                  " tab new shortcut
+colorscheme sahara
+syntax on
 
-" FuzzyFinder
-"nmap <leader>f :FufFileWithCurrentBufferDir **/<CR>
-nmap <leader>f :FufFile<CR>
-nmap <leader>g :FufFileWithCurrentBufferDir<CR>
-nmap <leader>b :FufBuffer<CR>
-nmap <leader>t :FufTaggedFile<CR>
+let mapleader = ","
 
-let g:fuf_file_exclude = '\v\~$|\.pyc$|\.orig$|\.bak$|\.swp|\.swo$'
-"let g:fuf_keyComplete = <Tab>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+map <up> <nop>
 
+map tc :tabclose<CR>
+map tl :tabnext<CR>
+map th :tabprev<CR>
+map tw :tabnew<CR>
+
+" map <C-c> :tabnew<CR>
+" map <C-h> :tabprev<CR>
+" map <C-l> :tabprev<CR>
+" map <C-x> :tabclose<CR>
+
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+imap <up> <nop>
+
+inoremap <esc> <nop>
+inoremap jk <esc>
+
+nmap <leader>f :CtrlP<CR>
+nmap <leader>l :set list!<CR>
+nmap <silent> <leader>n :silent :nohlsearch<CR>
+
+" set clipboard+=unnamed
 set colorcolumn=80                  " sets a color marker in col 80
-set exrc                            " enable per-directory .vimrc files
+set cursorline                      " cursor line color background
 set expandtab                       " converts tab to space
-set number                          " line number
+set exrc                            " enable per-directory .vimrc files
+set hidden
 set hlsearch                        " highlight the search
+set ignorecase                      " ignore case search
+set incsearch
 set list                            " whitespace sign
+set listchars=tab:▸\ ,trail:·,eol:¬
 set nobackup                        " doesn't create backup
+set number                          " line number
+set relativenumber
+set ruler
+set scrolloff=3                     " scroll 3 lines before border
 set secure                          " disable unsafe commands in local .vimrc files
 set shiftwidth=4                    " column count when doing reindent << >>
+set smartcase                       " search upper case when given
 set tabstop=4                       " column each tab pressed
+set title                           " set terminal title
+set wildmenu                        " show completion options
+set wildmode=list:longest
 
-" Save when losing focus
-au FocusLost * :wa
-
-"" sets python file to convert tab to space
-"autocmd FileType python setlocal expandtab
-
-" toggles set list
-nmap <leader>l :set list!<CR>
-
-" Uses the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+" tmp dir
+set backupdir=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/*
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|\env$'
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
 
-" auto converts less file to css by running lessc command against the file
+nnoremap <C-e> 3<C-e>
+nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-y> 3<C-y>
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" sort
+vnoremap <leader>s :sort<cr>
+
+let g:ctrlp_open_new_file = 't'
+let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
+
+au FocusLost * :wa
 au BufNewFile,BufRead *.less set filetype=less
+
+" sets python file to convert tab to space
+"autocmd FileType python setlocal expandtab
+
+" auto converts less file to css by running lessc command against the file
 autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>')) . ' ' . shellescape(expand('<afile>:r')) . '.css'
 
-" surrounds a word in double quotes
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+" auto reload vimrc after save
+:au! BufWritePost $MYVIMRC source $MYVIMRC
 
-" exits insert mode
-inoremap jk <esc>
+" js fold
+" au FileType javascript call JavaScriptFold()
+" au FileType javascript setl fen
 
-" disables normal exit
-inoremap <esc> <nop>
+" python-mode
+let g:pymode_lint_ignore = "E251"
 
-" commands the current line
-autocmd FileType javascript nnoremap <buffer> <localleader>c I//
-autocmd FileType python     nnoremap <buffer> <localleader>c I#
-
-" rope
-source /home/aldi/lib/ropevim/rope.vim
-
-" Show syntax highlighting groups for word under cursor
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
     endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" function! JavaScriptFold() 
+"     setl foldmethod=syntax
+"     setl foldlevelstart=1
+"     syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+"     function! FoldText()
+"         return substitute(getline(v:foldstart), '{.*', '{...}', '')
+"     endfunction
+"     setl foldtext=FoldText()
+" endfunction

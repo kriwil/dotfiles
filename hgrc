@@ -1,8 +1,11 @@
 [ui]
+editor = vim
 username = Aldiantoro Nugroho <kriwil@gmail.com>
+merge = vimdiff
 
 [extensions]
 color =
 graphlog =
 progress =
-prompt = /home/aldi/src/hg-prompt/prompt.py
+prompt = $HOME/src/hg-prompt/prompt.py # https://bitbucket.org/sjl/hg-prompt
+hgshelve = $HOME/src/hgshelve/hgshelve.py # ssh://hg@bitbucket.org/tkosh/hgshelve
