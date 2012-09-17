@@ -113,7 +113,7 @@ set wildmode=list:longest
 set backupdir=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/*
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|\env$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|env$'
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
