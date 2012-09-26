@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 " Bundle 'mhz/vim-matchit'
 " Bundle 'sontek/rope-vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'aaronbieber/quicktask'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'groenewege/vim-less'
 Bundle 'hdima/vim-scripts'
@@ -86,6 +87,8 @@ nmap <leader>l :set list!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
 " set clipboard+=unnamed
+" set number                          " line number
+" set relativenumber
 set colorcolumn=80                  " sets a color marker in col 80
 set cursorline                      " cursor line color background
 set expandtab                       " converts tab to space
@@ -97,8 +100,6 @@ set incsearch
 set list                            " whitespace sign
 set listchars=tab:▸\ ,trail:·,eol:¬
 set nobackup                        " doesn't create backup
-set number                          " line number
-set relativenumber
 set ruler
 set scrolloff=3                     " scroll 3 lines before border
 set secure                          " disable unsafe commands in local .vimrc files
@@ -109,17 +110,28 @@ set title                           " set terminal title
 set wildmenu                        " show completion options
 set wildmode=list:longest
 
+" numbers
+set rnu
+au BufEnter * :set rnu
+au BufLeave * :set nu
+au FocusGained * :set rnu
+au FocusLost * :set nu
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+au WinEnter * :set rnu
+au WinLeave * :set nu
+
 " tmp dir
 set backupdir=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/*
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|env$'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|env$'
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
 
 nnoremap <C-e> 3<C-e>
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <F3> :call NumberToggle()<cr>
 nnoremap <C-y> 3<C-y>
 
 " Reselect visual block after indent/outdent
@@ -130,7 +142,6 @@ vnoremap > >gv
 vnoremap <leader>s :sort<cr>
 
 let g:ctrlp_open_new_file = 't'
-let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 
 au FocusLost * :wa
 au BufNewFile,BufRead *.less set filetype=less
@@ -144,12 +155,9 @@ autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>'
 " auto reload vimrc after save
 :au! BufWritePost $MYVIMRC source $MYVIMRC
 
-" js fold
-" au FileType javascript call JavaScriptFold()
-" au FileType javascript setl fen
-
 " python-mode
-let g:pymode_lint_ignore = "E251"
+let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
+let g:pymode_lint_ignore = "E251,E501"
 
 function! NumberToggle()
     if(&relativenumber == 1)
@@ -158,14 +166,3 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
-
-" function! JavaScriptFold() 
-"     setl foldmethod=syntax
-"     setl foldlevelstart=1
-"     syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-
-"     function! FoldText()
-"         return substitute(getline(v:foldstart), '{.*', '{...}', '')
-"     endfunction
-"     setl foldtext=FoldText()
-" endfunction
