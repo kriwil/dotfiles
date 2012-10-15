@@ -80,7 +80,7 @@ imap <right> <nop>
 imap <up> <nop>
 
 inoremap <esc> <nop>
-inoremap jk <esc>
+inoremap jj <esc>
 
 nmap <leader>f :CtrlP<CR>
 nmap <leader>l :set list!<CR>
@@ -122,8 +122,8 @@ au WinEnter * :set rnu
 au WinLeave * :set nu
 
 " tmp dir
-set backupdir=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vimtmp,~/.tmp,~/tmp,/tmp
+set directory=~/.vimtmp,~/.tmp,~/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|env$'
 
