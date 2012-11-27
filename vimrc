@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundle 'kevinw/pyflakes-vim'
+" Bundle 'me-vlad/python-syntax.vim'
 " Bundle 'mhz/vim-matchit'
 " Bundle 'sontek/rope-vim'
 Bundle 'Lokaltog/vim-powerline'
@@ -37,9 +38,9 @@ Bundle 'w0ng/vim-hybrid'
 
 " vim-scripts
 " Bundle 'python.vim'
-" Bundle 'python.vim--Vasiliev'
 Bundle 'Lucius'
 Bundle 'MatchTag'
+Bundle 'python.vim--Vasiliev'
 
 if has("gui_running")
     set guioptions-=T
@@ -155,6 +156,7 @@ autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>'
 " html uses 2 tabs
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
+autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
 
 " auto reload vimrc after save
 :au! BufWritePost $MYVIMRC source $MYVIMRC
@@ -162,6 +164,9 @@ autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 " python-mode
 let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 let g:pymode_lint_ignore = "E251,E501"
+
+" indent guides
+let g:indent_guides_guide_size = 1
 
 function! NumberToggle()
     if(&relativenumber == 1)
