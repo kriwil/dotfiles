@@ -7,5 +7,6 @@
 	cancel = reset –soft HEAD^
 	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
 	oneline = log --pretty=oneline
-[core]
-	editor = vim
+	lf = show --pretty="format:" --name-only
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
