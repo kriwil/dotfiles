@@ -151,7 +151,7 @@ au BufNewFile,BufRead *.less set filetype=less
 "autocmd FileType python setlocal expandtab
 
 " auto converts less file to css by running lessc command against the file
-autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>')) . ' ' . shellescape(expand('<afile>:r')) . '.css'
+" autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>')) . ' ' . shellescape(expand('<afile>:r')) . '.css'
 
 " html uses 2 tabs
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
