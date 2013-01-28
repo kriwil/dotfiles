@@ -21,6 +21,8 @@ Bundle 'kikijump/tslime.vim'
 Bundle 'klen/python-mode'
 Bundle 'ludovicchabant/vim-lawrencium'
 Bundle 'majutsushi/tagbar'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'mikewest/vimroom'
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -126,7 +128,7 @@ au WinLeave * :set nu
 set backupdir=~/.vimtmp,~/.tmp,~/tmp,/tmp
 set directory=~/.vimtmp,~/.tmp,~/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/,media/
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|env$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|env\|media$'
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
