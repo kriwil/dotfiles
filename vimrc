@@ -2,18 +2,22 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+" Bundle 'Lokaltog/vim-powerline'
+" Bundle 'aaronbieber/quicktask'
+" Bundle 'altercation/vim-colors-solarized'
 " Bundle 'kevinw/pyflakes-vim'
 " Bundle 'me-vlad/python-syntax.vim'
 " Bundle 'mhz/vim-matchit'
 " Bundle 'sontek/rope-vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'aaronbieber/quicktask'
-Bundle 'altercation/vim-colors-solarized'
+" Bundle 'tristen/superman'
+" Bundle 'w0ng/vim-hybrid'
+Bundle 'Lokaltog/powerline'
 Bundle 'groenewege/vim-less'
 Bundle 'hdima/vim-scripts'
 Bundle 'kien/ctrlp.vim'
@@ -34,13 +38,11 @@ Bundle 'tejr/sahara'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
-Bundle 'tristen/superman'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'w0ng/vim-hybrid'
 
 " vim-scripts
+" Bundle 'Lucius'
 " Bundle 'python.vim'
-Bundle 'Lucius'
 Bundle 'MatchTag'
 Bundle 'python.vim--Vasiliev'
 
@@ -125,8 +127,8 @@ au WinEnter * :set rnu
 au WinLeave * :set nu
 
 " tmp dir
-set backupdir=~/.vimtmp,~/.tmp,~/tmp,/tmp
-set directory=~/.vimtmp,~/.tmp,~/tmp,/tmp
+" set backupdir=~/.vimtmp,~/.tmp,~/tmp,/tmp
+" set directory=~/.vimtmp,~/.tmp,~/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/,media/
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|env\|media$'
 
