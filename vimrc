@@ -58,6 +58,7 @@ set background=dark
 set encoding=utf-8
 set laststatus=2
 set mouse=a
+set noshowmode
 set t_Co=256
 
 colorscheme sahara
@@ -162,6 +163,7 @@ au BufNewFile,BufRead *.less set filetype=less
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 " auto reload vimrc after save
 :au! BufWritePost $MYVIMRC source $MYVIMRC
