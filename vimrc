@@ -2,7 +2,16 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+if has("unix")
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        " Do Mac stuff here
+        set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+        " set clipboard=unnamed
+    endif
+endif
+
 call vundle#rc()
 
 " let Vundle manage Vundle
