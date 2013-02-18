@@ -59,6 +59,7 @@ Bundle 'python.vim--Vasiliev'
 if has("gui_running")
     set guioptions-=T
     set guioptions-=r
+    set guifont=Envy\ Code\ R\ for\ Powerline:h11
 endif
 
 filetype plugin indent on
