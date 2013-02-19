@@ -19,7 +19,8 @@ GIT_PS1_SHOWUNTRACKEDFILES=yes
 # PS1='\u at \h in \w$(__git_ps1 " (%s)")$(hg_ps1)\n$ '
 # export PS1
 
-case $OSTYPE in darwin*)
+case $OSTYPE in
+darwin*)
     export LC_CTYPE=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
     export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
@@ -30,4 +31,8 @@ case $OSTYPE in darwin*)
     alias ls='ls -G'
 
     . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+    ;;
+linux-gnu*)
+    . $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+    ;;
 esac
