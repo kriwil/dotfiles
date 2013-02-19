@@ -17,22 +17,11 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" Bundle 'Lokaltog/powerline'
-" Bundle 'Lokaltog/vim-powerline'
-" Bundle 'aaronbieber/quicktask'
-" Bundle 'altercation/vim-colors-solarized'
-" Bundle 'kevinw/pyflakes-vim'
-" Bundle 'klen/python-mode'
-" Bundle 'ludovicchabant/vim-lawrencium'
-" Bundle 'me-vlad/python-syntax.vim'
-" Bundle 'mhz/vim-matchit'
-" Bundle 'sontek/rope-vim'
-" Bundle 'tristen/superman'
-" Bundle 'w0ng/vim-hybrid'
 Bundle 'groenewege/vim-less'
 Bundle 'hdima/vim-scripts'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kikijump/tslime.vim'
+Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
@@ -51,8 +40,6 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tsaleh/vim-matchit'
 
 " vim-scripts
-" Bundle 'Lucius'
-" Bundle 'python.vim'
 Bundle 'MatchTag'
 Bundle 'python.vim--Vasiliev'
 
