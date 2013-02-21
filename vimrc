@@ -18,10 +18,10 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+Bundle 'epeli/slimux'
 Bundle 'groenewege/vim-less'
 Bundle 'hdima/vim-scripts'
 Bundle 'kien/ctrlp.vim'
-Bundle 'kikijump/tslime.vim'
 Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/gist-vim'
@@ -180,3 +180,7 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
+
+" slimux
+map <leader>sp :SlimuxShellPrompt<cr>
+map <leader>sl :SlimuxShellLast<cr>
