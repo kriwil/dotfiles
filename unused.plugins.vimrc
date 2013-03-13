@@ -9,6 +9,7 @@
 " Bundle 'me-vlad/python-syntax.vim'
 " Bundle 'mhz/vim-matchit'
 " Bundle 'sontek/rope-vim'
+" Bundle 'tpope/vim-fugitive'
 " Bundle 'tristen/superman'
 " Bundle 'w0ng/vim-hybrid'
 
