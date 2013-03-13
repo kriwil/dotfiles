@@ -145,9 +145,6 @@ vnoremap > >gv
 
 " sort
 vnoremap <leader>s :sort<cr>
-
-let g:ctrlp_open_new_file = 't'
-
 au FocusLost * :wa
 au BufNewFile,BufRead *.less set filetype=less
 
@@ -166,12 +163,22 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 " auto reload vimrc after save
 :au! BufWritePost $MYVIMRC source $MYVIMRC
 
+" ctrl-p
+let g:ctrlp_open_new_file = 't'
+
 " python-mode
 let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 let g:pymode_lint_ignore = "E251,E501"
 
 " indent guides
 let g:indent_guides_guide_size = 1
+
+" gitgutter
+let g:gitgutter_highlight_lines = 1
+
+" slimux
+map <leader>sp :SlimuxShellPrompt<cr>
+map <leader>sl :SlimuxShellLast<cr>
 
 function! NumberToggle()
     if(&relativenumber == 1)
@@ -180,7 +187,3 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
-
-" slimux
-map <leader>sp :SlimuxShellPrompt<cr>
-map <leader>sl :SlimuxShellLast<cr>
