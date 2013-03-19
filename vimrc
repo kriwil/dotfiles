@@ -18,6 +18,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+Bundle 'Lokaltog/powerline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'epeli/slimux'
 Bundle 'groenewege/vim-less'

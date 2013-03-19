@@ -12,14 +12,14 @@ GIT_PS1_SHOWDIRTYSTATE=yes
 GIT_PS1_SHOWSTASHSTATE=yes
 GIT_PS1_SHOWUNTRACKEDFILES=yes
 
-# hg_ps1() {
-#     hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
-# }
+hg_ps1() {
+    hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
+}
 
-# PS1='\u at \h in \w$(__git_ps1 " (%s)")$(hg_ps1)\n$ '
-# export PS1
+PS1='\u at \h in \w$(__git_ps1 " (%s)")$(hg_ps1)\n$ '
+export PS1
 
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+# . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 case $OSTYPE in
 darwin*)

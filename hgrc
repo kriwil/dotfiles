@@ -7,5 +7,7 @@ merge = vimdiff
 color =
 graphlog =
 progress =
-prompt = $HOME/src/hg-prompt/prompt.py # https://bitbucket.org/sjl/hg-prompt
-hgshelve = $HOME/src/hgshelve/hgshelve.py # ssh://hg@bitbucket.org/tkosh/hgshelve
+# https://bitbucket.org/sjl/hg-prompt
+prompt = ~/src/hg-prompt/prompt.py
+# https://bitbucket.org/astiob/hgshelve
+hgshelve = ~/src/hgshelve/hgshelve.py
