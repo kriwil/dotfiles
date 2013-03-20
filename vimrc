@@ -131,7 +131,7 @@ au WinLeave * :set nu
 " tmp dir
 " set backupdir=~/.vimtmp,~/.tmp,~/tmp,/tmp
 " set directory=~/.vimtmp,~/.tmp,~/tmp,/tmp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,static/,env/,media/
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,static/,env/,media/
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|env\|media$'
 
 " allows to use :w!! if we forgot to use sudo vim file
@@ -161,6 +161,7 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType java setlocal noexpandtab
 
 " auto reload vimrc after save
 :au! BufWritePost $MYVIMRC source $MYVIMRC
