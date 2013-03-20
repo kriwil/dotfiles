@@ -19,6 +19,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/powerline'
+Bundle 'aaronbieber/quicktask'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'epeli/slimux'
 Bundle 'groenewege/vim-less'
