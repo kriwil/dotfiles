@@ -5,7 +5,7 @@ alias tmux='tmux -2'
 alias tmn='tmux new -s $1'
 alias tma='tmux attach -t $1'
 
-# source ~/.git-prompt.sh
+source ~/.git-prompt.sh
 
 # git
 GIT_PS1_SHOWDIRTYSTATE=yes

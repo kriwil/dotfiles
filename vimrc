@@ -183,6 +183,9 @@ let g:gitgutter_highlight_lines = 1
 map <leader>sp :SlimuxShellPrompt<cr>
 map <leader>sl :SlimuxShellLast<cr>
 
+" nerdtree
+let NERDTreeIgnore = ['\.pyc$']
+
 function! NumberToggle()
     if(&relativenumber == 1)
         set number
