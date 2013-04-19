@@ -13,7 +13,7 @@ set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 "     endif
 " endif
 
-call vundle#rc()
+    call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
@@ -187,6 +187,10 @@ map <leader>sl :SlimuxShellLast<cr>
 
 " nerdtree
 let NERDTreeIgnore = ['\.pyc$']
+
+" numbers.vim
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
 
 " function! NumberToggle()
 "     if(&relativenumber == 1)
