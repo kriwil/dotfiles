@@ -31,6 +31,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'mikewest/vimroom'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'othree/html5.vim'
 Bundle 'peterhoeg/vim-qml'
@@ -187,10 +188,10 @@ map <leader>sl :SlimuxShellLast<cr>
 " nerdtree
 let NERDTreeIgnore = ['\.pyc$']
 
-function! NumberToggle()
-    if(&relativenumber == 1)
-        set number
-    else
-        set relativenumber
-    endif
-endfunc
+" function! NumberToggle()
+"     if(&relativenumber == 1)
+"         set number
+"     else
+"         set relativenumber
+"     endif
+" endfunc
