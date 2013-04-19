@@ -39,6 +39,7 @@ Bundle 'saltstack/salt-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tejr/sahara'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tsaleh/vim-matchit'
 
