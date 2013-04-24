@@ -164,6 +164,7 @@ autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType java setlocal noexpandtab
+autocmd FileType cpp setlocal noexpandtab
 
 " auto reload vimrc after save
 :au! BufWritePost $MYVIMRC source $MYVIMRC
