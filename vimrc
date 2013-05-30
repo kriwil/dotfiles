@@ -92,6 +92,7 @@ inoremap <esc> <nop>
 inoremap jk <esc>
 
 nmap <leader>f :CtrlP<CR>
+nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>l :set list!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
@@ -173,6 +174,8 @@ autocmd FileType cpp setlocal noexpandtab
 let g:ctrlp_open_new_file = 't'
 
 " python-mode
+" let g:pymode = 1
+" let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 let g:pymode_lint_ignore = "E251,E501"
 
