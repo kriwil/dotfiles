@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="example"
+ZSH_THEME="kriwil"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,13 +40,16 @@ ZSH_THEME="example"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode command-not-found history history-substring-search mercurial virtualenv virtualenvwrapper)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git vi-mode command-not-found history history-substring-search mercurial python virtualenvwrapper tmux)
 
 # Customize to your needs...
 export PATH=$PATH:/home/aldi/perl5/bin:/usr/local/heroku/bin:/home/aldi/.local/bin:/home/aldi/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-export EDITOR=vim
-export VISUAL=vim
+
+EDITOR=vim
+VISUAL=vim
+WORKON_HOME=$HOME/.virtualenvs
+
+source /usr/local/bin/virtualenvwrapper.sh
+source $ZSH/oh-my-zsh.sh
 
 alias tmux="tmux -2"
