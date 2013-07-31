@@ -2,7 +2,8 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+" set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
 " if has("unix")
 "     let s:uname = system("uname")
@@ -18,9 +19,12 @@ set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'Lokaltog/powerline'
+
+" Bundle 'Lokaltog/powerline'
 Bundle 'aaronbieber/quicktask'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
 Bundle 'epeli/slimux'
 Bundle 'groenewege/vim-less'
 Bundle 'hdima/vim-scripts'
@@ -39,7 +43,6 @@ Bundle 'peterhoeg/vim-qml'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'saltstack/salt-vim'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'sleistner/vim-jshint'
 Bundle 'tejr/sahara'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
@@ -205,3 +208,6 @@ nnoremap <F4> :NumbersOnOff<CR>
 "         set relativenumber
 "     endif
 " endfunc
+
+" airline
+let g:airline_powerline_fonts = 1
