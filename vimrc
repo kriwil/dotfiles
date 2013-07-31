@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
@@ -14,7 +15,6 @@ set rtp+=~/.vim/bundle/vundle/
 "     endif
 " endif
 
-    call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
