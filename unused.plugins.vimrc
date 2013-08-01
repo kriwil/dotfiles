@@ -8,6 +8,7 @@
 " Bundle 'ludovicchabant/vim-lawrencium'
 " Bundle 'me-vlad/python-syntax.vim'
 " Bundle 'mhz/vim-matchit'
+" Bundle 'sleistner/vim-jshint'
 " Bundle 'sontek/rope-vim'
 " Bundle 'tpope/vim-fugitive'
 " Bundle 'tristen/superman'

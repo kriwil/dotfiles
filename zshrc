@@ -43,14 +43,15 @@ ZSH_THEME="kriwil"
 plugins=(git vi-mode command-not-found history history-substring-search mercurial python virtualenvwrapper tmux)
 
 # Customize to your needs...
-export PATH=$PATH:/home/aldi/perl5/bin:/usr/local/heroku/bin:/home/aldi/.local/bin:/home/aldi/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-EDITOR=vim
-VISUAL=vim
-WORKON_HOME=$HOME/.virtualenvs
-PROJECT_HOME=$HOME/Workspace
-
-source /usr/local/bin/virtualenvwrapper.sh
+source `which virtualenvwrapper.sh`
 source $ZSH/oh-my-zsh.sh
+
+# export PATH=$PATH:/home/aldi/perl5/bin:/usr/local/heroku/bin:/home/aldi/.local/bin:/home/aldi/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+export PATH=$PATH:/usr/local/share/python
+export EDITOR=vim
+export VISUAL=vim
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Workspace
 
 alias tmux="tmux -2"
