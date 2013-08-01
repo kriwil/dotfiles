@@ -48,6 +48,7 @@ export PATH=$PATH:/home/aldi/perl5/bin:/usr/local/heroku/bin:/home/aldi/.local/b
 EDITOR=vim
 VISUAL=vim
 WORKON_HOME=$HOME/.virtualenvs
+PROJECT_HOME=$HOME/Workspace
 
 source /usr/local/bin/virtualenvwrapper.sh
 source $ZSH/oh-my-zsh.sh
