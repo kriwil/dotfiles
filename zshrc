@@ -54,4 +54,4 @@ export VISUAL=vim
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Workspace
 
-# alias tmux="tmux -2"
+alias tmux="tmux -2"

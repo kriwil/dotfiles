@@ -19,15 +19,12 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-
-" Bundle 'Lokaltog/powerline'
 Bundle 'aaronbieber/quicktask'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline'
 Bundle 'epeli/slimux'
 Bundle 'groenewege/vim-less'
 Bundle 'hdima/vim-scripts'
+Bundle 'itchyny/lightline.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
@@ -200,6 +197,11 @@ let NERDTreeIgnore = ['\.pyc$']
 " numbers.vim
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
+
+" lightline.vim
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 " function! NumberToggle()
 "     if(&relativenumber == 1)
