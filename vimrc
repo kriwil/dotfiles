@@ -197,11 +197,6 @@ let NERDTreeIgnore = ['\.pyc$']
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 
-" lightline.vim
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-
 " function! NumberToggle()
 "     if(&relativenumber == 1)
 "         set number
