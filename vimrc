@@ -30,10 +30,8 @@ Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
-Bundle 'mattn/zencoding-vim'
 Bundle 'mikewest/vimroom'
 Bundle 'mileszs/ack.vim'
-Bundle 'myusuf3/numbers.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'othree/html5.vim'
 Bundle 'peterhoeg/vim-qml'
@@ -178,6 +176,7 @@ let g:ctrlp_open_new_file = 't'
 " python-mode
 " let g:pymode = 1
 " let g:pymode_lint = 1
+let g:pymode_rope = 0
 let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 let g:pymode_lint_ignore = "E251,E501"
 
