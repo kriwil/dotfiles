@@ -43,6 +43,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tsaleh/vim-matchit'
+Bundle 'w0ng/vim-hybrid.git'
 
 " vim-scripts
 Bundle 'MatchTag'
@@ -63,7 +64,7 @@ set mouse=a
 set noshowmode
 set t_Co=256
 
-colorscheme sahara
+colorscheme hybrid
 syntax on
 
 let mapleader = ","
@@ -150,7 +151,7 @@ vnoremap > >gv
 
 " sort
 vnoremap <leader>s :sort<cr>
-au FocusLost * :wa
+" au FocusLost * :wa
 au BufNewFile,BufRead *.less set filetype=less
 
 " sets python file to convert tab to space
@@ -175,10 +176,10 @@ let g:ctrlp_open_new_file = 't'
 
 " python-mode
 " let g:pymode = 1
-" let g:pymode_lint = 1
+let g:pymode_lint = 1
 let g:pymode_rope = 0
 let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
-let g:pymode_lint_ignore = "E251,E501"
+let g:pymode_lint_ignore = "E251,E501,E128"
 
 " indent guides
 let g:indent_guides_guide_size = 1

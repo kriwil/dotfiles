@@ -40,7 +40,7 @@ ZSH_THEME="kriwil"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode command-not-found history history-substring-search mercurial python virtualenvwrapper)
+plugins=(git command-not-found history history-substring-search mercurial python virtualenvwrapper)
 
 # Customize to your needs...
 
@@ -53,5 +53,6 @@ export EDITOR=vim
 export VISUAL=vim
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Workspace
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 alias tmux="tmux -2"
