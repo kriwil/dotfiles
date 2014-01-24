@@ -1,3 +1,5 @@
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -49,6 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export PATH=$PATH:/home/aldi/perl5/bin:/usr/local/heroku/bin:/home/aldi/.local/bin:/home/aldi/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 # export PATH=$PATH:/usr/local/share/python
+
 export EDITOR=vim
 export VISUAL=vim
 export WORKON_HOME=$HOME/.virtualenvs

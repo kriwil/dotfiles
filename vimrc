@@ -43,7 +43,8 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'w0ng/vim-hybrid.git'
+Bundle 'w0ng/vim-hybrid'
+" Bundle 'tpope/vim-vinegar'
 
 " vim-scripts
 Bundle 'MatchTag'
@@ -84,6 +85,10 @@ map tw :tabnew<CR>
 " map <C-l> :tabprev<CR>
 " map <C-x> :tabclose<CR>
 
+" buffer
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
+
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
@@ -93,6 +98,7 @@ inoremap <esc> <nop>
 inoremap jk <esc>
 
 nmap <leader>f :CtrlP<CR>
+nmap <leader>a :CtrlPMixed<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>l :set list!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
