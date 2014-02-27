@@ -185,7 +185,7 @@ let g:ctrlp_open_new_file = 't'
 let g:pymode_lint = 1
 let g:pymode_rope = 0
 let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
-let g:pymode_lint_ignore = "E251,E501,E128"
+let g:pymode_lint_ignore = "E251,E501,E128,E261,C901"
 
 " indent guides
 let g:indent_guides_guide_size = 1
