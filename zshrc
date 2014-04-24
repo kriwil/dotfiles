@@ -57,6 +57,7 @@ export PROJECT_HOME=$HOME/Workspace
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 alias tmux="tmux -2"
+alias ack="ack-grep"
 
 source `which virtualenvwrapper.sh`
 source $ZSH/oh-my-zsh.sh
