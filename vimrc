@@ -100,7 +100,7 @@ inoremap jk <esc>
 
 nmap <leader>f :CtrlP<CR>
 nmap <leader>a :CtrlPMixed<CR>
-nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>ff :CtrlPBuffer<CR>
 nmap <leader>l :set list!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
@@ -169,6 +169,7 @@ au BufNewFile,BufRead *.less set filetype=less
 
 " html uses 2 tabs
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
