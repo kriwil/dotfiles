@@ -4,18 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-
-" if has("unix")
-"     let s:uname = system("uname")
-"     if s:uname == "Darwin\n"
-"         " Do Mac stuff here
-"         set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-"         " set clipboard=unnamed
-"     endif
-" endif
-
-
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
@@ -75,16 +63,6 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 map <up> <nop>
-
-map tc :tabclose<CR>
-map tl :tabnext<CR>
-map th :tabprev<CR>
-map tw :tabnew<CR>
-
-" map <C-c> :tabnew<CR>
-" map <C-h> :tabprev<CR>
-" map <C-l> :tabprev<CR>
-" map <C-x> :tabclose<CR>
 
 " buffer
 nnoremap <C-l> :bnext<CR>
@@ -161,12 +139,6 @@ vnoremap <leader>s :sort<cr>
 " au FocusLost * :wa
 au BufNewFile,BufRead *.less set filetype=less
 
-" sets python file to convert tab to space
-"autocmd FileType python setlocal expandtab
-
-" auto converts less file to css by running lessc command against the file
-" autocmd BufWritePost *.less :silent exe '!lessc ' . shellescape(expand('<afile>')) . ' ' . shellescape(expand('<afile>:r')) . '.css'
-
 " html uses 2 tabs
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
@@ -202,17 +174,9 @@ map <leader>sl :SlimuxShellLast<cr>
 " nerdtree
 let NERDTreeIgnore = ['\.pyc$']
 
-" numbers.vim
-nnoremap <F3> :NumbersToggle<CR>
-nnoremap <F4> :NumbersOnOff<CR>
-
-" function! NumberToggle()
-"     if(&relativenumber == 1)
-"         set number
-"     else
-"         set relativenumber
-"     endif
-" endfunc
-
 " airline
 let g:airline_powerline_fonts = 1
+
+" gist
+" let g:gist_clip_command = 'xclip -selection clipboard'
+" let g:gist_open_browser_after_post = 1
