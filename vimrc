@@ -1,51 +1,52 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'aaronbieber/quicktask'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-Bundle 'epeli/slimux'
-Bundle 'groenewege/vim-less'
-Bundle 'hdima/vim-scripts'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'klen/python-mode'
-Bundle 'majutsushi/tagbar'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mikewest/vimroom'
-Bundle 'mileszs/ack.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'othree/html5.vim'
-Bundle 'peterhoeg/vim-qml'
-Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'saltstack/salt-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tejr/sahara'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'w0ng/vim-hybrid'
-" Bundle 'tsaleh/vim-matchit'
-" Bundle 'tpope/vim-vinegar'
+Plugin 'aaronbieber/quicktask'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Plugin 'epeli/slimux'
+Plugin 'groenewege/vim-less'
+Plugin 'hdima/vim-scripts'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode'
+Plugin 'majutsushi/tagbar'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mikewest/vimroom'
+Plugin 'mileszs/ack.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'othree/html5.vim'
+Plugin 'peterhoeg/vim-qml'
+Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'saltstack/salt-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tejr/sahara'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'w0ng/vim-hybrid'
+" Plugin 'tsaleh/vim-matchit'
+" Plugin 'tpope/vim-vinegar'
 
 " vim-scripts
-Bundle 'MatchTag'
-Bundle 'python.vim--Vasiliev'
+Plugin 'MatchTag'
+Plugin 'python.vim--Vasiliev'
+
+call vundle#end()
+filetype plugin indent on
 
 if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guifont=Envy\ Code\ R\ for\ Powerline:h11
 endif
-
-filetype plugin indent on
 
 set background=dark
 set encoding=utf-8
