@@ -166,7 +166,8 @@ let g:pymode_lint_ignore = "E251,E501,E128,E261,C901"
 let g:indent_guides_guide_size = 1
 
 " gitgutter
-let g:gitgutter_highlight_lines = 1
+let g:gitgutter_highlight_lines = 0
+let g:gitgutter_sign_column_always= 1
 
 " slimux
 map <leader>sp :SlimuxShellPrompt<cr>
