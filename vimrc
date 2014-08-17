@@ -7,9 +7,9 @@ call vundle#begin()
 " let Vundle manage Vundle
 Plugin 'gmarik/vundle'
 
-Plugin 'aaronbieber/quicktask'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
+Plugin 'digitaltoad/vim-jade'
 Plugin 'epeli/slimux'
 Plugin 'groenewege/vim-less'
 Plugin 'hdima/vim-scripts'
@@ -19,34 +19,25 @@ Plugin 'klen/python-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'mikewest/vimroom'
 Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'othree/html5.vim'
-Plugin 'peterhoeg/vim-qml'
-Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'othree/xml.vim'
 Plugin 'saltstack/salt-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tejr/sahara'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
+" colorscheme
 Plugin 'w0ng/vim-hybrid'
-" Plugin 'tsaleh/vim-matchit'
-" Plugin 'tpope/vim-vinegar'
 
 " vim-scripts
 Plugin 'MatchTag'
+Plugin 'matchit.zip'
 Plugin 'python.vim--Vasiliev'
 
 call vundle#end()
 filetype plugin indent on
-
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=r
-    set guifont=Envy\ Code\ R\ for\ Powerline:h11
-endif
 
 set background=dark
 set encoding=utf-8
@@ -75,13 +66,13 @@ imap <right> <nop>
 imap <up> <nop>
 
 inoremap <esc> <nop>
-inoremap jk <esc>
 
 nmap <leader>f :CtrlP<CR>
 nmap <leader>a :CtrlPMixed<CR>
-nmap <leader>ff :CtrlPBuffer<CR>
-nmap <leader>l :set list!<CR>
+nmap <leader>b :CtrlPBuffer<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
+
+vnoremap <leader>s :sort<CR>
 
 " set clipboard+=unnamed
 " set number                          " line number
@@ -118,36 +109,24 @@ au InsertLeave * :set rnu
 au WinEnter * :set rnu
 au WinLeave * :set nu
 
-" tmp dir
-" set backupdir=~/.vimtmp,~/.tmp,~/tmp,/tmp
-" set directory=~/.vimtmp,~/.tmp,~/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,static/,env/,media/
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$\|static$'
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
-
-nnoremap <C-e> 3<C-e>
-nnoremap <F3> :call NumberToggle()<cr>
-nnoremap <C-y> 3<C-y>
 
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
 
-" sort
-vnoremap <leader>s :sort<cr>
-" au FocusLost * :wa
-au BufNewFile,BufRead *.less set filetype=less
-
-" html uses 2 tabs
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
-autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
-autocmd FileType java setlocal noexpandtab
 autocmd FileType cpp setlocal noexpandtab
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
+autocmd FileType java setlocal noexpandtab
+autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
+autocmd FileType xml setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 " auto reload vimrc after save
 :au! BufWritePost $MYVIMRC source $MYVIMRC
@@ -156,7 +135,6 @@ autocmd FileType cpp setlocal noexpandtab
 let g:ctrlp_open_new_file = 't'
 
 " python-mode
-" let g:pymode = 1
 let g:pymode_lint = 1
 let g:pymode_rope = 0
 let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
