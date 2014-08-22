@@ -110,7 +110,7 @@ au WinEnter * :set rnu
 au WinLeave * :set nu
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,static/,env/,media/
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$\|static$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$'
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
