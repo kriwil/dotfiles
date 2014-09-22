@@ -7,16 +7,19 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim' " let vundle manage vundle
 Plugin 'w0ng/vim-hybrid' " colorscheme
 
-Plugin 'kien/ctrlp.vim' " file finder
 Plugin 'airblade/vim-gitgutter' " show what's changed in vcs
 Plugin 'bling/vim-airline' " cool statusbar
 Plugin 'epeli/slimux' " tmux integration
 Plugin 'gregsexton/MatchTag' " highlight matching html tag
+Plugin 'kien/ctrlp.vim' " file finder
+Plugin 'klen/python-mode' " the python complete stuff
 Plugin 'mattn/gist-vim' " gist integration
 Plugin 'mattn/webapi-vim' " used by gist-vim
+Plugin 'scrooloose/nerdtree' " simple tree file manager
 Plugin 'scrooloose/syntastic' " syntax thing
 Plugin 'tpope/vim-commentary' " easy way to comment the code
 Plugin 'tpope/vim-fugitive' " git integration
+Plugin 'tpope/vim-markdown' " markdown syntax
 
 " " syntax
 " Plugin 'digitaltoad/vim-jade'
@@ -26,15 +29,12 @@ Plugin 'tpope/vim-fugitive' " git integration
 " Plugin 'othree/html5.vim'
 " Plugin 'othree/xml.vim'
 " Plugin 'saltstack/salt-vim'
-" Plugin 'tpope/vim-markdown'
 
-" Plugin 'klen/python-mode'
 " Plugin 'majutsushi/tagbar'
 " Plugin 'matchit.zip'
 " Plugin 'mileszs/ack.vim'
 " Plugin 'nathanaelkane/vim-indent-guides'
 " Plugin 'python.vim--Vasiliev'
-" Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
@@ -107,6 +107,9 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 let g:airline_powerline_fonts = 1
+let g:pymode_lint = 0
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args='--ignore=E501'
 
 " nmap <silent> <leader>n :silent :nohlsearch<CR>
 " vnoremap <leader>s :sort<CR>
