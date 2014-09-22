@@ -97,6 +97,10 @@ vnoremap > >gv
 nnoremap <C-l> :bnext<CR>
 nnoremap <C-h> :bprevious<CR>
 
+" slimux
+map <leader>$ :SlimuxShellPrompt<CR>
+map <leader># :SlimuxShellLast<CR>
+
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp setlocal noexpandtab
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
@@ -107,7 +111,9 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 let g:airline_powerline_fonts = 1
+let g:pymode_doc = 0
 let g:pymode_lint = 0
+let g:pymode_rope = 0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args='--ignore=E501'
 
