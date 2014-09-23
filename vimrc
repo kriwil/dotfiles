@@ -86,6 +86,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,static/,env/,media/
 
 " let &colorcolumn=join(range(80,999),",")
 
+let mapleader = ","
+
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
 
