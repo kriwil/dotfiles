@@ -59,7 +59,7 @@ imap <left> <nop>
 imap <right> <nop>
 imap <up> <nop>
 
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 
 set colorcolumn=80 " sets a color mjrker in col 80
 set cursorline " cursor line color background
@@ -112,6 +112,7 @@ autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
+let NERDTreeIgnore = ['\.pyc$']
 let g:airline_powerline_fonts = 1
 let g:pymode_doc = 0
 let g:pymode_lint = 0
