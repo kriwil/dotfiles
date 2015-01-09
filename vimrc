@@ -11,6 +11,7 @@ Plugin 'airblade/vim-gitgutter' " show what's changed in vcs
 Plugin 'bling/vim-airline' " cool statusbar
 Plugin 'epeli/slimux' " tmux integration
 Plugin 'gregsexton/MatchTag' " highlight matching html tag
+Plugin 'kchmck/vim-coffee-script' " coffee syntax
 Plugin 'kien/ctrlp.vim' " file finder
 Plugin 'klen/python-mode' " the python complete stuff
 Plugin 'mattn/gist-vim' " gist integration
@@ -20,12 +21,12 @@ Plugin 'scrooloose/syntastic' " syntax thing
 Plugin 'tpope/vim-commentary' " easy way to comment the code
 Plugin 'tpope/vim-fugitive' " git integration
 Plugin 'tpope/vim-markdown' " markdown syntax
+Plugin 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 
 " " syntax
 " Plugin 'digitaltoad/vim-jade'
 " Plugin 'groenewege/vim-less'
 " Plugin 'hdima/vim-scripts'
-" Plugin 'kchmck/vim-coffee-script'
 " Plugin 'othree/html5.vim'
 " Plugin 'othree/xml.vim'
 " Plugin 'saltstack/salt-vim'
