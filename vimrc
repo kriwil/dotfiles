@@ -83,7 +83,7 @@ set tabstop=4 " column each tab pressed
 set title " set terminal title
 set wildmenu " show completion options
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,static/,env/,media/
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/
 
 " let &colorcolumn=join(range(80,999),",")
 
@@ -113,7 +113,7 @@ autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.pdf$']
 let g:airline_powerline_fonts = 1
 let g:pymode_doc = 0
 let g:pymode_lint = 0
