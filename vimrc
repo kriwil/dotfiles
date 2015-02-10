@@ -11,6 +11,7 @@ Plugin 'airblade/vim-gitgutter' " show what's changed in vcs
 Plugin 'bling/vim-airline' " cool statusbar
 Plugin 'epeli/slimux' " tmux integration
 Plugin 'gregsexton/MatchTag' " highlight matching html tag
+Plugin 'groenewege/vim-less' " less syntax
 Plugin 'kchmck/vim-coffee-script' " coffee syntax
 Plugin 'kien/ctrlp.vim' " file finder
 Plugin 'klen/python-mode' " the python complete stuff
@@ -25,7 +26,6 @@ Plugin 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 
 " " syntax
 " Plugin 'digitaltoad/vim-jade'
-" Plugin 'groenewege/vim-less'
 " Plugin 'hdima/vim-scripts'
 " Plugin 'othree/html5.vim'
 " Plugin 'othree/xml.vim'
@@ -84,6 +84,7 @@ set title " set terminal title
 set wildmenu " show completion options
 set wildmode=list:longest
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/
+set wrap
 
 " let &colorcolumn=join(range(80,999),",")
 
