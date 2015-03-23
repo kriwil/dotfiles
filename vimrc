@@ -17,12 +17,15 @@ Plugin 'kien/ctrlp.vim' " file finder
 Plugin 'klen/python-mode' " the python complete stuff
 Plugin 'mattn/gist-vim' " gist integration
 Plugin 'mattn/webapi-vim' " used by gist-vim
+Plugin 'mileszs/ack.vim' " ack in vim
 Plugin 'scrooloose/nerdtree' " simple tree file manager
 Plugin 'scrooloose/syntastic' " syntax thing
 Plugin 'tpope/vim-commentary' " easy way to comment the code
 Plugin 'tpope/vim-fugitive' " git integration
 Plugin 'tpope/vim-markdown' " markdown syntax
 Plugin 'tpope/vim-unimpaired' " pairs of handy bracket mappings
+
+Plugin 'wakatime/vim-wakatime'
 
 " " syntax
 " Plugin 'digitaltoad/vim-jade'
@@ -33,7 +36,6 @@ Plugin 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 
 " Plugin 'majutsushi/tagbar'
 " Plugin 'matchit.zip'
-" Plugin 'mileszs/ack.vim'
 " Plugin 'nathanaelkane/vim-indent-guides'
 " Plugin 'python.vim--Vasiliev'
 
@@ -62,6 +64,7 @@ imap <up> <nop>
 
 " inoremap <esc> <nop>
 
+set clipboard=unnamed " osx clipboard
 set colorcolumn=80 " sets a color mjrker in col 80
 set cursorline " cursor line color background
 set expandtab " converts tab to space
