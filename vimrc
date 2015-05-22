@@ -1,45 +1,44 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim' " let vundle manage vundle
-Plugin 'w0ng/vim-hybrid' " colorscheme
+Plug 'w0ng/vim-hybrid' " colorscheme
 
-Plugin 'airblade/vim-gitgutter' " show what's changed in vcs
-Plugin 'bling/vim-airline' " cool statusbar
-Plugin 'epeli/slimux' " tmux integration
-Plugin 'gregsexton/MatchTag' " highlight matching html tag
-Plugin 'groenewege/vim-less' " less syntax
-Plugin 'kchmck/vim-coffee-script' " coffee syntax
-Plugin 'kien/ctrlp.vim' " file finder
-Plugin 'klen/python-mode' " the python complete stuff
-Plugin 'mattn/gist-vim' " gist integration
-Plugin 'mattn/webapi-vim' " used by gist-vim
-Plugin 'mileszs/ack.vim' " ack in vim
-Plugin 'scrooloose/nerdtree' " simple tree file manager
-Plugin 'scrooloose/syntastic' " syntax thing
-Plugin 'tpope/vim-commentary' " easy way to comment the code
-Plugin 'tpope/vim-fugitive' " git integration
-Plugin 'tpope/vim-markdown' " markdown syntax
-Plugin 'tpope/vim-unimpaired' " pairs of handy bracket mappings
+Plug 'airblade/vim-gitgutter' " show what's changed in vcs
+Plug 'bling/vim-airline' " cool statusbar
+Plug 'epeli/slimux' " tmux integration
+Plug 'gregsexton/MatchTag' " highlight matching html tag
+Plug 'groenewege/vim-less' " less syntax
+Plug 'kchmck/vim-coffee-script' " coffee syntax
+Plug 'kien/ctrlp.vim' " file finder
+Plug 'klen/python-mode' " the python complete stuff
+Plug 'mattn/gist-vim' " gist integration
+Plug 'mattn/webapi-vim' " used by gist-vim
+Plug 'mileszs/ack.vim' " ack in vim
+Plug 'scrooloose/nerdtree' " simple tree file manager
+Plug 'scrooloose/syntastic' " syntax thing
+Plug 'tpope/vim-commentary' " easy way to comment the code
+Plug 'tpope/vim-fugitive' " git integration
+Plug 'tpope/vim-markdown' " markdown syntax
+Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 
-Plugin 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime'
 
 " " syntax
-" Plugin 'digitaltoad/vim-jade'
-" Plugin 'hdima/vim-scripts'
-" Plugin 'othree/html5.vim'
-" Plugin 'othree/xml.vim'
-" Plugin 'saltstack/salt-vim'
+" Plug 'digitaltoad/vim-jade'
+" Plug 'hdima/vim-scripts'
+" Plug 'othree/html5.vim'
+" Plug 'othree/xml.vim'
+" Plug 'saltstack/salt-vim'
 
-" Plugin 'majutsushi/tagbar'
-" Plugin 'matchit.zip'
-" Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'python.vim--Vasiliev'
+" Plug 'majutsushi/tagbar'
+" Plug 'matchit.zip'
+" Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'python.vim--Vasiliev'
 
-call vundle#end()
+call plug#end()
+
 filetype plugin indent on
 
 set background=dark
