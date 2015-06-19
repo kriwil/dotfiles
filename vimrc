@@ -3,10 +3,9 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'w0ng/vim-hybrid' " colorscheme
-
 Plug 'airblade/vim-gitgutter' " show what's changed in vcs
-Plug 'bling/vim-airline' " cool statusbar
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline' " working statusline
 Plug 'epeli/slimux' " tmux integration
 Plug 'gregsexton/MatchTag' " highlight matching html tag
 Plug 'groenewege/vim-less' " less syntax
@@ -31,6 +30,7 @@ Plug 'wakatime/vim-wakatime'
 " Plug 'othree/html5.vim'
 " Plug 'othree/xml.vim'
 " Plug 'saltstack/salt-vim'
+" Plug 'szw/vim-ctrlspace' " workspace thing
 
 " Plug 'majutsushi/tagbar'
 " Plug 'matchit.zip'
@@ -48,7 +48,7 @@ set noshowmode
 set t_Co=256
 set laststatus=2
 
-colorscheme hybrid
+colorscheme solarized
 syntax on
 
 map <down> <nop>
@@ -64,7 +64,7 @@ imap <up> <nop>
 " inoremap <esc> <nop>
 
 set clipboard=unnamed " osx clipboard
-set colorcolumn=80 " sets a color mjrker in col 80
+set colorcolumn=100 " sets a color marker in col 80
 set cursorline " cursor line color background
 set expandtab " converts tab to space
 set exrc " enable per-directory .vimrc files
@@ -118,6 +118,7 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$']
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:pymode_doc = 0
 let g:pymode_lint = 0
 let g:pymode_rope = 0
@@ -145,8 +146,6 @@ let g:syntastic_python_flake8_args='--ignore=E501'
 " " gitgutter
 " let g:gitgutter_highlight_lines = 0
 " let g:gitgutter_sign_column_always = 1
-
-" " airline
 
 " " gist
 " let g:gist_open_browser_after_post = 1
