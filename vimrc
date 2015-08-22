@@ -10,7 +10,7 @@ Plug 'epeli/slimux' " tmux integration
 Plug 'gregsexton/MatchTag' " highlight matching html tag
 Plug 'groenewege/vim-less' " less syntax
 Plug 'kchmck/vim-coffee-script' " coffee syntax
-Plug 'kien/ctrlp.vim' " file finder
+Plug 'ctrlpvim/ctrlp.vim' " file finder
 Plug 'klen/python-mode' " the python complete stuff
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
@@ -85,7 +85,7 @@ set tabstop=4 " column each tab pressed
 set title " set terminal title
 set wildmenu " show completion options
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/
 set wrap
 
 " let &colorcolumn=join(range(80,999),",")
