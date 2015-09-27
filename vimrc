@@ -4,24 +4,24 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter' " show what's changed in vcs
-Plug 'morhetz/gruvbox' " theme
 Plug 'bling/vim-airline' " working statusline
+Plug 'ctrlpvim/ctrlp.vim' " file finder
 Plug 'epeli/slimux' " tmux integration
 Plug 'gregsexton/MatchTag' " highlight matching html tag
 Plug 'groenewege/vim-less' " less syntax
+Plug 'kballard/vim-swift' " swift syntax, used by syntastic
 Plug 'kchmck/vim-coffee-script' " coffee syntax
-Plug 'ctrlpvim/ctrlp.vim' " file finder
 Plug 'klen/python-mode' " the python complete stuff
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
 Plug 'mileszs/ack.vim' " ack in vim
+Plug 'morhetz/gruvbox' " theme
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'scrooloose/syntastic' " syntax thing
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'tpope/vim-markdown' " markdown syntax
 Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
-
 Plug 'wakatime/vim-wakatime'
 
 " " syntax
