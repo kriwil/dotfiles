@@ -4,7 +4,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter' " show what's changed in vcs
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox' " theme
 Plug 'bling/vim-airline' " working statusline
 Plug 'epeli/slimux' " tmux integration
 Plug 'gregsexton/MatchTag' " highlight matching html tag
@@ -48,7 +48,7 @@ set noshowmode
 set t_Co=256
 set laststatus=2
 
-colorscheme solarized
+colorscheme gruvbox
 syntax on
 
 map <down> <nop>
@@ -85,7 +85,7 @@ set tabstop=4 " column each tab pressed
 set title " set terminal title
 set wildmenu " show completion options
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/,*/__pycache__/*
 set wrap
 
 " let &colorcolumn=join(range(80,999),",")
@@ -116,7 +116,7 @@ autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
-let NERDTreeIgnore = ['\.pyc$', '\.pdf$']
+let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:pymode_doc = 0
