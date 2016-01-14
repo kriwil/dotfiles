@@ -85,7 +85,7 @@ set tabstop=4 " column each tab pressed
 set title " set terminal title
 set wildmenu " show completion options
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/,*/__pycache__/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/,*/__pycache__/*,*.db
 set wrap
 
 " let &colorcolumn=join(range(80,999),",")
@@ -107,14 +107,14 @@ nnoremap <C-h> :bprevious<CR>
 map <leader>$ :SlimuxShellPrompt<CR>
 map <leader># :SlimuxShellLast<CR>
 
-autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
+autocmd FileType coffee setlocal shiftwidth=4 tabstop=4
 autocmd FileType cpp setlocal noexpandtab
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4
 autocmd FileType java setlocal noexpandtab
-autocmd FileType xhtml setlocal shiftwidth=2 tabstop=2
-autocmd FileType xml setlocal shiftwidth=2 tabstop=2
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
+autocmd FileType xml setlocal shiftwidth=4 tabstop=4
+autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:airline_powerline_fonts = 1
