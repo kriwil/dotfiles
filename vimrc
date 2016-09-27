@@ -112,6 +112,7 @@ autocmd FileType cpp setlocal noexpandtab
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4
 autocmd FileType java setlocal noexpandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
@@ -119,11 +120,16 @@ autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" python
 let g:pymode_doc = 0
 let g:pymode_lint = 0
 let g:pymode_rope = 0
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_python_flake8_args = '--ignore=E501'
+
+" javascript
+let g:syntastic_javascript_checkers = ['eslint']
 
 " nmap <silent> <leader>n :silent :nohlsearch<CR>
 " vnoremap <leader>s :sort<CR>
