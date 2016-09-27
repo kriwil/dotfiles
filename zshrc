@@ -96,3 +96,5 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
