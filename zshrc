@@ -49,7 +49,7 @@ ZSH_THEME="kriwil"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git command-not-found history history-substring-search python virtualenvwrapper)
+plugins=(git command-not-found history history-substring-search python)
 
 # User configuration
 
@@ -87,8 +87,12 @@ alias tmux="tmux -2"
 
 export EDITOR="vim"
 export VISUAL="vim"
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Workspace
-export VIRTUALENVWRAPPER_PYTHON=`which python`
 
-# source `which virtualenvwrapper.sh`
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+eval "$(direnv hook zsh)"
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
