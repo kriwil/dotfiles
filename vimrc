@@ -24,6 +24,8 @@ Plug 'tpope/vim-markdown' " markdown syntax
 Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 Plug 'wakatime/vim-wakatime'
 
+Plug 'elmcast/elm-vim'
+
 " " syntax
 " Plug 'digitaltoad/vim-jade'
 " Plug 'hdima/vim-scripts'
@@ -131,6 +133,19 @@ let g:syntastic_python_flake8_args = '--ignore=E501'
 " javascript
 let g:syntastic_javascript_checkers = ['eslint']
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+
+" elm
+let g:elm_format_autosave = 1
+let g:elm_syntastic_show_warnings = 1
+
+" gist
+let g:gist_open_browser_after_post = 1
+let g:gist_post_private = 1
+
+" map <leader>m :ElmMake<CR>
+
 " nmap <silent> <leader>n :silent :nohlsearch<CR>
 " vnoremap <leader>s :sort<CR>
 
@@ -152,9 +167,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 " " gitgutter
 " let g:gitgutter_highlight_lines = 0
 " let g:gitgutter_sign_column_always = 1
-
-" " gist
-" let g:gist_open_browser_after_post = 1
 
 " " ctrl-p
 " let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$'
