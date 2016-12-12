@@ -146,6 +146,11 @@ let g:gist_post_private = 1
 
 " map <leader>m :ElmMake<CR>
 
+" vimr
+if has("gui_vimr")
+    set guifont=Monoid:h9
+endif
+
 " nmap <silent> <leader>n :silent :nohlsearch<CR>
 " vnoremap <leader>s :sort<CR>
 
@@ -167,6 +172,9 @@ let g:gist_post_private = 1
 " " gitgutter
 " let g:gitgutter_highlight_lines = 0
 " let g:gitgutter_sign_column_always = 1
+
+" " gist
+" let g:gist_open_browser_after_post = 1
 
 " " ctrl-p
 " let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$'
