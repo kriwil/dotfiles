@@ -93,6 +93,7 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 eval "$(direnv hook zsh)"
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export CLICOLOR=1
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
