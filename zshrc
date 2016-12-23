@@ -92,10 +92,9 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 eval "$(direnv hook zsh)"
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin:`yarn global bin`
 export CLICOLOR=1
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
