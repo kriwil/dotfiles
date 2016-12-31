@@ -151,6 +151,9 @@ if has("gui_vimr")
     set guifont=Monoid:h9
 endif
 
+" ctrl-p
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|elm-stuff'
+
 " nmap <silent> <leader>n :silent :nohlsearch<CR>
 " vnoremap <leader>s :sort<CR>
 
