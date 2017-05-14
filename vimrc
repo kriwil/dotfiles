@@ -18,6 +18,7 @@ Plug 'mileszs/ack.vim' " ack in vim
 Plug 'morhetz/gruvbox' " theme
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'scrooloose/syntastic' " syntax thing
+Plug 'tmhedberg/matchit' " html match %
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'tpope/vim-markdown' " markdown syntax
