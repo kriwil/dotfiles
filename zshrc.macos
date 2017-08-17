@@ -98,3 +98,10 @@ export CLICOLOR=1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+source /Users/aldi/.rvm/scripts/rvm
+
+unsetopt AUTO_CD
