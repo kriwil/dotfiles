@@ -116,6 +116,7 @@ autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4
 autocmd FileType java setlocal noexpandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
