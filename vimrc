@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter' " show what's changed in vcs
 Plug 'bling/vim-airline' " working statusline
 Plug 'ctrlpvim/ctrlp.vim' " file finder
+Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
 Plug 'gregsexton/MatchTag' " highlight matching html tag
 Plug 'groenewege/vim-less' " less syntax
@@ -25,7 +26,10 @@ Plug 'tpope/vim-markdown' " markdown syntax
 Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 Plug 'wakatime/vim-wakatime'
 
-Plug 'elmcast/elm-vim'
+if has('nvim')
+    Plug 'roxma/nvim-completion-manager' "autocomplete
+    Plug 'roxma/ncm-elm-oracle' " elm autocomplete for nvim-completion-manager
+endif
 
 " " syntax
 " Plug 'digitaltoad/vim-jade'
