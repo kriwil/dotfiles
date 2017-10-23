@@ -8,28 +8,29 @@ Plug 'bling/vim-airline' " working statusline
 Plug 'ctrlpvim/ctrlp.vim' " file finder
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
-Plug 'gregsexton/MatchTag' " highlight matching html tag
-Plug 'groenewege/vim-less' " less syntax
-Plug 'kballard/vim-swift' " swift syntax, used by syntastic
-Plug 'kchmck/vim-coffee-script' " coffee syntax
-Plug 'klen/python-mode' " the python complete stuff
+" Plug 'gregsexton/MatchTag' " highlight matching html tag
+" Plug 'groenewege/vim-less' " less syntax
+" Plug 'kballard/vim-swift' " swift syntax, used by syntastic
+" Plug 'kchmck/vim-coffee-script' " coffee syntax
+" Plug 'klen/python-mode' " the python complete stuff
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
-Plug 'mileszs/ack.vim' " ack in vim
+" Plug 'mileszs/ack.vim' " ack in vim
 Plug 'morhetz/gruvbox' " theme
 Plug 'scrooloose/nerdtree' " simple tree file manager
-Plug 'scrooloose/syntastic' " syntax thing
-Plug 'tmhedberg/matchit' " html match %
+" Plug 'scrooloose/syntastic' " syntax thing
+" Plug 'tmhedberg/matchit' " html match %
 Plug 'tpope/vim-commentary' " easy way to comment the code
-Plug 'tpope/vim-fugitive' " git integration
-Plug 'tpope/vim-markdown' " markdown syntax
-Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
+" Plug 'tpope/vim-fugitive' " git integration
+" Plug 'tpope/vim-markdown' " markdown syntax
+" Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 Plug 'wakatime/vim-wakatime'
+" Plug 'w0rp/ale'
 
-if has('nvim')
-    Plug 'roxma/nvim-completion-manager' "autocomplete
-    Plug 'roxma/ncm-elm-oracle' " elm autocomplete for nvim-completion-manager
-endif
+" if has('nvim')
+"     Plug 'roxma/nvim-completion-manager' "autocomplete
+"     Plug 'roxma/ncm-elm-oracle' " elm autocomplete for nvim-completion-manager
+" endif
 
 " " syntax
 " Plug 'digitaltoad/vim-jade'
@@ -58,15 +59,15 @@ set laststatus=2
 colorscheme gruvbox
 syntax on
 
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+" map <up> <nop>
 
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
+" imap <up> <nop>
 
 " inoremap <esc> <nop>
 
@@ -133,16 +134,17 @@ let g:airline#extensions#tabline#enabled = 1
 let g:pymode_doc = 0
 let g:pymode_lint = 0
 let g:pymode_rope = 0
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--ignore=E501'
+" let g:syntastic_python_checkers = ['flake8']
+" let g:syntastic_python_flake8_args = '--ignore=E501'
 
 " javascript
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['eslint']
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
 
 " elm
+autocmd FileType elm nmap <leader>m <Plug>(elm-make)
 let g:elm_browser_command = ""
 let g:elm_detailed_complete = 0
 let g:elm_format_autosave = 1
@@ -151,7 +153,7 @@ let g:elm_jump_to_error = 0
 let g:elm_make_output_file = "elm.js"
 let g:elm_make_show_warnings = 0
 let g:elm_setup_keybindings = 1
-let g:elm_syntastic_show_warnings = 1
+" let g:elm_syntastic_show_warnings = 1
 
 " gist
 let g:gist_open_browser_after_post = 1
