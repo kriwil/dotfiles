@@ -8,24 +8,13 @@ Plug 'bling/vim-airline' " working statusline
 Plug 'ctrlpvim/ctrlp.vim' " file finder
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
-" Plug 'gregsexton/MatchTag' " highlight matching html tag
-" Plug 'groenewege/vim-less' " less syntax
-" Plug 'kballard/vim-swift' " swift syntax, used by syntastic
-" Plug 'kchmck/vim-coffee-script' " coffee syntax
-" Plug 'klen/python-mode' " the python complete stuff
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
-" Plug 'mileszs/ack.vim' " ack in vim
 Plug 'morhetz/gruvbox' " theme
 Plug 'scrooloose/nerdtree' " simple tree file manager
-" Plug 'scrooloose/syntastic' " syntax thing
-" Plug 'tmhedberg/matchit' " html match %
 Plug 'tpope/vim-commentary' " easy way to comment the code
-" Plug 'tpope/vim-fugitive' " git integration
-" Plug 'tpope/vim-markdown' " markdown syntax
-" Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
+Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
-" Plug 'w0rp/ale'
 
 " if has('nvim')
 "     Plug 'roxma/nvim-completion-manager' "autocomplete
@@ -40,10 +29,21 @@ Plug 'wakatime/vim-wakatime'
 " Plug 'saltstack/salt-vim'
 " Plug 'szw/vim-ctrlspace' " workspace thing
 
+" Plug 'tpope/vim-markdown' " markdown syntax
+" Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
+" Plug 'mileszs/ack.vim' " ack in vim
+" Plug 'scrooloose/syntastic' " syntax thing
+" Plug 'tmhedberg/matchit' " html match %
 " Plug 'majutsushi/tagbar'
 " Plug 'matchit.zip'
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'python.vim--Vasiliev'
+" Plug 'gregsexton/MatchTag' " highlight matching html tag
+" Plug 'groenewege/vim-less' " less syntax
+" Plug 'kballard/vim-swift' " swift syntax, used by syntastic
+" Plug 'kchmck/vim-coffee-script' " coffee syntax
+" Plug 'klen/python-mode' " the python complete stuff
+" Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -131,9 +131,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " python
-let g:pymode_doc = 0
-let g:pymode_lint = 0
-let g:pymode_rope = 0
+" let g:pymode_doc = 0
+" let g:pymode_lint = 0
+" let g:pymode_rope = 0
 " let g:syntastic_python_checkers = ['flake8']
 " let g:syntastic_python_flake8_args = '--ignore=E501'
 
