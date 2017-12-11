@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
+Plug 'leafgarland/typescript-vim'
 
 " if has('nvim')
 "     Plug 'roxma/nvim-completion-manager' "autocomplete
@@ -121,6 +122,7 @@ autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4
 autocmd FileType java setlocal noexpandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
