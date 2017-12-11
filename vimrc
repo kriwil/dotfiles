@@ -57,6 +57,12 @@ set noshowmode
 set t_Co=256
 set laststatus=2
 
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
+
 colorscheme gruvbox
 syntax on
 
