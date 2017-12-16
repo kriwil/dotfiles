@@ -16,6 +16,12 @@ Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
 Plug 'leafgarland/typescript-vim'
+Plug 'reasonml-editor/vim-reason-plus' " reason for vim
+
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
+
+Plug 'junegunn/fzf'
+Plug 'roxma/nvim-completion-manager' "autocomplete
 
 " if has('nvim')
 "     Plug 'roxma/nvim-completion-manager' "autocomplete
@@ -178,6 +184,12 @@ endif
 
 " ctrl-p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|elm-stuff'
+
+" language client
+let g:LanguageClient_serverCommands = { 
+    \ 'reason': ['ocaml-language-server', '--stdio'],
+    \ 'ocaml': ['ocaml-language-server', '--stdio'],
+    \ }
 
 " nmap <silent> <leader>n :silent :nohlsearch<CR>
 " vnoremap <leader>s :sort<CR>
