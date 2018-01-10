@@ -9,16 +9,13 @@
 	oneline = log --pretty=oneline
 	lf = show --pretty="format:" --name-only
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-
+	trim = "!f() { git branch | grep -v \"\\*\" | xargs -n 1 git branch -D; }; f"
 [github]
 	user = kriwil
 [core]
 	excludesfile = /Users/aldi/.gitignore_global
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
 [push]
 	default = simple
+[gitlab]
+	host = https://gitlab.com
+	user = kriwil

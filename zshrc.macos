@@ -84,9 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias tmux="tmux -2"
+alias vim="nvim"
 
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
