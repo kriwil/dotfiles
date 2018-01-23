@@ -17,6 +17,8 @@ Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
 Plug 'leafgarland/typescript-vim'
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
+Plug 'w0rp/ale'
+Plug 'mklabs/split-term.vim' " :terminal utility
 
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 
