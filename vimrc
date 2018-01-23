@@ -22,6 +22,7 @@ Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 
 Plug 'junegunn/fzf'
 Plug 'roxma/nvim-completion-manager' "autocomplete
+Plug 'w0rp/ale'
 
 " if has('nvim')
 "     Plug 'roxma/nvim-completion-manager' "autocomplete
@@ -50,7 +51,6 @@ Plug 'roxma/nvim-completion-manager' "autocomplete
 " Plug 'kballard/vim-swift' " swift syntax, used by syntastic
 " Plug 'kchmck/vim-coffee-script' " coffee syntax
 " Plug 'klen/python-mode' " the python complete stuff
-" Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -143,6 +143,7 @@ autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 
 " python
 " let g:pymode_doc = 0
