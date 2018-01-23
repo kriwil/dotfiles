@@ -95,8 +95,8 @@ set hidden
 set hlsearch " highlight the search
 set ignorecase " ignore case search
 set incsearch
-set list " whitespace sign
-set listchars=tab:▸\ ,trail:·,eol:¬
+" set list " whitespace sign
+" set listchars=tab:▸\ ,trail:·,eol:¬
 set nobackup " doesn't create backup
 set relativenumber " relative number
 set ruler
@@ -144,7 +144,7 @@ autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 
 " python
