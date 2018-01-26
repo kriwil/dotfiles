@@ -147,6 +147,12 @@ let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#ale#enabled = 1
 
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+let g:ale_javascript_prettier_use_local_config = 1
+
 " python
 " let g:pymode_doc = 0
 " let g:pymode_lint = 0
