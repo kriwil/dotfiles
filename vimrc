@@ -138,6 +138,7 @@ autocmd FileType java setlocal noexpandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
