@@ -17,7 +17,6 @@ Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
 Plug 'leafgarland/typescript-vim'
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
-Plug 'w0rp/ale'
 Plug 'mklabs/split-term.vim' " :terminal utility
 
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
@@ -153,6 +152,7 @@ let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_python_flake8_args='--ignore=E501'
 
 " python
 " let g:pymode_doc = 0
