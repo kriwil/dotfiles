@@ -49,11 +49,11 @@ ZSH_THEME="kriwil"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git command-not-found history history-substring-search python)
+plugins=(command-not-found history history-substring-search python)
 
 # User configuration
 
-export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/go/bin:$HOME/.pyenv/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/go/bin:$HOME/.pyenv/bin:$HOME/src/flutter/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -90,8 +90,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 # pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 eval "$(direnv hook zsh)"
 

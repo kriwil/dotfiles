@@ -140,7 +140,7 @@ autocmd FileType scss setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
-autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 " let g:airline_powerline_fonts = 1
