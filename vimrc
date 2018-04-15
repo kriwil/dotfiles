@@ -22,16 +22,10 @@ Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
-
-" test
 Plug 'w0rp/ale'
 
-" if has('nvim')
-"     Plug 'roxma/nvim-completion-manager' "autocomplete
-"     Plug 'roxma/ncm-elm-oracle' " elm autocomplete for nvim-completion-manager
-" endif
-
 " " syntax
+" Plug 'davidhalter/jedi-vim' " autocomplete
 " Plug 'digitaltoad/vim-jade'
 " Plug 'hdima/vim-scripts'
 " Plug 'othree/html5.vim'
@@ -141,15 +135,19 @@ let g:python3_host_prog = '/usr/local/bin/python3.6'
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
-" let g:ale_fixers = {
-"     \ 'javascript': ['prettier'],
-"     \ 'python': ['black'],
-"     \ }
-" let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+    \ 'javascript': ['prettier'],
+    \ 'python': ['black'],
+    \ }
+let g:ale_linters = {
+    \ 'python': ['flake8'],
+    \ }
+let g:ale_fix_on_save = 1
+let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
+let g:ale_python_black_options = '--line-length=100'
+let g:ale_python_flake8_options = '--ignore=E501'
 " let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 " let g:ale_javascript_prettier_use_local_config = 1
-" let g:ale_python_flake8_args = '--ignore=E501'
-" let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
 
 " elm
 autocmd FileType elm nmap <leader>m <Plug>(elm-make)
