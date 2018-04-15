@@ -18,6 +18,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'leafgarland/typescript-vim'
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
 Plug 'mklabs/split-term.vim' " :terminal utility
+Plug 'arrufat/vala.vim'  " vala syntax
 
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 
@@ -147,12 +148,17 @@ let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#ale#enabled = 1
 
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
+let g:python3_host_prog = '/usr/local/bin/python3.6'
+
+let g:ale_fixers = {
+    \ 'javascript': ['prettier'],
+    \ 'python': ['black'],
+    \ }
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_python_flake8_args='--ignore=E501'
+let g:ale_python_flake8_args = '--ignore=E501'
+let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
 
 " python
 " let g:pymode_doc = 0
