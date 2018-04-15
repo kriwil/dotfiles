@@ -4,26 +4,26 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter' " show what's changed in vcs
+Plug 'arrufat/vala.vim'  " vala syntax
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 Plug 'bling/vim-airline' " working statusline
 Plug 'ctrlpvim/ctrlp.vim' " file finder
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
+Plug 'junegunn/fzf'
+Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
+Plug 'mklabs/split-term.vim' " :terminal utility
 Plug 'morhetz/gruvbox' " theme
+Plug 'reasonml-editor/vim-reason-plus' " reason for vim
+Plug 'roxma/nvim-completion-manager' "autocomplete
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
-Plug 'leafgarland/typescript-vim'
-Plug 'reasonml-editor/vim-reason-plus' " reason for vim
-Plug 'mklabs/split-term.vim' " :terminal utility
-Plug 'arrufat/vala.vim'  " vala syntax
 
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
-
-Plug 'junegunn/fzf'
-Plug 'roxma/nvim-completion-manager' "autocomplete
+" test
 Plug 'w0rp/ale'
 
 " if has('nvim')
@@ -74,18 +74,6 @@ endif
 colorscheme gruvbox
 syntax on
 
-" map <down> <nop>
-" map <left> <nop>
-" map <right> <nop>
-" map <up> <nop>
-
-" imap <down> <nop>
-" imap <left> <nop>
-" imap <right> <nop>
-" imap <up> <nop>
-
-" inoremap <esc> <nop>
-
 set clipboard=unnamed " osx clipboard
 set colorcolumn=100 " sets a color marker in col 80
 set cursorline " cursor line color background
@@ -111,7 +99,12 @@ set wildmode=list:longest
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/,*/__pycache__/*,*.db
 set wrap
 
-" let &colorcolumn=join(range(80,999),",")
+" vimr
+if has("gui_vimr")
+    " set guifont=Monoid:h9
+    set termguicolors
+    set title
+endif
 
 let mapleader = ","
 
@@ -143,35 +136,20 @@ autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
-let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#ale#enabled = 1
-
+" set python bin for neovim
 let g:python3_host_prog = '/usr/local/bin/python3.6'
 
-let g:ale_fixers = {
-    \ 'javascript': ['prettier'],
-    \ 'python': ['black'],
-    \ }
-let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
-let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_python_flake8_args = '--ignore=E501'
-let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
+let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
-" python
-" let g:pymode_doc = 0
-" let g:pymode_lint = 0
-" let g:pymode_rope = 0
-" let g:syntastic_python_checkers = ['flake8']
-" let g:syntastic_python_flake8_args = '--ignore=E501'
-
-" javascript
-" let g:syntastic_javascript_checkers = ['eslint']
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
+" let g:ale_fixers = {
+"     \ 'javascript': ['prettier'],
+"     \ 'python': ['black'],
+"     \ }
+" let g:ale_fix_on_save = 1
+" let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+" let g:ale_javascript_prettier_use_local_config = 1
+" let g:ale_python_flake8_args = '--ignore=E501'
+" let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
 
 " elm
 autocmd FileType elm nmap <leader>m <Plug>(elm-make)
@@ -183,20 +161,10 @@ let g:elm_jump_to_error = 0
 let g:elm_make_output_file = "elm.js"
 let g:elm_make_show_warnings = 0
 let g:elm_setup_keybindings = 1
-" let g:elm_syntastic_show_warnings = 1
 
 " gist
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
-
-" map <leader>m :ElmMake<CR>
-
-" vimr
-if has("gui_vimr")
-    " set guifont=Monoid:h9
-    set termguicolors
-    set title
-endif
 
 " ctrl-p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|elm-stuff'
@@ -206,9 +174,6 @@ let g:LanguageClient_serverCommands = {
     \ 'reason': ['ocaml-language-server', '--stdio'],
     \ 'ocaml': ['ocaml-language-server', '--stdio'],
     \ }
-
-" nmap <silent> <leader>n :silent :nohlsearch<CR>
-" vnoremap <leader>s :sort<CR>
 
 " " numbers
 " set rnu
@@ -221,10 +186,6 @@ let g:LanguageClient_serverCommands = {
 " au WinEnter * :set rnu
 " au WinLeave * :set nu
 
-" nmap <leader>f :CtrlP<CR>
-" nmap <leader>a :CtrlPMixed<CR>
-" nmap <leader>b :CtrlPBuffer<CR>
-
 " " gitgutter
 " let g:gitgutter_highlight_lines = 0
 " let g:gitgutter_sign_column_always = 1
@@ -236,22 +197,19 @@ let g:LanguageClient_serverCommands = {
 " let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$'
 " let g:ctrlp_open_new_file = 't'
 
-" " python-mode
-" let g:pymode_lint = 1
-" let g:pymode_rope = 0
-" let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
-" let g:pymode_lint_ignore = "E251,E501,E128,E261,C901"
+" set clipboard+=unnamed
+" set number                          " line number
+" set relativenumber
 
-" " indent guides
-" let g:indent_guides_guide_size = 1
+" " disable arrow navigation
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+" map <up> <nop>
 
-" " slimux
-" map <leader>sp :SlimuxShellPrompt<cr>
-" map <leader>sl :SlimuxShellLast<cr>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
+" imap <up> <nop>
 
-" " nerdtree
-" let NERDTreeIgnore = ['\.pyc$']
-
-" " set clipboard+=unnamed
-" " set number                          " line number
-" " set relativenumber
+" inoremap <esc> <nop>
