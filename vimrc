@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
+Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
 Plug 'morhetz/gruvbox' " theme
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
@@ -40,7 +41,6 @@ Plug 'junegunn/fzf.vim'
 " Plug 'ctrlpvim/ctrlp.vim' " file finder
 " Plug 'tpope/vim-markdown' " markdown syntax
 " Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
-" Plug 'mileszs/ack.vim' " ack in vim
 " Plug 'scrooloose/syntastic' " syntax thing
 " Plug 'tmhedberg/matchit' " html match %
 " Plug 'majutsushi/tagbar'
