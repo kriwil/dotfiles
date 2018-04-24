@@ -108,3 +108,5 @@ export LANG=en_US.UTF-8
 # source /Users/aldi/.rvm/scripts/rvm
 
 unsetopt AUTO_CD
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

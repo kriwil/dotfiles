@@ -6,11 +6,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter' " show what's changed in vcs
 Plug 'arrufat/vala.vim'  " vala syntax
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
-Plug 'bling/vim-airline' " working statusline
-Plug 'ctrlpvim/ctrlp.vim' " file finder
+Plug 'editorconfig/editorconfig-vim'
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
-Plug 'junegunn/fzf'
+Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
@@ -21,10 +20,14 @@ Plug 'roxma/nvim-completion-manager' "autocomplete
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
-Plug 'wakatime/vim-wakatime'
 Plug 'w0rp/ale'
+Plug 'wakatime/vim-wakatime'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " " syntax
+" Plug 'bling/vim-airline' " working statusline
 " Plug 'davidhalter/jedi-vim' " autocomplete
 " Plug 'digitaltoad/vim-jade'
 " Plug 'hdima/vim-scripts'
@@ -32,7 +35,9 @@ Plug 'w0rp/ale'
 " Plug 'othree/xml.vim'
 " Plug 'saltstack/salt-vim'
 " Plug 'szw/vim-ctrlspace' " workspace thing
+" Plug 'mattn/emmet-vim' " html
 
+" Plug 'ctrlpvim/ctrlp.vim' " file finder
 " Plug 'tpope/vim-markdown' " markdown syntax
 " Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 " Plug 'mileszs/ack.vim' " ack in vim
@@ -101,6 +106,8 @@ if has("gui_vimr")
 endif
 
 let mapleader = ","
+
+map <C-p> :Files<CR>
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
