@@ -107,7 +107,12 @@ endif
 
 let mapleader = ","
 
+" fzf
 map <C-p> :Files<CR>
+
+" ack
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 " allows to use :w!! if we forgot to use sudo vim file
 cmap w!! %!sudo tee > /dev/null %
