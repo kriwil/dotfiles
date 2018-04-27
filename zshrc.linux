@@ -98,6 +98,8 @@ eval "$(direnv hook zsh)"
 # export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin:`yarn global bin`
 export CLICOLOR=1
 export PIPENV_VENV_IN_PROJECT=1
+export TERM=xterm-256color
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
