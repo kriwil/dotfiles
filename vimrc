@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter' " show what's changed in vcs
 Plug 'arrufat/vala.vim'  " vala syntax
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
 Plug 'itchyny/lightline.vim'
