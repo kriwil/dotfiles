@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter' " show what's changed in vcs
 Plug 'arrufat/vala.vim'  " vala syntax
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
+Plug 'dart-lang/dart-vim-plugin'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
