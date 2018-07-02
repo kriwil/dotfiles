@@ -1,6 +1,6 @@
 [core]
 	fileMode = false
-	excludesfile = /home/aldi/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
 [user]
