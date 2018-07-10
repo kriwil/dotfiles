@@ -19,7 +19,11 @@ Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
 Plug 'morhetz/gruvbox' " theme
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
-Plug 'roxma/nvim-completion-manager' "autocomplete
+Plug 'roxma/nvim-yarp' " required by ncm2/ncm2
+Plug 'ncm2/ncm2'  " formerly nvim-completion-manager
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-jedi'
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
@@ -40,7 +44,6 @@ Plug 'junegunn/fzf.vim'
 " Plug 'szw/vim-ctrlspace' " workspace thing
 " Plug 'mattn/emmet-vim' " html
 
-" Plug 'ctrlpvim/ctrlp.vim' " file finder
 " Plug 'tpope/vim-markdown' " markdown syntax
 " Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
 " Plug 'scrooloose/syntastic' " syntax thing
@@ -144,6 +147,12 @@ autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
+" enable ncm2 for all buffer
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" note that must keep noinsert in completeopt, the others is optional
+set completeopt=noinsert,menuone,noselect
+
 " set python bin for neovim
 let g:python3_host_prog = '/usr/local/bin/python3.6'
 
@@ -178,9 +187,6 @@ let g:elm_setup_keybindings = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
-" ctrl-p
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|elm-stuff'
-
 " language client
 let g:LanguageClient_serverCommands = { 
     \ 'reason': ['ocaml-language-server', '--stdio'],
@@ -204,10 +210,6 @@ let g:LanguageClient_serverCommands = {
 
 " " gist
 " let g:gist_open_browser_after_post = 1
-
-" " ctrl-p
-" let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|^env$\|media$'
-" let g:ctrlp_open_new_file = 't'
 
 " set clipboard+=unnamed
 " set number                          " line number
