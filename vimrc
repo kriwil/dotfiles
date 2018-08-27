@@ -19,11 +19,6 @@ Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
 Plug 'morhetz/gruvbox' " theme
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
-Plug 'roxma/nvim-yarp' " required by ncm2/ncm2
-Plug 'ncm2/ncm2'  " formerly nvim-completion-manager
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-jedi'
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
@@ -32,6 +27,14 @@ Plug 'wakatime/vim-wakatime'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" ncm2 stuff
+Plug 'roxma/nvim-yarp' " required by ncm2/ncm2
+Plug 'ncm2/ncm2'  " formerly nvim-completion-manager
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-jedi'
+
 
 " " syntax
 " Plug 'bling/vim-airline' " working statusline
@@ -149,12 +152,10 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 " enable ncm2 for all buffer
 autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" note that must keep noinsert in completeopt, the others is optional
 set completeopt=noinsert,menuone,noselect
 
 " set python bin for neovim
-let g:python3_host_prog = '/usr/local/bin/python3.6'
+let g:python3_host_prog = '/usr/bin/python3.6'
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
