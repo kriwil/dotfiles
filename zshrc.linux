@@ -53,7 +53,7 @@ plugins=(command-not-found history history-substring-search python)
 
 # User configuration
 
-export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/src/flutter/bin:$HOME/go/bin:/usr/local/go/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/src/flutter/bin:$HOME/go/bin:/usr/local/go/bin:/usr/local/bin:/snap/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
