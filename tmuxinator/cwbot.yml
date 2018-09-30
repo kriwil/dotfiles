@@ -1,0 +1,11 @@
+# ~/.tmuxinator/cwbot.yml
+
+name: cwbot
+
+windows:
+  - logs:
+      layout: even-horizontal
+      panes:
+        - sh -c "docker logs -f cwbot_kriwil"
+        - sh -c "docker logs -f cwbot_justalittlebrain"
+        - sh -c "docker logs -f cwbot_unusedusername"
