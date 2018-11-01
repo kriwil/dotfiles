@@ -1,11 +1,12 @@
 # ~/.tmuxinator/cwbot.yml
 
 name: cwbot
+root: ~/Workspace/telegram/cwbot
 
 windows:
   - logs:
       layout: even-horizontal
       panes:
-        - sh -c "docker logs -f cwbot_kriwil"
-        - sh -c "docker logs -f cwbot_justalittlebrain"
-        - sh -c "docker logs -f cwbot_unusedusername"
+        - ls
+        - ls
+        - ls
