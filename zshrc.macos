@@ -94,9 +94,10 @@ export VISUAL="nvim"
 eval "$(direnv hook zsh)"
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin:`yarn global bin`
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:/Users/aldi/Library/Python/2.7/bin
+export PATH=$PATH:/Users/aldi/Library/Python/3.7/bin
 export CLICOLOR=1
-
+export PIPENV_VENV_IN_PROJECT=1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
