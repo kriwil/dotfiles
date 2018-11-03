@@ -100,6 +100,7 @@ set secure " disable unsafe commands in local .vimrc files
 set shiftwidth=4 " column count when doing reindent << >>
 set smartcase " search upper case when given
 set tabstop=4 " column each tab pressed
+" set termguicolors
 set title " set terminal title
 set wildmenu " show completion options
 set wildmode=list:longest
@@ -109,7 +110,6 @@ set wrap
 " vimr
 if has("gui_vimr")
     " set guifont=Monoid:h9
-    set termguicolors
     set title
 endif
 
