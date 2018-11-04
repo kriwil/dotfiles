@@ -160,6 +160,7 @@ let g:python3_host_prog = '/usr/bin/python3.6'
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
 let g:ale_fixers = {
+    \ 'css': ['prettier'],
     \ 'javascript': ['prettier'],
     \ 'python': ['black'],
     \ }
