@@ -15,6 +15,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
+Plug 'mhinz/vim-mix-format'  " mix format wrapper
 Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
 Plug 'morhetz/gruvbox' " theme
@@ -155,7 +156,7 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
 " set python bin for neovim
-let g:python3_host_prog = '/usr/bin/python3.6'
+let g:python3_host_prog = '/usr/local/bin/python3.7'
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
