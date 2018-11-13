@@ -105,7 +105,7 @@ set tabstop=4 " column each tab pressed
 set title " set terminal title
 set wildmenu " show completion options
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/,*/__pycache__/*,*.db
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.class,*.pdf,static/,env/,media/,venv/,*/CACHE/,*/node_modules/,*/__pycache__/*,*.db,_build/
 set wrap
 
 " vimr
@@ -156,8 +156,6 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
 " set python bin for neovim
-let g:python3_host_prog = '/usr/local/bin/python3.7'
-
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
 let g:ale_fixers = {
@@ -195,6 +193,8 @@ let g:LanguageClient_serverCommands = {
     \ 'reason': ['ocaml-language-server', '--stdio'],
     \ 'ocaml': ['ocaml-language-server', '--stdio'],
     \ }
+
+source ~/.vimrc.python
 
 " " numbers
 " set rnu
