@@ -117,7 +117,7 @@ endif
 let mapleader = ","
 
 " fzf
-map <C-p> :Files<CR>
+map <C-p> :GFiles<CR>
 
 " ack
 cnoreabbrev Ack Ack!
