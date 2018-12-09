@@ -29,6 +29,9 @@ root: ~/Workspace/mark
 # post: tmux -CC attach -t pace
 
 windows:
-  - web: docker-compose up web
-  - db: ls
-  - code: cd pacescheduler
+  - code:
+      layout: even-horizontal
+      panes:
+        - docker-compose up web
+        - cd pacescheduler && vim
+  - docker: docker-compose run --rm testweb python pacescheduler/manage.py test client
