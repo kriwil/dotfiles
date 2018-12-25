@@ -62,8 +62,5 @@ conky.config = {
 }
 
 conky.text = [[
-${color grey}Tasks:
-$color${exec cat /home/aldi/.local/share/todayist}
-$hr
 ${color grey}Work hours: $color${exec cat /home/aldi/.local/share/harvest-hours}
 ]]
