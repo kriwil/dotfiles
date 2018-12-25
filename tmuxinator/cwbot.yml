@@ -1,7 +1,7 @@
 # ~/.tmuxinator/cwbot.yml
 
 name: cwbot
-root: ~/Workspace/telegram/cwbot
+root: ~/Workspace/cwbot
 
 windows:
   - logs:

@@ -1,7 +1,7 @@
-# ~/.tmuxinator/pace.yml
+# /home/aldi/.tmuxinator/system.yml
 
-name: pace
-root: ~/Workspace/mark/pacescheduler
+name: system
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -9,10 +9,23 @@ root: ~/Workspace/mark/pacescheduler
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 
+# Project hooks
+# Runs on project start, always
+# on_project_start: command
+# Run on project start, the first time
+# on_project_first_start: command
+# Run on project start, after the first time
+# on_project_restart: command
+# Run on project exit ( detaching from tmux session )
+# on_project_exit: command
+# Run on project stop
+# on_project_stop: command
+
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
-pre_window: source .venv/bin/activate
 
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
@@ -20,19 +33,14 @@ pre_window: source .venv/bin/activate
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 # startup_window: editor
 
-# Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
 
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t pace
+# post: tmux -CC attach -t system
 
 windows:
-  - code:
-      layout: even-horizontal
-      panes:
-        - python pacescheduler/manage.py runserver
-        - vim
-  - test: python pacescheduler/manage.py test client
+  - watch: glances -C ~/.config/glances
