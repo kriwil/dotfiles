@@ -34,10 +34,9 @@ windows:
   - editor:
       layout: even-horizontal
       panes:
-        - mix test
+        - mix phx.server
         - vim
   - server:
       layout: even-horizontal
       panes:
-        - mix phx.server
-        - docker-compose up
+        - mix test
