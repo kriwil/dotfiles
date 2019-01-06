@@ -166,7 +166,7 @@ let g:ale_linters = {
     \ }
 let g:ale_fix_on_save = 1
 let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
-let g:ale_python_black_options = '--line-length=100 --safe'
+let g:ale_python_black_options = '--safe'
 let g:ale_python_flake8_options = '--ignore=E501'
 let g:ale_javascript_prettier_options = '--single-quote'
 let g:ale_javascript_prettier_use_local_config = 1
