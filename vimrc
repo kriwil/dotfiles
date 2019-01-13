@@ -182,7 +182,7 @@ let g:elm_make_output_file = "elm.js"
 let g:elm_make_show_warnings = 0
 let g:elm_setup_keybindings = 1
 
-let g:mix_format_on_save = 1
+" let g:mix_format_on_save = 1
 
 " gist
 let g:gist_open_browser_after_post = 1
