@@ -199,6 +199,9 @@ let g:LanguageClient_serverCommands = {
     \ 'ocaml': ['ocaml-language-server', '--stdio'],
     \ }
 
+" python
+" pdb
+nnoremap <leader>p Oimport pdb; pdb.set_trace()<Esc>
 source ~/.vimrc.python
 
 " " numbers
