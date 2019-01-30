@@ -139,6 +139,10 @@ nnoremap <leader>bd :1,100bd<CR>
 map <leader>$ :SlimuxShellPrompt<CR>
 map <leader># :SlimuxShellLast<CR>
 
+" terminal
+highlight TermCursor ctermfg=red guifg=red
+tnoremap <Leader><ESC> <C-\><C-n>
+
 autocmd FileType cpp setlocal noexpandtab
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
