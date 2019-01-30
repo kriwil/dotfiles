@@ -133,6 +133,7 @@ vnoremap > >gv
 " buffer
 nnoremap <C-l> :bnext<CR>
 nnoremap <C-h> :bprevious<CR>
+nnoremap <leader>bd :1,100bd<CR>
 
 " slimux
 map <leader>$ :SlimuxShellPrompt<CR>
