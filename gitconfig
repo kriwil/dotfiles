@@ -6,7 +6,7 @@
 [user]
 	name = Aldiantoro Nugroho
 	email = kriwil@gmail.com
-	signingkey = FC397DE0
+	signingkey = 51BC40F26542DC6A
 [color]
 	ui = true
 [alias]
@@ -22,3 +22,5 @@
 	host = https://gitlab.com
 	user = kriwil
 
+[commit]
+	gpgsign = true
