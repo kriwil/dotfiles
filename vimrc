@@ -196,9 +196,12 @@ let g:gist_post_private = 1
 
 " language client
 let g:LanguageClient_serverCommands = { 
-    \ 'reason': ['ocaml-language-server', '--stdio'],
-    \ 'ocaml': ['ocaml-language-server', '--stdio'],
+    \ 'reason': ['~/bin/reason-language-server.exe'],
     \ }
+" let g:LanguageClient_serverCommands = {
+"     \ 'reason': ['ocaml-language-server', '--stdio'],
+"     \ 'ocaml': ['ocaml-language-server', '--stdio'],
+"     \ }
 
 " python
 " pdb
