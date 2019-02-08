@@ -159,6 +159,9 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
+" language server
+nnoremap <leader>fm :call LanguageClient_textDocument_formatting()<cr>
+
 " set python bin for neovim
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
