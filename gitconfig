@@ -21,8 +21,9 @@
 [gitlab]
 	host = https://gitlab.com
 	user = kriwil
-
 [commit]
 	gpgsign = true
 [gpg]
 	program = gpg
+[remote "origin"]
+	prune = true
