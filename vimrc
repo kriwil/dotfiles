@@ -94,7 +94,7 @@ set incsearch
 " set list " whitespace sign
 " set listchars=tab:▸\ ,trail:·,eol:¬
 set nobackup " doesn't create backup
-set relativenumber " relative number
+set number relativenumber " line number and relative line number
 set ruler
 set scrolloff=3 " scroll 3 lines before border
 set secure " disable unsafe commands in local .vimrc files
