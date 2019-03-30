@@ -33,6 +33,6 @@ windows:
   - code:
       layout: even-horizontal
       panes:
-        - python pacescheduler/manage.py runserver
         - vim
+        - python pacescheduler/manage.py runserver
   - test: python pacescheduler/manage.py test client
