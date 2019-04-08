@@ -43,4 +43,8 @@ root: ~/
 # post: tmux -CC attach -t system
 
 windows:
-  - watch: glances -C ~/.config/glances
+  - code:
+      layout: main-vertical
+      panes:
+        - glances -C ~/.config/glances
+        - cd ~/Workspace/statusci && watch -n300 pipenv run python main.py
