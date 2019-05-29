@@ -21,6 +21,7 @@ Plug 'mklabs/split-term.vim' " :terminal utility
 Plug 'gruvbox-community/gruvbox' " theme
 Plug 'posva/vim-vue' " vue
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
+Plug 'rhysd/git-messenger.vim'
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
