@@ -48,3 +48,5 @@ windows:
       panes:
         - glances -C ~/.config/glances
         - cd ~/Workspace/statusci && watch -n300 pipenv run python main.py
+        - dmesg -w
+        - ping google.com

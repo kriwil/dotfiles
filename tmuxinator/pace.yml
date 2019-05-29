@@ -31,10 +31,11 @@ pre_window: source .venv/bin/activate
 
 windows:
   - shell:
-      layout: even-horizontal
+      layout: tiled
       panes:
-        - git status
         - python pacescheduler/manage.py runserver
+        - python pacescheduler/manage.py celeryd -B --loglevel=INFO -n pace.local -Q default
+        - git status
   - test:
       layout: main-vertical
       panes:
