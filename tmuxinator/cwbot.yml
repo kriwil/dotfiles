@@ -5,8 +5,11 @@ root: ~/Workspace/cwbot
 
 windows:
   - logs:
-      layout: even-horizontal
+      layout: tiled
       panes:
-        - ls
-        - ls
-        - ls
+        - docker logs -f cwbot3_kriwil
+        - docker logs -f cwbot3_justalittlebrain
+        - docker logs -f cwbot3_unusedusername
+        - docker logs -f cwbot3_random000
+        - docker logs -f cwbot3_embi1234
+        - docker logs -f cwbot3_arjuna13

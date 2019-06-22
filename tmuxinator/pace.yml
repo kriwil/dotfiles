@@ -39,6 +39,5 @@ windows:
   - test:
       layout: main-vertical
       panes:
-      panes:
         - vim
         - python pacescheduler/manage.py test client

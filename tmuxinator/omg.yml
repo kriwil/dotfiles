@@ -1,7 +1,7 @@
-# /home/aldi/.tmuxinator/system.yml
+# /home/aldi/.tmuxinator/omg.yml
 
-name: system
-root: ~/
+name: omg
+root: ~/Workspace/omg
 
 # Optional tmux socket
 # socket_name: foo
@@ -23,6 +23,7 @@ root: ~/
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
+pre_window: pipenv shell
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -40,13 +41,15 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t system
+# post: tmux -CC attach -t omg
 
 windows:
-  - code:
+  - editor:
       layout: main-vertical
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
       panes:
-        - glances -C ~/.config/glances
-        - cd ~/Workspace/statusci && watch -n300 pipenv run python main.py
-        - dmesg -w
-        - watch -n120 /home/aldi/bin/cwfun.sh
+        - vim
+        - python manage.py runserver 
+  - git: git status
