@@ -112,7 +112,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 unsetopt AUTO_CD
 
-[ -s "/usr/share/io.elementary.terminal/enable-zsh-completion-notifications" ] && builtin . /usr/share/io.elementary.terminal/enable-zsh-completion-notifications || builtin true
+# [ -s "/usr/share/io.elementary.terminal/enable-zsh-completion-notifications" ] && builtin . /usr/share/io.elementary.terminal/enable-zsh-completion-notifications || builtin true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
