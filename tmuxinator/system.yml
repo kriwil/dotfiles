@@ -49,4 +49,4 @@ windows:
         - glances -C ~/.config/glances
         - cd ~/Workspace/statusci && watch -n300 pipenv run python main.py
         - dmesg -w
-        - watch -n120 /home/aldi/bin/cwfun.sh
+        - watch -n600 /home/aldi/bin/cwfun.sh

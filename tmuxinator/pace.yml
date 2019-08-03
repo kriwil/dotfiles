@@ -34,10 +34,7 @@ windows:
       layout: tiled
       panes:
         - python pacescheduler/manage.py runserver
-        - python pacescheduler/manage.py celeryd -B --loglevel=INFO -n pace.local -Q default
+        - python pacescheduler/manage.py celeryd -B --loglevel=INFO
         - git status
-  - test:
-      layout: main-vertical
-      panes:
-        - vim
-        - python pacescheduler/manage.py test client
+  - code: vim
+  - test: deactivate && cd ../pace-merge && git checkout master && git pull && ./.venv/bin/pip install -r requirements.txt && ./.venv/bin/python pacescheduler/manage.py test shift

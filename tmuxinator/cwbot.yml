@@ -1,15 +1,25 @@
 # ~/.tmuxinator/cwbot.yml
 
 name: cwbot
-root: ~/Workspace/cwbot
+root: ~/Workspace/cwbot-neo
 
 windows:
-  - logs:
+  - parser:
       layout: tiled
       panes:
-        - docker logs -f cwbot3_kriwil
-        - docker logs -f cwbot3_justalittlebrain
-        - docker logs -f cwbot3_unusedusername
-        - docker logs -f cwbot3_random000
-        - docker logs -f cwbot3_embi1234
-        - docker logs -f cwbot3_arjuna13
+        - ./parser.sh kriwil
+        - ./parser.sh justalittlebrain
+        - ./parser.sh unusedusername
+        - ./parser.sh random000
+        - ./parser.sh embi1234
+        - ./parser.sh arjuna13
+
+  - runner:
+      layout: tiled
+      panes:
+        - tail -f ~/log/cwbot3_kriwil.log
+        - tail -f ~/log/cwbot3_justalittlebrain.log
+        - tail -f ~/log/cwbot3_unusedusername.log
+        - tail -f ~/log/cwbot3_random000.log
+        - tail -f ~/log/cwbot3_embi1234.log
+        - tail -f ~/log/cwbot3_arjuna13.log
