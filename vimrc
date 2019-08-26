@@ -95,6 +95,7 @@ set ignorecase " ignore case search
 set incsearch
 " set list " whitespace sign
 " set listchars=tab:▸\ ,trail:·,eol:¬
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set nobackup " doesn't create backup
 set number relativenumber " line number and relative line number
 set ruler
@@ -193,6 +194,12 @@ let g:elm_make_output_file = "elm.js"
 let g:elm_make_show_warnings = 0
 let g:elm_setup_keybindings = 1
 
+" fold
+set foldmethod=syntax " syntax highlighting items specify folds
+set foldcolumn=1 " defines 1 col at window left, to indicate folding
+let javaScript_fold=1 " activate folding by JS syntax
+set foldlevelstart=99 " start file with all folds opened
+
 " let g:mix_format_on_save = 1
 
 " gist
@@ -201,7 +208,7 @@ let g:gist_post_private = 1
 
 " language client
 let g:LanguageClient_serverCommands = { 
-    \ 'reason': ['~/bin/reason-language-server.exe'],
+    \ 'reason': ['~/bin/reason-language-server'],
     \ }
 " let g:LanguageClient_serverCommands = {
 "     \ 'reason': ['ocaml-language-server', '--stdio'],
@@ -211,6 +218,11 @@ let g:LanguageClient_serverCommands = {
 " python
 " pdb
 nnoremap <leader>p Oimport pdb; pdb.set_trace()<Esc>
+
+" pre save
+" autocmd BufWritePre * %s/\s\+$//e
+" autocmd BufWritePre * :%s/\s+$//e
+
 source ~/.vimrc.python
 
 " " numbers
