@@ -11,7 +11,7 @@ root: ~/Workspace/mark/pacescheduler
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
-pre_window: source .venv/bin/activate
+# pre_window: source .venv/bin/activate
 
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
