@@ -11,6 +11,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
+Plug 'gruvbox-community/gruvbox' " theme
 Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
@@ -18,7 +19,6 @@ Plug 'mattn/webapi-vim' " used by gist-vim
 Plug 'mhinz/vim-mix-format'  " mix format wrapper
 Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
-Plug 'gruvbox-community/gruvbox' " theme
 Plug 'posva/vim-vue' " vue
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
 Plug 'rhysd/git-messenger.vim'
@@ -63,6 +63,7 @@ Plug 'ncm2/ncm2-jedi'
 " Plug 'kballard/vim-swift' " swift syntax, used by syntastic
 " Plug 'kchmck/vim-coffee-script' " coffee syntax
 " Plug 'klen/python-mode' " the python complete stuff
+" Plug 'tmhedberg/SimpylFold' " python fold
 
 call plug#end()
 
@@ -197,8 +198,9 @@ let g:elm_setup_keybindings = 1
 " fold
 set foldmethod=syntax " syntax highlighting items specify folds
 set foldcolumn=1 " defines 1 col at window left, to indicate folding
-let javaScript_fold=1 " activate folding by JS syntax
 set foldlevelstart=99 " start file with all folds opened
+
+let javaScript_fold=1 " activate folding by JS syntax
 
 " let g:mix_format_on_save = 1
 
