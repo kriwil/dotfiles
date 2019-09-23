@@ -19,6 +19,7 @@ Plug 'mattn/webapi-vim' " used by gist-vim
 Plug 'mhinz/vim-mix-format'  " mix format wrapper
 Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
+Plug 'ntpeters/vim-better-whitespace' " highlight extra whitespace
 Plug 'posva/vim-vue' " vue
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
 Plug 'rhysd/git-messenger.vim'
