@@ -12,6 +12,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
 Plug 'gruvbox-community/gruvbox' " theme
+Plug 'huyvohcmc/atlas.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
