@@ -84,7 +84,7 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-colorscheme gruvbox
+colorscheme atlas  " gruvbox
 syntax on
 
 set clipboard=unnamed " osx clipboard
@@ -209,6 +209,11 @@ let javaScript_fold=1 " activate folding by JS syntax
 " gist
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
+
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
+
 
 " language client
 let g:LanguageClient_serverCommands = { 
