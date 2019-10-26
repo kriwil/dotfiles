@@ -17,6 +17,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-mix-format'  " mix format wrapper
 Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
@@ -201,6 +202,7 @@ let g:elm_setup_keybindings = 1
 set foldmethod=syntax " syntax highlighting items specify folds
 set foldcolumn=1 " defines 1 col at window left, to indicate folding
 set foldlevelstart=99 " start file with all folds opened
+set showtabline=2
 
 let javaScript_fold=1 " activate folding by JS syntax
 
@@ -214,9 +216,17 @@ let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ }
 
+let g:lightline#bufferline#show_number = 1
+let g:lightline#bufferline#shorten_path = 1
+let g:lightline#bufferline#unnamed = '[No Name]'
+
+" let g:lightline = {}
+let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type = {'buffers': 'tabsel'}
 
 " language client
-let g:LanguageClient_serverCommands = { 
+let g:LanguageClient_serverCommands = {
     \ 'reason': ['~/bin/reason-language-server'],
     \ }
 " let g:LanguageClient_serverCommands = {
