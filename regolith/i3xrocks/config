@@ -47,9 +47,10 @@ min_width=100%
 # Battery indicator
 #
 # The battery instance defaults to 0.
-# [battery]
+[battery]
+label=BAT 
+interval=30
 # label= 
-# interval=30
 
 [memory]
 label=RAM 
@@ -66,6 +67,6 @@ interval=5
 # Date Time
 #
 [time]
-label=TODAY
+label=TODAY 
 interval=60
 
