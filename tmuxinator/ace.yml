@@ -1,13 +1,13 @@
-# /home/aldi/.tmuxinator/system.yml
+# /home/aldi/.config/tmuxinator/ace.yml
 
-name: system
+name: ace
 root: ~/
 
 # Optional tmux socket
 # socket_name: foo
 
-# Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
 
 # Project hooks
 # Runs on project start, always
@@ -39,16 +39,8 @@ root: ~/
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
 
-# Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t system
-
 windows:
-  - code:
-      layout: main-vertical
+  - players:
       panes:
-        - glances -C ~/.config/glances
-        - cd ~/Workspace/statusci && watch -n300 pipenv run python main.py
-        - dmesg -w
-  - hijrah: cd $HOME/Workspace/hijrah/project-hijrah
-  - docker: cd $HOME/Workspace/servers
-  - pace: cd $HOME/Workspace/mark/pacescheduler
+        - acestreamplayer.engine --client-console
+        - acestreamplayer
