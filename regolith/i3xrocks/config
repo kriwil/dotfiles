@@ -47,9 +47,9 @@ min_width=100%
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
-label=BAT 
-interval=30
+# [battery2]
+# label=BAT 
+# interval=30
 # label= 
 
 [memory]
