@@ -26,6 +26,7 @@ Plug 'posva/vim-vue' " vue
 Plug 'reasonml-editor/vim-reason-plus' " reason for vim
 Plug 'rhysd/git-messenger.vim'
 Plug 'scrooloose/nerdtree' " simple tree file manager
+Plug 'smallwat3r/vim-simplicity'
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'w0rp/ale'
@@ -85,7 +86,7 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-colorscheme atlas  " gruvbox
+colorscheme simplicity  " atlas gruvbox
 syntax on
 
 set clipboard=unnamed " osx clipboard

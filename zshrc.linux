@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias tmux="tmux -2"
 alias vim="nvim"
-alias ipm="/usr/lib/inkdrop/resources/app/ipm/bin/ipm"
+alias xclip="xclip -selection c"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
