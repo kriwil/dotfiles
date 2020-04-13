@@ -1,0 +1,56 @@
+! -- Styles - Colors
+#include "/etc/regolith/styles/ubuntu/color"
+
+! Typeface: Ubuntu
+#define typeface_bar_glyph  Ubuntu Mono 11
+#define typeface_wm         Ubuntu Medium 12
+#define typeface_bar        pango:FontAwesome 12
+#define typeface_rofi       Ubuntu Medium 12
+#define typeface_terminal   Ubuntu Mono:pixelsize=12:antialias=true:autohint=true
+
+#define typeface_bar_glyph_wifi 
+#define typeface_bar_glyph_wired 
+#define typeface_bar_glyph_up ▴
+#define typeface_bar_glyph_dn ▾
+#define typeface_bar_glyph_cpu 
+#define typeface_bar_glyph_battery_100 
+#define typeface_bar_glyph_battery_80 
+#define typeface_bar_glyph_battery_50 
+#define typeface_bar_glyph_battery_20 
+#define typeface_bar_glyph_battery_0 
+#define typeface_bar_glyph_battery_charging 
+#define typeface_bar_glyph_battery_ac 
+#define typeface_bar_glyph_battery_unknown 
+#define typeface_bar_glyph_time 
+#define typeface_bar_glyph_workspace 
+
+#define typeface_bar_glyph_media_playing 
+#define typeface_bar_glyph_media_paused 
+
+#define typeface_bar_glyph_notify_none 
+#define typeface_bar_glyph_notify_some 
+#define typeface_bar_glyph_notify_error 
+#define typeface_bar_glyph_help 
+#define typeface_bar_glyph_thermometer 
+
+#define typeface_bar_glyph_sound S
+#define typeface_bar_glyph_mute M
+#define typeface_bar_glyph_memory R
+#define typeface_bar_glyph_hours R
+
+#define typeface_bar_glyph_on +
+#define typeface_bar_glyph_off -
+
+#define typeface_bar_glyph_numlock N
+#define typeface_bar_glyph_capslock C
+
+! -- Styles - Theme
+#include "/etc/regolith/styles/ubuntu/theme"
+
+! -- Applications
+! These files map values defined above into specific app settings.
+#include "/etc/regolith/styles/st-term"
+#include "/etc/regolith/styles/i3-wm"
+#include "/etc/regolith/styles/i3xrocks"
+#include "/etc/regolith/styles/rofi"
+#include "/etc/regolith/styles/gnome"
