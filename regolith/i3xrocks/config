@@ -94,6 +94,9 @@ min_width=100%
 command=/usr/share/i3xrocks/rofication-statusi3blocks.py
 interval=10
 
+[temperature2]
+interval=10
+
 # Date Time
 [time2]
 interval=10

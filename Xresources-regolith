@@ -1,17 +1,17 @@
 ! -- Styles - Colors
-#include "/etc/regolith/styles/ubuntu/color"
+#include "/etc/regolith/styles/ayu-dark/color"
 
-! Typeface: Ubuntu
-#define typeface_bar_glyph  Ubuntu Mono 11
-#define typeface_wm         Ubuntu Medium 12
-#define typeface_bar        pango:FontAwesome 12
-#define typeface_rofi       Ubuntu Medium 12
-#define typeface_terminal   Ubuntu Mono:pixelsize=12:antialias=true:autohint=true
+! Typeface: Source Code Pro
+#define typeface_bar_glyph  Source Code Pro Medium 11
+#define typeface_wm         Source Code Pro Medium 11
+#define typeface_bar        pango:Source Code Pro Medium 11, FontAwesome 11
+#define typeface_rofi       Source Code Pro Medium 14
+#define typeface_terminal   Source Code Pro:pixelsize=14:antialias=true:autohint=true
 
 #define typeface_bar_glyph_wifi 
 #define typeface_bar_glyph_wired 
-#define typeface_bar_glyph_up ▴
-#define typeface_bar_glyph_dn ▾
+#define typeface_bar_glyph_up 
+#define typeface_bar_glyph_dn 
 #define typeface_bar_glyph_cpu 
 #define typeface_bar_glyph_battery_100 
 #define typeface_bar_glyph_battery_80 
@@ -36,7 +36,6 @@
 #define typeface_bar_glyph_sound S
 #define typeface_bar_glyph_mute M
 #define typeface_bar_glyph_memory R
-#define typeface_bar_glyph_hours R
 
 #define typeface_bar_glyph_on +
 #define typeface_bar_glyph_off -
@@ -45,7 +44,7 @@
 #define typeface_bar_glyph_capslock C
 
 ! -- Styles - Theme
-#include "/etc/regolith/styles/ubuntu/theme"
+#include "/etc/regolith/styles/ayu-dark/theme"
 
 ! -- Applications
 ! These files map values defined above into specific app settings.
