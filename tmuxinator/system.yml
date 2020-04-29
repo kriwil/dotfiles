@@ -43,10 +43,10 @@ root: ~/
 # post: tmux -CC attach -t system
 
 windows:
+  - monitor: $HOME/Workspace/bashtop/bashtop
   - code:
-      layout: main-vertical
+      layout: even-vertical
       panes:
-        - glances -C ~/.config/glances
         - cd ~/Workspace/statusci && watch -n300 pipenv run python main.py
         - dmesg -w
   - hijrah: cd $HOME/Workspace/hijrah/project-hijrah
