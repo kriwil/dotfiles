@@ -7,6 +7,7 @@
 	name = Aldiantoro Nugroho
 	email = kriwil@gmail.com
 	signingkey = 51BC40F26542DC6A
+	signinkey = 51BC40F26542DC6A
 [color]
 	ui = true
 [alias]
