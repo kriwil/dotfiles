@@ -11,8 +11,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
-Plug 'gruvbox-community/gruvbox' " theme
-Plug 'huyvohcmc/atlas.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
@@ -31,6 +29,12 @@ Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
+
+" colorscheme
+Plug 'fxn/vim-monochrome'
+Plug 'Lokaltog/vim-monotone'
+Plug 'gruvbox-community/gruvbox' " theme
+Plug 'huyvohcmc/atlas.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -86,7 +90,11 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-colorscheme simplicity  " atlas gruvbox
+let g:monotone_emphasize_comments = 1 " Emphasize comments
+colorscheme monotone
+" colorscheme gruvbox
+" colorscheme atlas
+" colorscheme simplicity  " atlas gruvbox
 syntax on
 
 set clipboard=unnamed " osx clipboard
