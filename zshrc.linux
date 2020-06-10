@@ -124,6 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export ANDROID_SDK=$HOME/Android/Sdk
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
+export PATH=$HOME/flutter/bin:$PATH
 
 # go
 export GOPATH="$HOME/go/"
