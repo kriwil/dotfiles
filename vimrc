@@ -134,6 +134,7 @@ let mapleader = ","
 
 " fzf
 map <C-p> :Files<CR>
+map <C-g> :Buffers<CR>
 
 " ack
 cnoreabbrev Ack Ack!
