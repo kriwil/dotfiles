@@ -52,4 +52,8 @@ windows:
   - hijrah: cd $HOME/Workspace/hijrah/project-hijrah
   - docker: cd $HOME/Workspace/servers
   - pace: cd $HOME/Workspace/mark/pacescheduler
-  - cwbot: cd $HOME/Workspace/cwbot-neo && pipenv run python parser.py unusedusername
+  - cwbot:
+      layout: even-vertical
+      panes:
+        - cd $HOME/Workspace/cwbot-neo && pipenv run python parser.py unusedusername
+        - cd $HOME/Workspace/cwbot-neo && watch -n60 pipenv run python checker.py

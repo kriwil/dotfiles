@@ -1,7 +1,7 @@
 # /home/aldi/.config/tmuxinator/kbb.yml
 
 name: kbb
-root: ~/Workspace/kbb/kbb-reason
+root: ~/Workspace/kbb
 
 # Optional tmux socket
 # socket_name: foo
@@ -40,8 +40,9 @@ root: ~/Workspace/kbb/kbb-reason
 # attach: false
 
 windows:
-  - code: vim
-  - shell:
+  - backend: cd backend && git status
+  - frontend:
       layout: tiled
-        - git status
-        - yarn server
+      panes:
+        - cd frontend && git status
+        - cd frontend && yarn dev

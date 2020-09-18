@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter' " show what's changed in vcs
 Plug 'arrufat/vala.vim'  " vala syntax
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
@@ -27,7 +28,6 @@ Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'smallwat3r/vim-simplicity'
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
-Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
 
 " colorscheme
@@ -35,6 +35,7 @@ Plug 'fxn/vim-monochrome'
 Plug 'Lokaltog/vim-monotone'
 Plug 'gruvbox-community/gruvbox' " theme
 Plug 'huyvohcmc/atlas.vim'
+Plug 'jaredgorski/fogbell.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -184,6 +185,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
 let g:ale_fixers = {
     \ 'css': ['prettier'],
+    \ 'elixir': ['mix_format'],
     \ 'javascript': ['prettier'],
     \ 'python': ['black'],
     \ }
@@ -194,7 +196,7 @@ let g:ale_fix_on_save = 1
 let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
 let g:ale_python_black_options = '--safe'
 let g:ale_python_flake8_options = '--ignore=E501'
-let g:ale_javascript_prettier_options = '--single-quote'
+" let g:ale_javascript_prettier_options = '--single-quote'
 let g:ale_javascript_prettier_use_local_config = 1
 
 " elm
