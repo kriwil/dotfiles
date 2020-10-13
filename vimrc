@@ -36,6 +36,9 @@ Plug 'Lokaltog/vim-monotone'
 Plug 'gruvbox-community/gruvbox' " theme
 Plug 'huyvohcmc/atlas.vim'
 Plug 'jaredgorski/fogbell.vim'
+Plug 'reedes/vim-colors-pencil'
+Plug 'pbrisbin/vim-colors-off'
+Plug 'andreasvc/vim-256noir'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

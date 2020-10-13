@@ -131,3 +131,6 @@ export GOPATH="$HOME/go/"
 
 # pycharm
 export PATH="$PATH:$HOME/Applications/pycharm-2019.2.1/bin"
+
+# gpg
+export GPG_TTY=$(tty)
