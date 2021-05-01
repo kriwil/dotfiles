@@ -96,7 +96,6 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 eval "$(direnv hook zsh)"
 
-# export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin:`yarn global bin`
 export CLICOLOR=1
 export PIPENV_VENV_IN_PROJECT=1
 export TERM=xterm-256color
@@ -106,19 +105,16 @@ export LANG=en_US.UTF-8
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-[ -s "$HOME/.rvm/scripts/rvm" ] && source $HOME/.rvm/scripts/rvm
+# export PATH="$PATH:$HOME/.rvm/bin"
+# [ -s "$HOME/.rvm/scripts/rvm" ] && source $HOME/.rvm/scripts/rvm
 
 unsetopt AUTO_CD
 
-# [ -s "/usr/share/io.elementary.terminal/enable-zsh-completion-notifications" ] && builtin . /usr/share/io.elementary.terminal/enable-zsh-completion-notifications || builtin true
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -s "$HOME/.poetry/env" ] && source $HOME/.poetry/env
 
@@ -129,8 +125,8 @@ export PATH=$HOME/flutter/bin:$PATH
 # go
 export GOPATH="$HOME/go/"
 
-# pycharm
-export PATH="$PATH:$HOME/Applications/pycharm-2019.2.1/bin"
-
 # gpg
 export GPG_TTY=$(tty)
+
+# asdf
+. $HOME/.asdf/asdf.sh
