@@ -13,33 +13,21 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'epeli/slimux' " tmux integration
 Plug 'itchyny/lightline.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim' " gist integration
 Plug 'mattn/webapi-vim' " used by gist-vim
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'mhinz/vim-mix-format'  " mix format wrapper
 Plug 'mileszs/ack.vim' " ack in vim
 Plug 'mklabs/split-term.vim' " :terminal utility
 Plug 'ntpeters/vim-better-whitespace' " highlight extra whitespace
-Plug 'posva/vim-vue' " vue
-Plug 'reasonml-editor/vim-reason-plus' " reason for vim
 Plug 'rhysd/git-messenger.vim'
 Plug 'scrooloose/nerdtree' " simple tree file manager
-Plug 'smallwat3r/vim-simplicity'
 Plug 'tpope/vim-commentary' " easy way to comment the code
 Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
 
 " colorscheme
-" Plug 'fxn/vim-monochrome'
 Plug 'Lokaltog/vim-monotone'
 " Plug 'gruvbox-community/gruvbox' " theme
-" Plug 'huyvohcmc/atlas.vim'
-" Plug 'jaredgorski/fogbell.vim'
-" Plug 'reedes/vim-colors-pencil'
-" Plug 'pbrisbin/vim-colors-off'
-" Plug 'andreasvc/vim-256noir'
-Plug 'gilgigilgil/anderson.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -50,33 +38,6 @@ Plug 'ncm2/ncm2'  " formerly nvim-completion-manager
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-jedi'
-
-
-" " syntax
-" Plug 'bling/vim-airline' " working statusline
-" Plug 'davidhalter/jedi-vim' " autocomplete
-" Plug 'digitaltoad/vim-jade'
-" Plug 'hdima/vim-scripts'
-" Plug 'othree/html5.vim'
-" Plug 'othree/xml.vim'
-" Plug 'saltstack/salt-vim'
-" Plug 'szw/vim-ctrlspace' " workspace thing
-" Plug 'mattn/emmet-vim' " html
-
-" Plug 'tpope/vim-markdown' " markdown syntax
-" Plug 'tpope/vim-unimpaired' " pairs of handy bracket mappings
-" Plug 'scrooloose/syntastic' " syntax thing
-" Plug 'tmhedberg/matchit' " html match %
-" Plug 'majutsushi/tagbar'
-" Plug 'matchit.zip'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'python.vim--Vasiliev'
-" Plug 'gregsexton/MatchTag' " highlight matching html tag
-" Plug 'groenewege/vim-less' " less syntax
-" Plug 'kballard/vim-swift' " swift syntax, used by syntastic
-" Plug 'kchmck/vim-coffee-script' " coffee syntax
-" Plug 'klen/python-mode' " the python complete stuff
-" Plug 'tmhedberg/SimpylFold' " python fold
 
 call plug#end()
 
@@ -98,8 +59,6 @@ endif
 let g:monotone_emphasize_comments = 1 " Emphasize comments
 colorscheme monotone
 " colorscheme gruvbox
-" colorscheme atlas
-" colorscheme simplicity  " atlas gruvbox
 syntax on
 
 set clipboard=unnamed " osx clipboard
@@ -243,9 +202,9 @@ let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type = {'buffers': 'tabsel'}
 
 " language client
-let g:LanguageClient_serverCommands = {
-    \ 'reason': ['~/bin/reason-language-server'],
-    \ }
+" let g:LanguageClient_serverCommands = {
+"     \ 'reason': ['~/bin/reason-language-server'],
+"     \ }
 " let g:LanguageClient_serverCommands = {
 "     \ 'reason': ['ocaml-language-server', '--stdio'],
 "     \ 'ocaml': ['ocaml-language-server', '--stdio'],
