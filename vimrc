@@ -134,6 +134,7 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType reason setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
@@ -151,6 +152,8 @@ let g:ale_fixers = {
     \ 'css': ['prettier'],
     \ 'elixir': ['mix_format'],
     \ 'javascript': ['prettier'],
+    \ 'typescript': ['prettier'],
+    \ 'typescriptreact': ['prettier'],
     \ 'python': ['black'],
     \ }
 let g:ale_linters = {
