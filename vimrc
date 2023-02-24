@@ -154,7 +154,7 @@ let g:ale_fixers = {
     \ 'javascript': ['prettier'],
     \ 'typescript': ['prettier'],
     \ 'typescriptreact': ['prettier'],
-    \ 'python': ['black'],
+    \ 'python': ['black', 'isort'],
     \ }
 let g:ale_linters = {
     \ 'python': ['flake8'],
