@@ -221,7 +221,7 @@ nnoremap <leader>p Oimport pdb; pdb.set_trace()<Esc>
 " autocmd BufWritePre * %s/\s\+$//e
 " autocmd BufWritePre * :%s/\s+$//e
 
-source ~/.vimrc.python
+" source ~/.vimrc.python
 
 " " numbers
 " set rnu
