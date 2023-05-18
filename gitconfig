@@ -16,7 +16,7 @@
 	oneline = log --pretty=oneline
 	lf = show --pretty="format:" --name-only
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	trim = "!f() { git branch | grep -v \"\\*\" | xargs -n 1 git branch -D; }; f"
+	trim = "!f() { git branch --merged| grep -v \"\\*\" | xargs -n 1 git branch -D; }; f"
 [github]
 	user = kriwil
 [gitlab]
