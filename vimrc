@@ -26,8 +26,9 @@ Plug 'tpope/vim-fugitive' " git integration
 Plug 'wakatime/vim-wakatime'
 
 " colorscheme
-Plug 'Lokaltog/vim-monotone'
+" Plug 'Lokaltog/vim-monotone'
 " Plug 'gruvbox-community/gruvbox' " theme
+Plug 'pbrisbin/vim-colors-off'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -43,7 +44,7 @@ call plug#end()
 
 filetype plugin indent on
 
-set background=dark
+set background=light
 set encoding=utf-8
 set mouse=a
 set noshowmode
@@ -56,9 +57,12 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-let g:monotone_emphasize_comments = 1 " Emphasize comments
-colorscheme monotone
+" let g:monotone_emphasize_comments = 1 " Emphasize comments
+" let g:monotone_color = [10, 5, 60] " light mode monotone
+" let g:monotone_contrast_factor = -0.4
+" colorscheme monotone
 " colorscheme gruvbox
+colorscheme off
 syntax on
 
 set clipboard=unnamed " osx clipboard
@@ -192,7 +196,7 @@ let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'one',
       \ }
 
 let g:lightline#bufferline#show_number = 1
