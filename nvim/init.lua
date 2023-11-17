@@ -12,9 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-require("lualine").setup({
-	options = { theme = "onelight", section_separators = "", component_separators = "" }
-})
 
 vim.cmd.colorscheme("off")
 vim.cmd.syntax("on")
