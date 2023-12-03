@@ -103,4 +103,5 @@ source $HOME/.profile
 alias vim=nvim
 
 # Created by `pipx` on 2023-10-18 22:44:43
-export PATH="$PATH:/Users/aldi/.local/bin"
+export PATH="$PATH:/usr/local/go/bin:/Users/aldi/.local/bin"
+export DISABLE_AUTO_TITLE='true'
