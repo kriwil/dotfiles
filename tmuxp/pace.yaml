@@ -9,7 +9,7 @@ windows:
     shell_command_before: source .venv/bin/activate
     panes:
       - nvim
-      - python manage.py migrate && python manage.py runserver
+      - null  # python manage.py migrate && python manage.py runserver
   - window_name: data
     start_directory: data
     panes:

@@ -1,0 +1,8 @@
+session_name: dotfiles
+start_directory: ~/Workspace/dotfiles/
+windows:
+  - window_name: main
+    layout: even-horizontal
+    panes:
+      - nvim
+      - git pull
