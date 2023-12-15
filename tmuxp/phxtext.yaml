@@ -1,0 +1,8 @@
+session_name: phxtext
+start_directory: ~/Workspace/phxtext/
+windows:
+  - window_name: main
+    layout: even-horizontal
+    panes:
+      - nvim
+      - mix phx.server
