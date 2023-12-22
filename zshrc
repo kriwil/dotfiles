@@ -73,7 +73,7 @@ ZSH_CUSTOM=$HOME/Workspace/dotfiles/zsh_custom
 plugins=(git asdf brew direnv history history-substring-search tmux)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.profile
+source $HOME/.zprofile
 
 # User configuration
 

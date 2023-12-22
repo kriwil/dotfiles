@@ -1,0 +1,9 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+# Created by `pipx` on 2023-10-18 22:44:43
+export PATH="$PATH:/Users/aldi/.local/bin"
+
+. "$HOME/.cargo/env"
