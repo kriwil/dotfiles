@@ -102,6 +102,8 @@ source $HOME/.zprofile
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 
+export GPG_TTY=$(tty)
+
 # Created by `pipx` on 2023-10-18 22:44:43
 export PATH="$PATH:/usr/local/go/bin:/Users/aldi/.local/bin"
 export DISABLE_AUTO_TITLE='true'
