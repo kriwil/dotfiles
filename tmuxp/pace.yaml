@@ -16,6 +16,6 @@ windows:
       - npm run tailwind-watch --prefix ./jstoolchain
       - null  # python manage.py migrate && python manage.py runserver
   - window_name: data
-    start_directory: data
+    start_directory: data/clients
     panes:
       - null
