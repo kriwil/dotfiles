@@ -54,45 +54,18 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_dead_keys = false
 config.scrollback_lines = 5000
 
-config.disable_default_key_bindings = true
+-- config.disable_default_key_bindings = true
 config.keys = {
-	{ key = "m", mods = "SUPER", action = act.Hide },
-	{ key = "h", mods = "SUPER", action = act.HideApplication },
-	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
-	{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
-	{ key = "Copy", action = act.CopyTo("Clipboard") },
-	{ key = "Paste", action = act.PasteFrom("Clipboard") },
-
-	{ key = "r", mods = "SUPER|SHIFT", action = act.ReloadConfiguration },
-	{ key = "p", mods = "SUPER|SHIFT", action = act.ActivateCommandPalette },
-
-	{ key = "f", mods = "SUPER", action = act.Search({ CaseSensitiveString = "" }) },
-
-	{ key = "t", mods = "SUPER", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "w", mods = "SUPER", action = act.CloseCurrentTab({ confirm = true }) },
 	{ key = "LeftArrow", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
 	{ key = "RightArrow", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
-	{ key = "1", mods = "SUPER", action = act.ActivateTab(0) },
-	{ key = "2", mods = "SUPER", action = act.ActivateTab(1) },
-	{ key = "3", mods = "SUPER", action = act.ActivateTab(2) },
-	{ key = "4", mods = "SUPER", action = act.ActivateTab(3) },
-	{ key = "5", mods = "SUPER", action = act.ActivateTab(4) },
-	{ key = "6", mods = "SUPER", action = act.ActivateTab(5) },
-	{ key = "7", mods = "SUPER", action = act.ActivateTab(6) },
-	{ key = "8", mods = "SUPER", action = act.ActivateTab(7) },
-	{ key = "9", mods = "SUPER", action = act.ActivateTab(8) },
-	{ key = "0", mods = "SUPER", action = act.ActivateTab(-1) },
 
-	{ key = "v", mods = "SUPER|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "s", mods = "SUPER|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-	{ key = "z", mods = "SUPER|SHIFT", action = act.TogglePaneZoomState },
-	{ key = "w", mods = "SUPER|SHIFT", action = act.CloseCurrentPane({ confirm = true }) },
 	{ key = "LeftArrow", mods = "SUPER", action = act.ActivatePaneDirection("Left") },
 	{ key = "RightArrow", mods = "SUPER", action = act.ActivatePaneDirection("Right") },
 	{ key = "UpArrow", mods = "SUPER", action = act.ActivatePaneDirection("Up") },
 	{ key = "DownArrow", mods = "SUPER", action = act.ActivatePaneDirection("Down") },
 
-	{ key = "l", mods = "ALT", action = act.ShowLauncher },
+	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = act.SwitchWorkspaceRelative(-1) },
+	{ key = "RightArrow", mods = "CTRL|SHIFT", action = act.SwitchWorkspaceRelative(1) },
 }
 
 return config
