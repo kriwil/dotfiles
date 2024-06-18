@@ -3,8 +3,14 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 local act = wezterm.action
+local mux = wezterm.mux
 
-config.color_scheme = "PaperColor Light (base16)"
+wezterm.on("gui-startup", function()
+	local tab, pane, window = mux.spawn_window({})
+	window:gui_window():maximize()
+end)
+
+config.color_scheme = "Catppuccin Latte"
 
 config.font = wezterm.font("EnvyCodeR Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font_size = 12.
@@ -66,6 +72,14 @@ config.keys = {
 
 	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = act.SwitchWorkspaceRelative(-1) },
 	{ key = "RightArrow", mods = "CTRL|SHIFT", action = act.SwitchWorkspaceRelative(1) },
+}
+
+config.ssh_domains = {
+	{
+		name = "raspi",
+		remote_address = "192.168.68.103",
+		username = "pi",
+	},
 }
 
 return config
