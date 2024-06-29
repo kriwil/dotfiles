@@ -10,7 +10,8 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 
-config.color_scheme = "Catppuccin Latte"
+-- config.color_scheme = "Catppuccin Latte"
+config.color_scheme = "zenbones"
 
 config.font = wezterm.font("EnvyCodeR Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font_size = 12.
