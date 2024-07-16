@@ -7,3 +7,5 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 export PATH="$PATH:/Users/aldi/.local/bin"
 
 . "$HOME/.cargo/env"
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
