@@ -14,11 +14,11 @@ end)
 config.color_scheme = "zenbones"
 
 config.font = wezterm.font("EnvyCodeR Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
-config.font_size = 12.
+config.font_size = 13.
 
 config.window_frame = {
 	font = wezterm.font({ family = "Roboto", weight = "Bold" }),
-	font_size = 12.0,
+	font_size = 13.0,
 
 	active_titlebar_bg = "rgba(202 202 203 1)",
 	inactive_titlebar_bg = "rgba(202 202 203 1)",
@@ -80,6 +80,12 @@ config.ssh_domains = {
 		name = "raspi",
 		remote_address = "192.168.68.103",
 		username = "pi",
+	},
+
+	{
+		name = "storm",
+		remote_address = "192.168.68.106",
+		username = "aldi",
 	},
 }
 
