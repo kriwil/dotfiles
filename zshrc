@@ -110,3 +110,7 @@ export DISABLE_AUTO_TITLE='true'
 
 # Created by `pipx` on 2024-07-20 16:23:53
 export PATH="$PATH:/home/aldi/.local/bin"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
