@@ -10,8 +10,8 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 
--- config.color_scheme = "Catppuccin Latte"
-config.color_scheme = "zenbones"
+config.color_scheme = "Catppuccin Latte"
+-- config.color_scheme = "zenbones"
 
 config.font = wezterm.font("EnvyCodeR Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font_size = 13.
@@ -78,8 +78,8 @@ config.keys = {
 config.ssh_domains = {
 	{
 		name = "raspi",
-		remote_address = "192.168.68.103",
-		username = "pi",
+		remote_address = "192.168.68.111",
+		username = "aldi",
 	},
 
 	{
