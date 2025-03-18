@@ -105,7 +105,7 @@ alias vim=nvim
 export GPG_TTY=$(tty)
 
 # Created by `pipx` on 2023-10-18 22:44:43
-export PATH="$PATH:/usr/local/go/bin:/Users/aldi/.local/bin"
+export PATH="$PATH:/usr/local/go/bin"
 export DISABLE_AUTO_TITLE='true'
 
 # Created by `pipx` on 2024-07-20 16:23:53
