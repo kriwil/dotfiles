@@ -1,0 +1,5 @@
+set relativenumber
+set which-key
+map <Space> <Leader>
+
+Plug 'tpope/vim-commentary'
