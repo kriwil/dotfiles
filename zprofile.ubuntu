@@ -1,4 +1,1 @@
 . "$HOME/.cargo/env"
-
-# Created by `pipx` on 2024-07-20 16:23:53
-export PATH="$PATH:/home/aldi/.local/bin"

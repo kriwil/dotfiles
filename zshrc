@@ -70,7 +70,7 @@ ZSH_CUSTOM=$HOME/Workspace/dotfiles/zsh_custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf brew direnv history history-substring-search tmux)
+plugins=(git brew direnv history history-substring-search tmux)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zprofile
@@ -114,3 +114,6 @@ export PATH="$PATH:/home/aldi/.local/bin"
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+
+export ASDF_DATA_DIR=/home/aldi/.asdf
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
