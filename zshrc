@@ -109,11 +109,16 @@ export PATH="$PATH:/usr/local/go/bin"
 export DISABLE_AUTO_TITLE='true'
 
 # Created by `pipx` on 2024-07-20 16:23:53
-export PATH="$PATH:/home/aldi/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
 
-export ASDF_DATA_DIR=/home/aldi/.asdf
+export ASDF_DATA_DIR=$HOME/.asdf
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/aldi/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

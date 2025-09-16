@@ -6,3 +6,6 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 . "$HOME/.cargo/env"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# docker
+export PATH="$PATH:$HOME/.docker/bin"
