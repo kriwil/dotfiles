@@ -10,7 +10,7 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 
-config.color_scheme = "zenbones_dark"
+config.color_scheme = "zenbones_light"
 
 config.font = wezterm.font("EnvyCodeR Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font_size = 11.
