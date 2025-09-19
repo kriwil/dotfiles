@@ -11,7 +11,7 @@ wezterm.on("gui-startup", function()
 end)
 
 -- config.color_scheme = "Catppuccin Latte"
-config.color_scheme = "zenbones_dark"
+config.color_scheme = "zenbones_light"
 -- config.color_scheme = "zenwritten_light"
 
 config.font = wezterm.font("EnvyCodeR Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
