@@ -271,7 +271,7 @@ load_plugins {
 web_client {
     font "monospace"
 }
- 
+
 // Use a simplified UI without special fonts (arrow glyphs)
 // Options:
 //   - true
@@ -283,7 +283,6 @@ web_client {
 // Default: default
 // 
 // theme "dracula"
-theme "iceberg-light"
 
 // Choose the base input mode of zellij.
 // Default: normal
@@ -531,3 +530,18 @@ theme "iceberg-light"
 // can be useful for removing wrappers around commands
 // Note: be sure to escape backslashes and similar characters properly
 // post_command_discovery_hook "echo $RESURRECT_COMMAND | sed <your_regex_here>"
+  
+// theme "ansi"
+// ui {
+//   pane_frames {
+//     rounded_corners true
+//   }
+// }
+
+ui {
+  pane_frames {
+    rounded_corners true
+  }
+}
+
+theme "zenbones_light"
