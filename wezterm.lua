@@ -10,7 +10,6 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 
--- config.color_scheme = "Catppuccin Latte"
 config.color_scheme = "zenbones_light"
 -- config.color_scheme = "zenwritten_light"
 
@@ -20,44 +19,7 @@ config.font_size = 14.
 config.window_frame = {
 	font = wezterm.font({ family = "Roboto", weight = "Bold" }),
 	font_size = 13.0,
-
-	-- active_titlebar_bg = "rgba(202 202 203 1)",
-	-- inactive_titlebar_bg = "rgba(202 202 203 1)",
 }
-
--- config.colors = {
--- 	tab_bar = {
--- 		inactive_tab_edge = "rgba(202 202 203 1)",
---
--- 		active_tab = {
--- 			bg_color = "rgba(228 228 229 1)",
--- 			fg_color = "#404040",
--- 		},
---
--- 		inactive_tab = {
--- 			bg_color = "rgba(202 202 203 1)",
--- 			fg_color = "#808080",
--- 		},
---
--- 		inactive_tab_hover = {
--- 			bg_color = "rgba(228 228 229 1)",
--- 			fg_color = "#808080",
--- 		},
---
--- 		new_tab = {
--- 			bg_color = "rgba(202 202 203 1)",
--- 			fg_color = "#808080",
--- 		},
---
--- 		new_tab_hover = {
--- 			bg_color = "rgba(228 228 229 1)",
--- 			fg_color = "#808080",
--- 		},
--- 	},
--- }
-
-config.use_fancy_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = true
 
 config.use_dead_keys = false
 config.scrollback_lines = 5000
@@ -101,5 +63,66 @@ config.unix_domains = {
 -- domain on startup.
 -- If you prefer to connect manually, leave out this line.
 config.default_gui_startup_args = { "connect", "unix" }
+
+-- Make WezTerm look like macOS Terminal (Tahoe/Sequoia style)
+config.window_decorations = "TITLE|RESIZE" -- native titlebar
+config.tab_max_width = 24
+config.show_new_tab_button_in_tab_bar = true
+
+-- Titlebar colors to match macOS light chrome
+config.window_frame = {
+	font = wezterm.font({ family = "Roboto", weight = "Bold" }),
+	font_size = 13.0,
+	active_titlebar_bg = "#E4E4E5", -- light neutral
+	inactive_titlebar_bg = "#E4E4E5",
+}
+
+-- Tab bar colors: soft active tab, muted inactive, subtle edge
+config.colors = config.colors or {}
+config.colors.tab_bar = {
+	background = "#E4E4E5", -- bar background (blends with titlebar)
+	inactive_tab_edge = "rgba(0,0,0,0.08)",
+
+	active_tab = {
+		bg_color = "#F2F2F3", -- slightly lighter “pill”
+		fg_color = "#303030",
+		intensity = "Normal",
+		italic = false,
+		strikethrough = false,
+		underline = "None",
+	},
+
+	inactive_tab = {
+		bg_color = "#CACACB", -- muted gray
+		fg_color = "#5F5F5F",
+	},
+
+	inactive_tab_hover = {
+		bg_color = "#D9D9DA", -- hover lift
+		fg_color = "#4A4A4A",
+	},
+
+	new_tab = {
+		bg_color = "#CACACB",
+		fg_color = "#5F5F5F",
+	},
+
+	new_tab_hover = {
+		bg_color = "#D9D9DA",
+		fg_color = "#303030",
+	},
+}
+
+-- Add gentle left/right padding so the active tab feels “pill-like”
+wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
+	local title = wezterm.truncate_right(tab.active_pane.title, max_width - 2)
+	local pad_l = "  "
+	local pad_r = "  "
+	return {
+		{ Background = { Color = tab.is_active and "#F2F2F3" or (hover and "#D9D9DA" or "#CACACB") } },
+		{ Foreground = { Color = tab.is_active and "#303030" or (hover and "#4A4A4A" or "#5F5F5F") } },
+		{ Text = pad_l .. title .. pad_r },
+	}
+end)
 
 return config
