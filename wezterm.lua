@@ -103,25 +103,25 @@ table.insert(config.hyperlink_rules, {
 })
 
 -- ===== Right status (workspace · host · battery · time) ====================
-wezterm.on("update-right-status", function(window, pane)
-	local bat = ""
-	for _, b in ipairs(wezterm.battery_info()) do
-		local pct = math.floor(b.state_of_charge * 100)
-		local ico = (b.state == "Charging") and "" or ""
-		bat = string.format(" %s %d%%", ico, pct)
-		break
-	end
-
-	local ws = window:active_workspace()
-	local host = wezterm.hostname()
-	local time = wezterm.strftime("%a %d %b %H:%M")
-
-	window:set_right_status(wezterm.format({
-		{ Background = { Color = "#E4E4E5" } }, -- light bg
-		{ Foreground = { Color = "#303030" } }, -- dark readable text
-		{ Text = "  " .. ws .. " · " .. host .. bat .. " · " .. time .. "  " },
-	}))
-end)
+-- wezterm.on("update-right-status", function(window, pane)
+-- 	local bat = ""
+-- 	for _, b in ipairs(wezterm.battery_info()) do
+-- 		local pct = math.floor(b.state_of_charge * 100)
+-- 		local ico = (b.state == "Charging") and "" or ""
+-- 		bat = string.format(" %s %d%%", ico, pct)
+-- 		break
+-- 	end
+--
+-- 	local ws = window:active_workspace()
+-- 	local host = wezterm.hostname()
+-- 	local time = wezterm.strftime("%a %d %b %H:%M")
+--
+-- 	window:set_right_status(wezterm.format({
+-- 		{ Background = { Color = "#E4E4E5" } }, -- light bg
+-- 		{ Foreground = { Color = "#303030" } }, -- dark readable text
+-- 		{ Text = "  " .. ws .. " · " .. host .. bat .. " · " .. time .. "  " },
+-- 	}))
+-- end)
 
 -- ===== Keys: tabs, panes, workspaces, splits, resize =======================
 config.keys = {
