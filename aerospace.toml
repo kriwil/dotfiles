@@ -85,6 +85,42 @@ automatically-unhide-macos-hidden-apps = false
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
 
+[[on-window-detected]]
+    if.app-id = 'com.jetbrains.pycharm'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+    if.app-id = 'org.mozilla.firefox'
+    run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+    if.app-id = 'com.openai.chat'
+    run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+    if.app-id = 'com.mitchellh.ghostty'
+    run = 'move-node-to-workspace 6'
+
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+    if.app-id = 'com.jonny.mona'
+    run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+    if.app-id = 'ru.keepcoder.Telegram'
+    run = 'move-node-to-workspace 9'
+
 [workspace-to-monitor-force-assignment]
   1 = 'secondary'
   2 = 'secondary'
