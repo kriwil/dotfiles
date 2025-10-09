@@ -103,7 +103,7 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
     if.app-id = 'com.mitchellh.ghostty'
-    run = 'move-node-to-workspace 6'
+    run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
     if.app-id = 'md.obsidian'
