@@ -76,10 +76,10 @@ automatically-unhide-macos-hidden-apps = false
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main']
 
-    alt-shift-left = ['join-with left', 'mode main']
-    alt-shift-down = ['join-with down', 'mode main']
-    alt-shift-up = ['join-with up', 'mode main']
-    alt-shift-right = ['join-with right', 'mode main']
+    ctrl-shift-left = ['join-with left', 'mode main']
+    ctrl-shift-down = ['join-with down', 'mode main']
+    ctrl-shift-up = ['join-with up', 'mode main']
+    ctrl-shift-right = ['join-with right', 'mode main']
 
     down = 'volume down'
     up = 'volume up'
