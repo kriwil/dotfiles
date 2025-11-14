@@ -6,7 +6,7 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 
 -- ===== Colors / fonts =======================================================
-config.color_scheme = "zenbones_light"
+config.color_scheme = "zenbones_dark"
 
 -- Prefer your font, but fall back gracefully (incl. emoji)
 config.font = wezterm.font_with_fallback({
