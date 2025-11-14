@@ -44,15 +44,15 @@ PaperWM:bindHotkeys({
 	toggle_floating = { { "alt", "cmd", "shift" }, "escape" },
 
 	-- focus the first / second / etc window in the current space
-	focus_window_1 = { { "cmd", "shift" }, "1" },
-	focus_window_2 = { { "cmd", "shift" }, "2" },
-	focus_window_3 = { { "cmd", "shift" }, "3" },
-	focus_window_4 = { { "cmd", "shift" }, "4" },
-	focus_window_5 = { { "cmd", "shift" }, "5" },
-	focus_window_6 = { { "cmd", "shift" }, "6" },
-	focus_window_7 = { { "cmd", "shift" }, "7" },
-	focus_window_8 = { { "cmd", "shift" }, "8" },
-	focus_window_9 = { { "cmd", "shift" }, "9" },
+	focus_window_1 = { { "alt" }, "1" },
+	focus_window_2 = { { "alt" }, "2" },
+	focus_window_3 = { { "alt" }, "3" },
+	focus_window_4 = { { "alt" }, "4" },
+	focus_window_5 = { { "alt" }, "5" },
+	focus_window_6 = { { "alt" }, "6" },
+	focus_window_7 = { { "alt" }, "7" },
+	focus_window_8 = { { "alt" }, "8" },
+	focus_window_9 = { { "alt" }, "9" },
 
 	-- switch to a new Mission Control space
 	switch_space_l = { { "alt", "shift" }, "," },
