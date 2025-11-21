@@ -1,2 +1,2 @@
-RPROMPT='$(git_prompt_info) %2~'
+RPROMPT='$(git_super_status) %2~'
 PROMPT='$ '
