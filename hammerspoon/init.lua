@@ -81,3 +81,19 @@ PaperWM:bindHotkeys({
 PaperWM.swipe_fingers = 3
 PaperWM.swipe_gain = 1.0
 PaperWM:start()
+
+hs.loadSpoon("FocusMode")
+-- Optional: tweak settings before start
+-- spoon.FocusMode.dimAlpha = 0.45
+-- spoon.FocusMode.mouseDim = true
+-- spoon.FocusMode.windowCornerRadius = 6
+-- spoon.FocusMode.eventSettleDelay = 0.03 -- smoother with tilers
+
+-- Optional: custom hotkeys
+-- spoon.FocusMode:bindHotkeys({
+--   start = { {"ctrl","alt","cmd"}, "I" },
+--   stop  = { {"ctrl","alt","cmd"}, "O" },
+-- })
+
+-- Start (you can also use the hotkey)
+spoon.FocusMode:start()
