@@ -81,7 +81,3 @@ PaperWM:bindHotkeys({
 PaperWM.swipe_fingers = 3
 PaperWM.swipe_gain = 1.0
 PaperWM:start()
-
-ActiveSpace = hs.loadSpoon("ActiveSpace")
-ActiveSpace.compact = true
-ActiveSpace:start()
