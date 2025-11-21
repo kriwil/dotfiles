@@ -2,15 +2,15 @@ PaperWM = hs.loadSpoon("PaperWM")
 
 PaperWM:bindHotkeys({
 	-- switch to a new focused window in tiled grid
-	focus_left = { { "ctrl", "shift" }, "left" },
-	focus_right = { { "ctrl", "shift" }, "right" },
-	focus_up = { { "ctrl", "shift" }, "up" },
-	focus_down = { { "ctrl", "shift" }, "down" },
+	focus_left = { { "alt", "cmd" }, "left" },
+	focus_right = { { "alt", "cmd" }, "right" },
+	focus_up = { { "alt", "cmd" }, "up" },
+	focus_down = { { "alt", "cmd" }, "down" },
 
 	-- switch windows by cycling forward/backward
 	-- (forward = down or right, backward = up or left)
-	focus_prev = { { "ctrl", "shift" }, "j" },
-	focus_next = { { "ctrl", "shift" }, "y" },
+	focus_prev = { { "alt", "cmd" }, "j" },
+	focus_next = { { "alt", "cmd" }, "y" },
 
 	-- move windows around in tiled grid
 	swap_left = { { "cmd", "shift" }, "left" },
@@ -44,15 +44,15 @@ PaperWM:bindHotkeys({
 	toggle_floating = { { "alt", "cmd", "shift" }, "escape" },
 
 	-- focus the first / second / etc window in the current space
-	focus_window_1 = { { "alt" }, "1" },
-	focus_window_2 = { { "alt" }, "2" },
-	focus_window_3 = { { "alt" }, "3" },
-	focus_window_4 = { { "alt" }, "4" },
-	focus_window_5 = { { "alt" }, "5" },
-	focus_window_6 = { { "alt" }, "6" },
-	focus_window_7 = { { "alt" }, "7" },
-	focus_window_8 = { { "alt" }, "8" },
-	focus_window_9 = { { "alt" }, "9" },
+	-- focus_window_1 = { { "ctrl", "shift" }, "1" },
+	-- focus_window_2 = { { "ctrl", "shift" }, "2" },
+	-- focus_window_3 = { { "ctrl", "shift" }, "3" },
+	-- focus_window_4 = { { "ctrl", "shift" }, "4" },
+	-- focus_window_5 = { { "ctrl", "shift" }, "5" },
+	-- focus_window_6 = { { "ctrl", "shift" }, "6" },
+	-- focus_window_7 = { { "ctrl", "shift" }, "7" },
+	-- focus_window_8 = { { "ctrl", "shift" }, "8" },
+	-- focus_window_9 = { { "ctrl", "shift" }, "9" },
 
 	-- switch to a new Mission Control space
 	switch_space_l = { { "alt", "shift" }, "," },
@@ -82,7 +82,7 @@ PaperWM.swipe_fingers = 3
 PaperWM.swipe_gain = 1.0
 PaperWM:start()
 
-hs.loadSpoon("FocusMode")
+-- hs.loadSpoon("FocusMode")
 -- Optional: tweak settings before start
 -- spoon.FocusMode.dimAlpha = 0.45
 -- spoon.FocusMode.mouseDim = true
@@ -96,4 +96,4 @@ hs.loadSpoon("FocusMode")
 -- })
 
 -- Start (you can also use the hotkey)
-spoon.FocusMode:start()
+-- spoon.FocusMode:start()
