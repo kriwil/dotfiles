@@ -66,12 +66,6 @@ PaperWM:bindHotkeys({
     swap_up    = {{"alt", "cmd", "shift"}, "up"},
     swap_down  = {{"alt", "cmd", "shift"}, "down"},
 
-    -- alternative: swap entire columns, rather than
-    -- individual windows (to be used instead of
-    -- swap_left / swap_right bindings)
-    -- swap_column_left = {{"alt", "cmd", "shift"}, "left"},
-    -- swap_column_right = {{"alt", "cmd", "shift"}, "right"},
-
     -- position and resize focused window
     center_window        = {{"alt", "cmd"}, "c"},
     full_width           = {{"alt", "cmd"}, "f"},
@@ -149,6 +143,9 @@ modal:bind({}, "h", nil, actions.focus_left)
 modal:bind({}, "j", nil, actions.focus_down)
 modal:bind({}, "k", nil, actions.focus_up)
 modal:bind({}, "l", nil, actions.focus_right)
+modal:bind({}, "escape", function() modal:exit() end)
+
+PaperWM:start()
 ```
 
 `PaperWM:start()` will begin automatically tiling new and existing windows.

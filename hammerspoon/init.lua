@@ -79,6 +79,7 @@ PaperWM:bindHotkeys({
 	move_window_9 = { { "alt", "ctrl", "shift" }, "9" },
 })
 PaperWM.swipe_fingers = 3
+PaperWM.swipe_gain = 1.0
 PaperWM:start()
 
 ActiveSpace = hs.loadSpoon("ActiveSpace")
