@@ -1,0 +1,11 @@
+# Environment variables
+. "/nix/store/8na6r9kbyn2h6a480cr9bxrrjc5l37hl-hm-session-vars.sh/etc/profile.d/hm-session-vars.sh"
+
+# Only source this once
+if [[ -z "$__HM_ZSH_SESS_VARS_SOURCED" ]]; then
+  export __HM_ZSH_SESS_VARS_SOURCED=1
+  
+fi
+
+ZSH="/nix/store/d6aalzc5biw53vmk4viyagmk0xk3cjx1-oh-my-zsh-2025-11-23/share/oh-my-zsh";
+ZSH_CACHE_DIR="/home/aldi/.cache/oh-my-zsh";

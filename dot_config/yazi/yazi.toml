@@ -1,0 +1,72 @@
+[[open.rules]]
+mime = "image/*"
+use = "swayimg"
+
+[[open.rules]]
+mime = "application/pdf"
+use = "zathura"
+
+[[open.rules]]
+mime = "video/*"
+use = "mpv"
+
+[[open.rules]]
+name = "*.zip"
+use = "extract"
+
+[[open.rules]]
+name = "*.tar.gz"
+use = "extract"
+
+[[open.rules]]
+name = "*.tgz"
+use = "extract"
+
+[[open.rules]]
+name = "*.tar.xz"
+use = "extract"
+
+[[open.rules]]
+mime = "application/zip"
+use = "extract"
+
+[[open.rules]]
+mime = "application/gzip"
+use = "extract"
+
+[[open.rules]]
+mime = "application/x-tar"
+use = "extract"
+
+[[open.rules]]
+mime = "application/x-xz"
+use = "extract"
+
+[[open.rules]]
+name = "fallback"
+use = "default"
+
+[[opener.default]]
+block = false
+desc = "Open with system default"
+run = "xdg-open \"$@\""
+
+[[opener.extract]]
+block = true
+desc = "Extract archive into directory named after file"
+run = "file=\"$1\"\nbase=\"$(basename \"$file\")\"\n\n# Remove multiple extensions: .tar.gz, .tar.xz, .zip, etc.\ndir=\"$base\"\ndir=\"${dir%.tar.gz}\"\ndir=\"${dir%.tar.xz}\"\ndir=\"${dir%.tgz}\"\ndir=\"${dir%.tar}\"\ndir=\"${dir%.zip}\"\n\nmkdir -p \"$dir\"\nbsdtar -xf \"$file\" -C \"$dir\"\n"
+
+[[opener.mpv]]
+block = false
+desc = "Play video with mpv"
+run = "mpv \"$@\""
+
+[[opener.swayimg]]
+block = true
+desc = "View image with swayimg"
+run = "swayimg \"$@\""
+
+[[opener.zathura]]
+block = true
+desc = "View PDF with zathura"
+run = "zathura \"$@\""
