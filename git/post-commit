@@ -1,6 +1,0 @@
-#!/bin/sh
-# With this git-hook every commit is immeditely pushed to origin
- 
-branch=$(git rev-parse --abbrev-ref HEAD)
-echo Pushing commit to origin/$branch
-git push -u origin $branch

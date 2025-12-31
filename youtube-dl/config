@@ -1,4 +1,0 @@
--f 22
--o "%(upload_date)s-%(title)s-%(id)s.%(ext)s"
--w
--i
