@@ -4,4 +4,5 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 # if uwsm check may-start && uwsm select; then
 #   exec uwsm start default
 # fi
+
 eval "$(atuin init zsh)"
