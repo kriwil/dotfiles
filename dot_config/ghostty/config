@@ -1,0 +1,5 @@
+copy-on-select = clipboard
+font-family = "EnvyCodeR Nerd Font Mono"
+font-size = 14
+font-thicken = true
+theme = dark:Zenbones Dark,light:Zenbones Light
