@@ -1,7 +1,7 @@
 return {
   {
-    "mcchrish/zenbones.nvim",
-    dependencies = { "rktjmp/lush.nvim" },
+    "zenbones-theme/zenbones.nvim",
+    dependencies = { "rktjmp/lush.nvim", lazy = false, priority = 1000 },
   },
   {
     "tinted-theming/tinted-vim",
