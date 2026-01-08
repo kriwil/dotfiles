@@ -7,9 +7,12 @@ return {
     "tinted-theming/tinted-vim",
   },
   {
+    "oskarnurm/koda.nvim",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "zenbones",
+      colorscheme = "koda",
     },
   },
 }
