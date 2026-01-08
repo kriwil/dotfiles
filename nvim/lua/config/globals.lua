@@ -7,5 +7,3 @@ vim.cmd.filetype("plugin indent on")
 local g = vim.g
 g.mapleader = " "
 g.maplocalleader = " "
-
--- vim: ts=2 sts=2 sw=2 et

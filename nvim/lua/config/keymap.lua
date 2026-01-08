@@ -18,5 +18,3 @@ map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]ui
 -- or just use <C-\><C-n> to exit terminal mode
 map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 map("n", "<C-/>", "<cmd>terminal<CR>i", { desc = "Open terminal" })
-
--- vim: ts=2 sts=2 sw=2 et

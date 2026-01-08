@@ -1,8 +1,4 @@
 vim.pack.add({
-  "https://github.com/nvim-tree/nvim-web-devicons", -- requied for bufferline
-  "https://github.com/rktjmp/lush.nvim", -- required for zenbones
-  "https://github.com/nvim-lua/plenary.nvim", -- required or todo-comments
-
   "https://github.com/akinsho/bufferline.nvim",
   "https://github.com/folke/which-key.nvim",
   "https://github.com/folke/todo-comments.nvim",
@@ -22,5 +18,3 @@ vim.cmd("colorscheme zenbones")
 vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete current buffer" })
 vim.keymap.set("n", "<leader>bo", "<cmd>BufferLineCloseOthers<CR>", { desc = "Delete other buffers" })
 vim.keymap.set("n", "<C-b>", "<cmd>BufferLineCycleNext<CR>", { desc = "Cycle next buffer" })
-
--- vim: ts=2 sts=2 sw=2 et

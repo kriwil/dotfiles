@@ -8,7 +8,7 @@ vim.pack.add({
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "lua",
-    "python"
+    "python",
   },
   auto_install = false,
   highlight = {
@@ -36,5 +36,3 @@ vim.api.nvim_create_autocmd("PackChanged", {
     end
   end,
 })
-
--- vim: ts=2 sts=2 sw=2 et
