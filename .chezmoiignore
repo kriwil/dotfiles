@@ -1,4 +1,6 @@
 {{ if eq .chezmoi.os "linux" }}
 .aerospace.toml
 .config/ghostty
+.config/sketchybar
+.hammerspoon
 {{ end }}
