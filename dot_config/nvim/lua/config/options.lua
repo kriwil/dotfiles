@@ -4,7 +4,7 @@
 
 -- vim.opt.background = "light"
 vim.g.lazyvim_python_ruff = "ruff"
-vim.g.zenbones_lightness = "bright"
+-- vim.g.zenbones_lightness = "bright"
 
 if vim.g.neovide then
   vim.o.guifont = "EnvyCodeR Nerd Font Mono:h14"
