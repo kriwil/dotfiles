@@ -159,7 +159,7 @@ require("bufferline").setup()
 require("todo-comments").setup()
 
 -- require("koda").setup({ transparent = true })
-vim.cmd("colorscheme zenbones")
+vim.cmd("colorscheme koda")
 
 -- bufferline
 -- TODO: Add keybinds for cycling buffers
@@ -244,4 +244,9 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" 
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "Telescope find files" })
 
+vim.pack.add({
+  "https://github.com/folke/trouble.nvim",
+})
+
 vim.cmd.filetype("plugin indent on")
+vim.lsp.enable("pyright")
