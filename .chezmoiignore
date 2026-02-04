@@ -1,3 +1,6 @@
+{{ if eq .chezmoi.os "darwin" }}
+.config/nvim/lua/plugins//mason.lua
+{{ end }}
 {{ if eq .chezmoi.os "linux" }}
 .aerospace.toml
 .config/borders
