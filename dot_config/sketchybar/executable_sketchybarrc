@@ -5,8 +5,8 @@ sketchybar --bar position=top height=32 blur_radius=100 color=0xff000000 padding
 default=(
   padding_left=5
   padding_right=5
-  icon.font="Hack Nerd Font:Bold:16.0"
-  label.font="SF Compact:Bold:14.0"
+  icon.font="Hack Nerd Font:Normal:16.0"
+  label.font="SF Compact:Normal:14.0"
   icon.color=0xffffffff
   label.color=0xffffffff
   icon.padding_left=4
@@ -68,17 +68,17 @@ sketchybar --add item front_app center \
 sketchybar --add item clock right \
            --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
            --add item volume right \
-           --set volume icon.font="SF Compact:Bold:14.0" script="$PLUGIN_DIR/volume.sh" \
+           --set volume icon.font="SF Compact:Normal:14.0" script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change \
            --add item battery right \
-           --set battery update_freq=120 icon.font="SF Compact:Bold:14.0" script="$PLUGIN_DIR/battery.sh" \
+           --set battery update_freq=120 icon.font="SF Compact:Normal:14.0" script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
            --add item memory right \
-           --set memory update_freq=10 icon.font="SF Compact:Bold:14.0" script="$PLUGIN_DIR/memory.sh" \
+           --set memory update_freq=10 icon.font="SF Compact:Normal:14.0" script="$PLUGIN_DIR/memory.sh" \
            --add item cpu right \
-           --set cpu update_freq=5 icon.font="SF Compact:Bold:14.0" script="$PLUGIN_DIR/cpu.sh" \
+           --set cpu update_freq=5 icon.font="SF Compact:Normal:14.0" script="$PLUGIN_DIR/cpu.sh" \
            --add item network right \
-           --set network update_freq=2 icon.font="SF Compact:Bold:14.0" script="$PLUGIN_DIR/network.sh"
+           --set network update_freq=2 icon.font="SF Compact:Normal:14.0" script="$PLUGIN_DIR/network.sh"
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

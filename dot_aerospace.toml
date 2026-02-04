@@ -1,7 +1,7 @@
-after-startup-command = [
-  'exec-and-forget sketchybar',
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
-]
+# after-startup-command = [
+#   'exec-and-forget sketchybar',
+#   'exec-and-forget borders'
+# ]
 
 exec-on-workspace-change = ['/bin/bash', '-c',
     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE'
@@ -26,12 +26,12 @@ automatically-unhide-macos-hidden-apps = false
     preset = 'qwerty'
 
 [gaps]
-    inner.horizontal = 8
-    inner.vertical =   8
-    outer.left =       8
-    outer.bottom =     8
-    outer.top =        8
-    outer.right =      8
+    inner.horizontal = 12
+    inner.vertical =   12 
+    outer.left =       12 
+    outer.bottom =     12 
+    outer.top =        12 
+    outer.right =      12
 
 [mode.main.binding]
 
