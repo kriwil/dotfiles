@@ -6,6 +6,7 @@
 .aerospace.toml
 .config/borders
 .config/ghostty
+.config/rift
 .config/sketchybar
 .hammerspoon
 {{ end }}
