@@ -2,11 +2,12 @@
 .config/nvim/lua/plugins//mason.lua
 {{ end }}
 {{ if eq .chezmoi.os "linux" }}
-.zshrc
 .aerospace.toml
 .config/borders
 .config/ghostty
 .config/rift
 .config/sketchybar
+.config/zellij
 .hammerspoon
+.zshrc
 {{ end }}
