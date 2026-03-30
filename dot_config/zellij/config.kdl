@@ -296,7 +296,7 @@ web_client {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "ansi"
+theme "flexoki-light"
  
 // Choose the base input mode of zellij.
 // Default: normal
