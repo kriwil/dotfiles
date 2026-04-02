@@ -326,6 +326,7 @@ theme "flexoki-light"
 // (Requires restart)
 // 
 // theme_dir "/tmp"
+theme_dir "/Users/aldi/.config/zellij/themes"
  
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
