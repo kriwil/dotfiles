@@ -5,5 +5,8 @@
 
 if [ "$SENDER" = "volume_change" ]; then
 	VOLUME="$INFO"
-	sketchybar --set "$NAME" icon="VOL" label="$VOLUME%"
+else
+  VOLUME=$(osascript -e 'output volume of (get volume settings)')
 fi
+
+sketchybar --set "$NAME" icon="󰕾" label="$VOLUME%"

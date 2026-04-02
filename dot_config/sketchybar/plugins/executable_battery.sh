@@ -6,4 +6,4 @@ if [ "$PERCENTAGE" = "" ]; then
 	exit 0
 fi
 
-sketchybar --set "$NAME" icon="BAT" label="${PERCENTAGE}%"
+sketchybar --set "$NAME" icon="󰁹" label="${PERCENTAGE}%"

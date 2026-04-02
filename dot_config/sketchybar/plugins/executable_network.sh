@@ -6,7 +6,7 @@ INTERFACE="en0"
 # Cache file to store previous values
 CACHE_FILE="/tmp/sketchybar_network_stats"
 
-# Get current stats
+# Get current stats (column 7: Ibytes, column 10: Obytes)
 CURRENT_STATS=$(netstat -ib | grep -e "$INTERFACE" | awk '{print $7":"$10}' | head -1)
 CURRENT_RX=$(echo "$CURRENT_STATS" | cut -d: -f1)
 CURRENT_TX=$(echo "$CURRENT_STATS" | cut -d: -f2)
@@ -30,20 +30,21 @@ if [ -f "$CACHE_FILE" ]; then
 		RX_RATE=$((RX_BYTES / TIME_DIFF))
 		TX_RATE=$((TX_BYTES / TIME_DIFF))
 
-		# Convert to human readable format (KB/s or MB/s)
-		if [ "$RX_RATE" -ge 1048576 ]; then
-			RX_DISPLAY=$(echo "$RX_RATE" | awk '{printf "%.1fM", $1/1048576}')
-		else
-			RX_DISPLAY=$(echo "$RX_RATE" | awk '{printf "%.0fK", $1/1024}')
-		fi
+		format_speed() {
+			local RATE=$1
+			if [ "$RATE" -ge 1048576 ]; then
+				echo "$RATE" | awk '{printf "%.1fMB/s", $1/1048576}'
+			elif [ "$RATE" -ge 1024 ]; then
+				echo "$RATE" | awk '{printf "%.1fKB/s", $1/1024}'
+			else
+				echo "${RATE}B/s"
+			fi
+		}
 
-		if [ "$TX_RATE" -ge 1048576 ]; then
-			TX_DISPLAY=$(echo "$TX_RATE" | awk '{printf "%.1fM", $1/1048576}')
-		else
-			TX_DISPLAY=$(echo "$TX_RATE" | awk '{printf "%.0fK", $1/1024}')
-		fi
+		RX_DISPLAY=$(format_speed "$RX_RATE")
+		TX_DISPLAY=$(format_speed "$TX_RATE")
 
-		sketchybar --set "$NAME" icon="NET" label="↓${RX_DISPLAY} ↑${TX_DISPLAY}"
+		sketchybar --set "$NAME" icon="󰀂" label="↓${RX_DISPLAY} ↑${TX_DISPLAY}"
 	fi
 fi
 
