@@ -76,7 +76,15 @@ local function delete_buffers(targets)
   local deleting_current = vim.tbl_contains(targets, current)
 
   if deleting_current then
-    vim.cmd("enew")
+    local remaining = vim.tbl_filter(function(buf)
+      return not vim.tbl_contains(targets, buf)
+    end, listed_buffers())
+
+    if #remaining > 0 then
+      vim.api.nvim_set_current_buf(remaining[1])
+    else
+      vim.cmd("enew")
+    end
   end
 
   for _, buf in ipairs(targets) do
