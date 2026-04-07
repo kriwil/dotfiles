@@ -75,14 +75,17 @@ vim.pack.add({
     version = "master",
   },
   "https://github.com/neovim/nvim-lspconfig",
-  "https://github.com/nvim-mini/mini.nvim", -- lightweight git diff signs
+  "https://github.com/nvim-mini/mini.nvim", -- mini.diff, mini.git, mini.icons, mini.statusline
   "https://github.com/rktjmp/lush.nvim", -- zenbones requirement
   "https://github.com/mcchrish/zenbones.nvim", -- colorscheme
   "https://github.com/oskarnurm/koda.nvim", -- colorscheme
   "https://github.com/folke/snacks.nvim", -- file picker/search
-  "https://github.com/nvim-tree/nvim-web-devicons", -- optional icons for picker results
+  "https://github.com/nvim-tree/nvim-web-devicons", -- compatibility for plugins expecting the real module
 })
 vim.cmd("colorscheme zenbones")
+
+local icons = require("config.icons")
+icons.setup()
 
 local buffers = require("config.buffers")
 buffers.setup()
@@ -108,7 +111,6 @@ git.setup()
 
 local statusline = require("config.statusline")
 statusline.setup()
-statusline.refresh_highlights()
 
 -- [[ Plugins stuff ]]
 
