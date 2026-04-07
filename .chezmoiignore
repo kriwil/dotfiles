@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.os "darwin" }}
-.config/nvim/lua/plugins//mason.lua
+.config/nvim/lua/plugins/mason.lua
 {{ end }}
 {{ if eq .chezmoi.os "linux" }}
 .aerospace.toml
@@ -12,5 +12,6 @@
 .hammerspoon
 .zshrc
 {{ end }}
+.config/nvim/lazy-lock.json
 AGENTS.md
 RTK.md
