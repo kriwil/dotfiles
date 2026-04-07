@@ -70,6 +70,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.pack.add({
+  {
+    src = "https://github.com/nvim-treesitter/nvim-treesitter",
+    version = "master",
+  },
+  "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/nvim-mini/mini.nvim", -- lightweight git diff signs
   "https://github.com/rktjmp/lush.nvim", -- zenbones requirement
   "https://github.com/mcchrish/zenbones.nvim", -- colorscheme
@@ -86,8 +91,14 @@ buffers.refresh_highlights()
 local pickers = require("config.pickers")
 pickers.setup()
 
+local treesitter = require("config.treesitter")
+treesitter.setup()
+
 local python = require("config.python")
 python.setup()
+
+local lua_support = require("config.lua")
+lua_support.setup()
 
 local diagnostics = require("config.diagnostics")
 diagnostics.setup()

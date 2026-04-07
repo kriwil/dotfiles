@@ -12,29 +12,6 @@ local root_markers = {
 
 local format_group = vim.api.nvim_create_augroup("nvim-pure-python-format", { clear = true })
 
-local function setup_treesitter()
-  local ok, treesitter = pcall(require, "nvim-treesitter.configs")
-  if not ok then
-    return
-  end
-
-  treesitter.setup({
-    ensure_installed = {
-      "python",
-      "ninja",
-      "rst",
-    },
-    auto_install = false,
-    highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = false,
-    },
-    indent = {
-      enable = true,
-    },
-  })
-end
-
 local function setup_lsp()
   vim.lsp.config("basedpyright", {
     root_markers = root_markers,
@@ -78,15 +55,6 @@ local function setup_lsp()
 end
 
 function M.setup()
-  vim.pack.add({
-    {
-      src = "https://github.com/nvim-treesitter/nvim-treesitter",
-      version = "master",
-    },
-    "https://github.com/neovim/nvim-lspconfig",
-  })
-
-  setup_treesitter()
   setup_lsp()
 end
 
