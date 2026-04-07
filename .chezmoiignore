@@ -11,3 +11,5 @@
 .hammerspoon
 .zshrc
 {{ end }}
+AGENTS.md
+RTK.md
