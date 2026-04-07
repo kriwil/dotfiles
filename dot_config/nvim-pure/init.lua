@@ -94,6 +94,9 @@ buffers.refresh_highlights()
 local pickers = require("config.pickers")
 pickers.setup()
 
+local explorer = require("config.explorer")
+explorer.setup()
+
 local treesitter = require("config.treesitter")
 treesitter.setup()
 
