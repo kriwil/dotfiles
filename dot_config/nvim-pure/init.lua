@@ -85,6 +85,12 @@ buffers.refresh_highlights()
 local pickers = require("config.pickers")
 pickers.setup()
 
+local python = require("config.python")
+python.setup()
+
+local diagnostics = require("config.diagnostics")
+diagnostics.setup()
+
 -- [[ Plugins stuff ]]
 
 vim.cmd.filetype("plugin indent on")
