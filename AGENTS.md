@@ -32,7 +32,7 @@ Also refer to `nvim-pure/init.lua.bak`. That was my attempt to copy LazyVim func
 Keep `nvim-pure/init.lua` focused on bootstrap, global options, and wiring. When a feature grows beyond a small block, move it into `dot_config/nvim-pure/lua/config/` as its own module, similar to `config.buffers` and `config.pickers`.
 Keep shared infrastructure in shared modules instead of repeating it in language modules. For example, `config.treesitter` owns the combined Treesitter setup, while `config.python` and `config.lua` only contain language-specific LSP behavior.
 `nvim-pure` uses `mini.nvim` selectively: `config.git` owns `mini.diff` and the `snacks.nvim` lazygit wiring, and `config.statusline` owns `mini.statusline`.
-`config.snacks` owns the single `Snacks.setup()` call. Feature modules like `config.pickers` and `config.git` should consume `snacks` APIs without calling `Snacks.setup()` again.
+`config.snacks` owns the single `Snacks.setup()` call and shared `Snacks` keymaps like terminal toggles. Feature modules like `config.pickers` and `config.git` should consume `snacks` APIs without calling `Snacks.setup()` again.
 `config.copilot` uses the `nvim-lspconfig` `copilot` definition, so keep that module aligned with upstream rather than hardcoding the server command unless there is a concrete reason.
 `config.sidekick` assumes Copilot LSP is enabled and uses the README-style `<Tab>` fallback flow: Sidekick NES first, then native inline completion, then a normal tab.
 
