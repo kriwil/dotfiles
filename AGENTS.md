@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository is a `chezmoi` source tree for macOS dotfiles. Top-level files such as `dot_zshrc`, `dot_aerospace.toml`, and `dot_ideavimrc` map to real dotfiles in the target home directory. App-specific config lives under `dot_config/`, including `nvim/`, `nvim-pure/`, `ghostty/`, `sketchybar/`, `zellij/`, `borders/`, and `rift/`. `dot_config/nvim-pure/` uses `init.lua` as the entrypoint and keeps extracted modules under `dot_config/nvim-pure/lua/config/`, currently including `buffers`, `copilot`, `diagnostics`, `explorer`, `git`, `icons`, `lua`, `pickers`, `python`, `sidekick`, `statusline`, `treesitter`, and `trouble`. Hammerspoon code lives in `dot_hammerspoon/`, with the bundled Lua module at `dot_hammerspoon/Spoons/PaperWM.spoon/` and its tests in `spec/`. Binary and font assets stay next to the config that consumes them, for example `dot_config/sketchybar/helpers/`.
+This repository is a `chezmoi` source tree for macOS dotfiles. Top-level files such as `dot_zshrc`, `dot_aerospace.toml`, and `dot_ideavimrc` map to real dotfiles in the target home directory. App-specific config lives under `dot_config/`, including `nvim/`, `nvim-pure/`, `ghostty/`, `sketchybar/`, `zellij/`, `borders/`, and `rift/`. `dot_config/nvim-pure/` uses `init.lua` as the entrypoint and keeps extracted modules under `dot_config/nvim-pure/lua/config/`, currently including `buffers`, `copilot`, `diagnostics`, `explorer`, `git`, `icons`, `lua`, `pickers`, `python`, `sidekick`, `snacks`, `statusline`, `treesitter`, and `trouble`. Hammerspoon code lives in `dot_hammerspoon/`, with the bundled Lua module at `dot_hammerspoon/Spoons/PaperWM.spoon/` and its tests in `spec/`. Binary and font assets stay next to the config that consumes them, for example `dot_config/sketchybar/helpers/`.
 
 ## Build, Test, and Development Commands
 
@@ -31,7 +31,8 @@ Whenever you're asked to add feature to `nvim-pure`, check how `nvim` and LazyVi
 Also refer to `nvim-pure/init.lua.bak`. That was my attempt to copy LazyVim functionality manually.
 Keep `nvim-pure/init.lua` focused on bootstrap, global options, and wiring. When a feature grows beyond a small block, move it into `dot_config/nvim-pure/lua/config/` as its own module, similar to `config.buffers` and `config.pickers`.
 Keep shared infrastructure in shared modules instead of repeating it in language modules. For example, `config.treesitter` owns the combined Treesitter setup, while `config.python` and `config.lua` only contain language-specific LSP behavior.
-`nvim-pure` uses `mini.nvim` selectively: `config.git` owns `mini.diff`, and `config.statusline` owns `mini.statusline`.
+`nvim-pure` uses `mini.nvim` selectively: `config.git` owns `mini.diff` and the `snacks.nvim` lazygit wiring, and `config.statusline` owns `mini.statusline`.
+`config.snacks` owns the single `Snacks.setup()` call. Feature modules like `config.pickers` and `config.git` should consume `snacks` APIs without calling `Snacks.setup()` again.
 `config.copilot` uses the `nvim-lspconfig` `copilot` definition, so keep that module aligned with upstream rather than hardcoding the server command unless there is a concrete reason.
 `config.sidekick` assumes Copilot LSP is enabled and uses the README-style `<Tab>` fallback flow: Sidekick NES first, then native inline completion, then a normal tab.
 

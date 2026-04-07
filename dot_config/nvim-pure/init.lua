@@ -89,6 +89,9 @@ vim.cmd("colorscheme zenbones")
 local icons = require("config.icons")
 icons.setup()
 
+local snacks = require("config.snacks")
+snacks.setup()
+
 local buffers = require("config.buffers")
 buffers.setup()
 buffers.refresh_highlights()

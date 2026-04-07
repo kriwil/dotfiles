@@ -11,10 +11,6 @@ function M.setup()
   local map = vim.keymap.set
   local Snacks = require("snacks")
 
-  Snacks.setup({
-    picker = { enabled = true },
-  })
-
   map("n", "<leader><space>", function()
     Snacks.picker.files({ cwd = project_root() })
   end, { desc = "Find Files (Root Dir)" })
