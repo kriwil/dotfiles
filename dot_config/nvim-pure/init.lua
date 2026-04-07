@@ -53,6 +53,15 @@ local map = vim.keymap.set
 
 map("n", "<Esc>", "<cmd>nohlsearch<CR>") -- Clear highlights on search when pressing <Esc> in normal mode
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" }) -- Diagnostic keymaps
+map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
+map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+map("n", "[b", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
+map("n", "]b", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+map("n", "[B", "<cmd>BufferLineMovePrev<CR>", { desc = "Move Buffer Prev" })
+map("n", "]B", "<cmd>BufferLineMoveNext<CR>", { desc = "Move Buffer Next" })
+map("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
+map("n", "<leader>bj", "<cmd>BufferLinePick<CR>", { desc = "Pick Buffer" })
+map("n", "<leader>`", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
 
 -- [[ Basic Autocommands ]]
 
@@ -67,15 +76,79 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- [[ Colorschemes ]]
+local function project_root()
+  local cwd = vim.uv.cwd() or vim.fn.getcwd()
+  local buf = vim.api.nvim_buf_get_name(0)
+  local start = buf ~= "" and vim.fs.dirname(buf) or cwd
+  return vim.fs.root(start, { ".git" }) or cwd
+end
 
 vim.pack.add({
   "https://github.com/rktjmp/lush.nvim", -- zenbones requirement
   "https://github.com/mcchrish/zenbones.nvim", -- colorscheme
   "https://github.com/oskarnurm/koda.nvim", -- colorscheme
+  "https://github.com/akinsho/bufferline.nvim", -- buffer tabs
+  "https://github.com/folke/snacks.nvim", -- file picker/search
+  "https://github.com/nvim-tree/nvim-web-devicons", -- optional icons for picker results
 })
 vim.cmd("colorscheme zenbones")
 
 -- [[ Plugins stuff ]]
+
+local bufferline = require("bufferline")
+local Snacks = require("snacks")
+
+bufferline.setup({
+  options = {
+    always_show_bufferline = false,
+  },
+})
+
+Snacks.setup({
+  picker = { enabled = true },
+})
+
+map("n", "<leader><space>", function()
+  Snacks.picker.files({ cwd = project_root() })
+end, { desc = "Find Files (Root Dir)" })
+map("n", "<leader>/", function()
+  Snacks.picker.grep({ cwd = project_root() })
+end, { desc = "Grep (Root Dir)" })
+map("n", "<leader>fb", function()
+  Snacks.picker.buffers()
+end, { desc = "Buffers" })
+map("n", "<leader>fc", function()
+  Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+end, { desc = "Find Config File" })
+map("n", "<leader>ff", function()
+  Snacks.picker.files({ cwd = project_root() })
+end, { desc = "Find Files (Root Dir)" })
+map("n", "<leader>fF", function()
+  Snacks.picker.files()
+end, { desc = "Find Files (cwd)" })
+map("n", "<leader>fg", function()
+  Snacks.picker.git_files({ cwd = project_root() })
+end, { desc = "Find Files (git-files)" })
+map("n", "<leader>fr", function()
+  Snacks.picker.recent()
+end, { desc = "Recent" })
+map("n", "<leader>sb", function()
+  Snacks.picker.lines()
+end, { desc = "Buffer Lines" })
+map("n", "<leader>sB", function()
+  Snacks.picker.grep_buffers()
+end, { desc = "Grep Open Buffers" })
+map("n", "<leader>sg", function()
+  Snacks.picker.grep({ cwd = project_root() })
+end, { desc = "Grep (Root Dir)" })
+map("n", "<leader>sG", function()
+  Snacks.picker.grep()
+end, { desc = "Grep (cwd)" })
+map({ "n", "x" }, "<leader>sw", function()
+  Snacks.picker.grep_word({ cwd = project_root() })
+end, { desc = "Visual selection or word (Root Dir)" })
+map("n", "<leader>sk", function()
+  Snacks.picker.keymaps()
+end, { desc = "Keymaps" })
 
 vim.cmd.filetype("plugin indent on")
