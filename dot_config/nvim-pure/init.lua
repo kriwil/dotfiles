@@ -34,6 +34,8 @@ end)
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 o.ignorecase = true
 o.smartcase = true
+o.grepformat = "%f:%l:%c:%m"
+o.grepprg = "rg --vimgrep"
 
 -- Configure how new splits should be opened
 o.splitright = true
