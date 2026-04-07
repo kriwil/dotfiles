@@ -80,6 +80,7 @@ vim.pack.add({
   "https://github.com/mcchrish/zenbones.nvim", -- colorscheme
   "https://github.com/oskarnurm/koda.nvim", -- colorscheme
   "https://github.com/folke/snacks.nvim", -- file picker/search
+  "https://github.com/folke/trouble.nvim", -- diagnostics and lists UI
   "https://github.com/nvim-tree/nvim-web-devicons", -- compatibility for plugins expecting the real module
 })
 vim.cmd("colorscheme zenbones")
@@ -108,6 +109,9 @@ lua_support.setup()
 
 local diagnostics = require("config.diagnostics")
 diagnostics.setup()
+
+local trouble = require("config.trouble")
+trouble.setup()
 
 local git = require("config.git")
 git.setup()
