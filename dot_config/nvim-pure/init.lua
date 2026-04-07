@@ -70,6 +70,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.pack.add({
+  "https://github.com/nvim-mini/mini.nvim", -- lightweight git diff signs
   "https://github.com/rktjmp/lush.nvim", -- zenbones requirement
   "https://github.com/mcchrish/zenbones.nvim", -- colorscheme
   "https://github.com/oskarnurm/koda.nvim", -- colorscheme
@@ -90,6 +91,13 @@ python.setup()
 
 local diagnostics = require("config.diagnostics")
 diagnostics.setup()
+
+local git = require("config.git")
+git.setup()
+
+local statusline = require("config.statusline")
+statusline.setup()
+statusline.refresh_highlights()
 
 -- [[ Plugins stuff ]]
 
