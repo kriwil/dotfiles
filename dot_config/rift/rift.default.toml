@@ -57,10 +57,7 @@ auto_focus_blacklist = []
 #   "rift-cli subscribe cli --event windows_changed --command sh --args -c --args 'sketchybar --trigger rift_windows_changed RIFT_WORKSPACE_NAME=\"$RIFT_WORKSPACE_NAME\" RIFT_WINDOW_COUNT=\"$RIFT_WINDOW_COUNT\"'"
 # ]
 
-run_on_start = [
-  "rift-cli subscribe cli --event workspace_changed --command sh --args -c --args 'sketchybar --trigger rift_workspace_changed RIFT_WORKSPACE_NAME=\"$RIFT_WORKSPACE_NAME\" RIFT_WORKSPACE_ID=\"$RIFT_WORKSPACE_ID\"'",
-  "rift-cli subscribe cli --event windows_changed --command sh --args -c --args 'sketchybar --trigger rift_windows_changed RIFT_WORKSPACE_NAME=\"$RIFT_WORKSPACE_NAME\" RIFT_WINDOW_COUNT=\"$RIFT_WINDOW_COUNT\"'",
-]
+run_on_start = []
 
 # Hot Reloading
 # - If true, rift will watch the config file for changes and reload automatically.
@@ -142,7 +139,7 @@ default_orientation = "perpendicular"
 #   Use the display's UUID as the key (for example, from system profiler or via rift CLI).
 
 [settings.layout.gaps.outer]
-top = 80
+top = 0
 left = 0
 bottom = 0
 right = 0
@@ -349,8 +346,8 @@ comb1 = "Alt + Shift"
 # - move_window_to_workspace = N / move_window_to_workspace = { workspace = N, window_id = 123 } (optional window id)
 # - create_workspace
 # - switch_to_last_workspace
-# - set_workspace_layout = { mode = "traditional"|"bsp"|"master_stack"|"scrolling" } (active workspace)
-# - set_workspace_layout = { workspace = N, mode = "traditional"|"bsp"|"master_stack"|"scrolling" }
+# - set_workspace_layout = { mode = "traditional"|"bsp"|"stack"|"master_stack"|"scrolling" } (active workspace)
+# - set_workspace_layout = { workspace = N, mode = "traditional"|"bsp"|"stack"|"master_stack"|"scrolling" }
 # - next_window / prev_window (focus wraps when it reaches last window in current workspace)
 # - ascend / descend
 # - move_focus = "left"|"right"|"up"|"down"
@@ -377,15 +374,15 @@ comb1 = "Alt + Shift"
 
 "Alt + Z" = "toggle_space_activated"
 
-"Alt + Left" = { move_focus = "left" }
-"Alt + Down" = { move_focus = "down" }
-"Alt + Up" = { move_focus = "up" }
-"Alt + Right" = { move_focus = "right" }
+"Alt + H" = { move_focus = "left" }
+"Alt + J" = { move_focus = "down" }
+"Alt + K" = { move_focus = "up" }
+"Alt + L" = { move_focus = "right" }
 
-"comb1 + Left" = { move_node = "left" }
-"comb1 + Down" = { move_node = "down" }
-"comb1 + Up" = { move_node = "up" }
-"comb1 + Right" = { move_node = "right" }
+"comb1 + H" = { move_node = "left" }
+"comb1 + J" = { move_node = "down" }
+"comb1 + K" = { move_node = "up" }
+"comb1 + L" = { move_node = "right" }
 
 "Alt + 0" = { switch_to_workspace = 0 }
 "Alt + 1" = { switch_to_workspace = 1 }
@@ -405,10 +402,10 @@ comb1 = "Alt + Shift"
 # "Alt + Ctrl + 3" = { set_workspace_layout = { mode = "master_stack" } }
 # "Alt + Ctrl + 4" = { set_workspace_layout = { mode = "scrolling" } }
 
-"Comb1 + Ctrl + Left" = { join_window = "left" }
-"Comb1 + Ctrl + Right" = { join_window = "right" }
-"Comb1 + Ctrl + Up" = { join_window = "up" }
-"Comb1 + Ctrl + Down" = { join_window = "down" }
+"Alt + Shift + Left" = { join_window = "left" }
+"Alt + Shift + Right" = { join_window = "right" }
+"Alt + Shift + Up" = { join_window = "up" }
+"Alt + Shift + Down" = { join_window = "down" }
 "Alt + Comma" = "toggle_stack"
 "Alt + Slash" = "toggle_orientation"
 "Alt + Ctrl + E" = "unjoin_windows"
