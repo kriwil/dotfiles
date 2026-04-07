@@ -90,6 +90,10 @@ local function close_all_buffers()
   delete_buffers(listed_buffers())
 end
 
+local function close_current_buffer()
+  delete_buffers({ vim.api.nvim_get_current_buf() })
+end
+
 local function close_other_buffers()
   local current = vim.api.nvim_get_current_buf()
   local targets = vim.tbl_filter(function(buf)
@@ -142,6 +146,7 @@ function M.setup()
   map("n", "]b", "<cmd>bnext<CR>", { desc = "Next Buffer" })
   map("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
   map("n", "<leader>`", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
+  map("n", "<leader>bd", close_current_buffer, { desc = "Delete Buffer" })
   map("n", "<leader>ba", close_all_buffers, { desc = "Delete All Buffers" })
   map("n", "<leader>bo", close_other_buffers, { desc = "Delete Other Buffers" })
 
