@@ -27,7 +27,7 @@ There are 2 configs for Neovim
 - `nvim` is using LazyVim setup
 - `nvim-pure` is bare neovim 0.12 setup
 
-Whenever you're asked to add feature to `nvim-pure`, check how `nvim` and LazyVim are implement them. Try to use the same plugin as LazyVim unless asked differently.
+Whenever you're asked to add feature to `nvim-pure`, check how `nvim` and LazyVim are implement them. Try to use built-in neovim 0.12 before trying to use the same plugin as LazyVim.
 Also refer to `nvim-pure/init.lua.bak`. That was my attempt to copy LazyVim functionality manually.
 
 @RTK.md
