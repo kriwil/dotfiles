@@ -55,15 +55,6 @@ local map = vim.keymap.set
 
 map("n", "<Esc>", "<cmd>nohlsearch<CR>") -- Clear highlights on search when pressing <Esc> in normal mode
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" }) -- Diagnostic keymaps
-map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
-map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
-map("n", "[b", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
-map("n", "]b", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
-map("n", "[B", "<cmd>BufferLineMovePrev<CR>", { desc = "Move Buffer Prev" })
-map("n", "]B", "<cmd>BufferLineMoveNext<CR>", { desc = "Move Buffer Next" })
-map("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
-map("n", "<leader>bj", "<cmd>BufferLinePick<CR>", { desc = "Pick Buffer" })
-map("n", "<leader>`", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
 
 -- [[ Basic Autocommands ]]
 
@@ -89,22 +80,18 @@ vim.pack.add({
   "https://github.com/rktjmp/lush.nvim", -- zenbones requirement
   "https://github.com/mcchrish/zenbones.nvim", -- colorscheme
   "https://github.com/oskarnurm/koda.nvim", -- colorscheme
-  "https://github.com/akinsho/bufferline.nvim", -- buffer tabs
   "https://github.com/folke/snacks.nvim", -- file picker/search
   "https://github.com/nvim-tree/nvim-web-devicons", -- optional icons for picker results
 })
 vim.cmd("colorscheme zenbones")
 
+local buffers = require("config.buffers")
+buffers.setup()
+buffers.refresh_highlights()
+
 -- [[ Plugins stuff ]]
 
-local bufferline = require("bufferline")
 local Snacks = require("snacks")
-
-bufferline.setup({
-  options = {
-    always_show_bufferline = false,
-  },
-})
 
 Snacks.setup({
   picker = { enabled = true },
