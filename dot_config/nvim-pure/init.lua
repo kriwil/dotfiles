@@ -87,6 +87,7 @@ vim.pack.add({
   "https://github.com/folke/snacks.nvim", -- file picker/search
   "https://github.com/folke/sidekick.nvim", -- AI CLI and Copilot NES
   "https://github.com/folke/trouble.nvim", -- diagnostics and lists UI
+  "https://github.com/folke/which-key.nvim", -- keymap hints
   "https://github.com/nvim-tree/nvim-web-devicons", -- compatibility for plugins expecting the real module
 })
 vim.cmd("colorscheme zenbones")
@@ -133,6 +134,9 @@ git.setup()
 
 local statusline = require("config.statusline")
 statusline.setup()
+
+local which_key = require("config.which-key")
+which_key.setup()
 
 -- [[ Plugins stuff ]]
 
