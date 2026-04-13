@@ -1,4 +1,5 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
+SPACE_MODE="${SPACE_MODE:-native}" # native | aerospace
 
 sketchybar --bar position=top height=32 blur_radius=100 color=0xff000000 padding_left=5 padding_right=5
 
@@ -16,48 +17,56 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
-# SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-# for i in "${!SPACE_ICONS[@]}"
-# do
-#   sid="$(($i+1))"
-#   space=(
-#     space="$sid"
-#     icon="${SPACE_ICONS[i]}"
-#     icon.padding_left=7
-#     icon.padding_right=7
-#     background.color=0x40ffffff
-#     background.corner_radius=5
-#     background.height=25
-#     label.drawing=off
-#     script="$PLUGIN_DIR/space.sh"
-#     # click_script="yabai -m space --focus $sid"
-#   )
-#   sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
-# done
+if [ "$SPACE_MODE" = "aerospace" ]; then
+  sketchybar --add event aerospace_workspace_change
 
-##### Aerospace #####
-sketchybar --add event aerospace_workspace_change
-
-for sid in $(aerospace list-workspaces --all); do
+  for sid in $(aerospace list-workspaces --all); do
     sketchybar --add item space.$sid left \
-        --subscribe space.$sid aerospace_workspace_change \
-        --set space.$sid \
-        background.color=0x44ffffff \
-        background.corner_radius=5 \
-        background.height=20 \
-        background.drawing=off \
-        icon.font="sketchybar-app-font:Regular:16.0" \
-        label="$sid" \
-        label.align=center \
-        label.padding_left=4 \
-        label.padding_right=6 \
-        icon.drawing=off \
-        icon.padding_left=6 \
-        icon.padding_right=0 \
-        click_script="aerospace workspace $sid" \
-        label.drawing=off \
-        script="$CONFIG_DIR/plugins/aerospace.sh $sid"
-done
+      --subscribe space.$sid aerospace_workspace_change \
+      --set space.$sid \
+      background.color=0x44ffffff \
+      background.corner_radius=5 \
+      background.height=20 \
+      background.drawing=off \
+      icon.font="sketchybar-app-font:Regular:16.0" \
+      label="$sid" \
+      label.align=center \
+      label.padding_left=4 \
+      label.padding_right=6 \
+      icon.drawing=off \
+      icon.padding_left=6 \
+      icon.padding_right=0 \
+      label.drawing=off \
+      click_script="aerospace workspace $sid" \
+      script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+  done
+else
+  SPACE_COUNT=$(
+    defaults read com.apple.spaces SpacesDisplayConfiguration 2>/dev/null \
+      | awk '/uuid = / { gsub(/[;"]/,"", $3); print $3 }' \
+      | sort -u \
+      | wc -l \
+      | tr -d ' '
+  )
+
+  if [ -z "$SPACE_COUNT" ] || [ "$SPACE_COUNT" -lt 1 ]; then
+    SPACE_COUNT=1
+  fi
+
+  for sid in $(seq 1 "$SPACE_COUNT"); do
+    sketchybar --add space space."$sid" left \
+      --set space."$sid" \
+      space="$sid" \
+      icon="$sid" \
+      icon.padding_left=8 \
+      icon.padding_right=8 \
+      label.drawing=off \
+      background.color=0x44ffffff \
+      background.corner_radius=5 \
+      background.height=20 \
+      script="$PLUGIN_DIR/space.sh"
+  done
+fi
 
 ##### Adding Center Items #####
 sketchybar --add item front_app center \
