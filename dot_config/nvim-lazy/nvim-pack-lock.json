@@ -1,0 +1,24 @@
+{
+  "plugins": {
+    "koda.nvim": {
+      "rev": "a560a332ccc1eb2caacb280a390213bb9f37b3cb",
+      "src": "https://github.com/oskarnurm/koda.nvim"
+    },
+    "lush.nvim": {
+      "rev": "9c60ec2279d62487d942ce095e49006af28eed6e",
+      "src": "https://github.com/rktjmp/lush.nvim"
+    },
+    "nvim-web-devicons": {
+      "rev": "95b7a002d5dba1a42eb58f5fac5c565a485eefd0",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "snacks.nvim": {
+      "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
+      "src": "https://github.com/folke/snacks.nvim"
+    },
+    "zenbones.nvim": {
+      "rev": "22b7fb75593412e0dc81b4bdefae718e9e84aa82",
+      "src": "https://github.com/mcchrish/zenbones.nvim"
+    }
+  }
+}
