@@ -11,6 +11,7 @@ function M.setup()
       "lua",
       "luadoc",
       "luap",
+      "nix",
       "python",
       "ninja",
       "rst",

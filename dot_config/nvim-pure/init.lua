@@ -114,6 +114,9 @@ treesitter.setup()
 local python = require("config.python")
 python.setup()
 
+local nix = require("config.nix")
+nix.setup()
+
 local lua_support = require("config.lua")
 lua_support.setup()
 
