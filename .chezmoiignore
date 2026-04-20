@@ -8,7 +8,6 @@
 .config/rift
 .config/sketchybar
 .config/yazi
-.config/zellij
 .hammerspoon
 .zshrc
 {{ end }}
