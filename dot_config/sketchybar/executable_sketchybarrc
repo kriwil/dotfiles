@@ -84,6 +84,8 @@ sketchybar --add item clock right \
            --subscribe battery system_woke power_source_change \
            --add item memory right \
            --set memory update_freq=10 script="$PLUGIN_DIR/memory.sh" \
+           --add item temperature right \
+           --set temperature update_freq=10 script="$PLUGIN_DIR/temperature.sh" \
            --add item cpu right \
            --set cpu update_freq=5 script="$PLUGIN_DIR/cpu.sh" \
            --add item network right \
