@@ -88,8 +88,6 @@ sketchybar --add item clock right \
            --set temperature update_freq=10 script="$PLUGIN_DIR/temperature.sh" \
            --add item cpu right \
            --set cpu update_freq=5 script="$PLUGIN_DIR/cpu.sh" \
-           --add item network right \
-           --set network update_freq=2 script="$PLUGIN_DIR/network.sh" \
            --add item progress right \
            --set progress update_freq=10 \
                           icon=󰚗 \
