@@ -42,6 +42,12 @@ function M.setup()
     { "<leader>gG", desc = "Lazygit (cwd)", mode = "n" },
     { "<leader>gg", desc = "Lazygit (Root Dir)", mode = "n" },
 
+    { "<leader>o", group = "Obsidian" },
+    { "<leader>of", desc = "Obsidian Quick Switch", mode = "n" },
+    { "<leader>og", desc = "Obsidian Search", mode = "n" },
+    { "<leader>on", desc = "Obsidian New", mode = "n" },
+    { "<leader>ot", desc = "Obsidian Today", mode = "n" },
+
     { "<leader>q", desc = "Open diagnostic [Q]uickfix list", mode = "n" },
     { "<leader>R", desc = "Restart Neovim", mode = "n" },
 

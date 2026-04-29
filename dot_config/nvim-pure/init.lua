@@ -91,7 +91,7 @@ vim.pack.add({
   "https://github.com/nvim-tree/nvim-web-devicons", -- compatibility for plugins expecting the real module
   {
     src = "https://github.com/obsidian-nvim/obsidian.nvim",
-    version = vim.version.range "*", -- use latest release, remove to use latest commit
+    version = vim.version.range("*"), -- use latest release, remove to use latest commit
   },
 })
 vim.cmd("colorscheme zenbones")
@@ -145,20 +145,8 @@ statusline.setup()
 local which_key = require("config.which-key")
 which_key.setup()
 
-local obsidian = require("obsidian")
-obsidian.setup {
-  legacy_commands = false, -- this will be removed in 4.0.0
-  daily_notes = {
-    folder = "daily-notes/",
-    date_format = "YYYY/MM/YYYY-MM-DD",
-  },
-  workspaces = {
-    {
-      name = "personal",
-      path = "~/obsidian-personal",
-    },
-  },
-}
+local obsidian = require("config.obsidian")
+obsidian.setup()
 
 -- [[ Plugins stuff ]]
 
