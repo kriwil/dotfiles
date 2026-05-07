@@ -1,12 +1,22 @@
+@RTK.md
+
+## Updating AGENTS.md
+
+- Keep it short and concise.
+- Use bullet points.
+
+--- project-doc ---
+
 # Repository Guidelines
 
 ## Project Structure & Module Organization
 
 - This repository is a `chezmoi` source tree for macOS dotfiles.
 - Top-level files such as `dot_zshrc`, `dot_aerospace.toml`, and `dot_ideavimrc` map to real dotfiles in the target home directory.
-- App-specific config lives under `dot_config/`, including `nvim/`, `nvim-pure/`, `ghostty/`, `sketchybar/`, `zellij/`, `borders/`, and `rift/`.
+- App-specific config lives under `dot_config/`, including `nvim-lazy/`, `nvim-pure/`, `ghostty/`, `sketchybar/`, `zellij/`, `yazi/`, `borders/`, and `rift/`.
+- `dot_config/symlink_nvim` chooses the active Neovim config.
 - `dot_config/nvim-pure/` uses `init.lua` as the entrypoint and keeps extracted modules under `dot_config/nvim-pure/lua/config/`.
-- Current `nvim-pure` modules include `buffers`, `copilot`, `diagnostics`, `explorer`, `git`, `icons`, `lua`, `pickers`, `python`, `sidekick`, `snacks`, `statusline`, `treesitter`, `trouble`, and `which-key`.
+- Current `nvim-pure` modules include `buffers`, `copilot`, `diagnostics`, `explorer`, `git`, `icons`, `lua`, `nix`, `pickers`, `python`, `sidekick`, `snacks`, `statusline`, `treesitter`, `trouble`, and `which-key`.
 - Hammerspoon code lives in `dot_hammerspoon/`, with the bundled Lua module at `dot_hammerspoon/Spoons/PaperWM.spoon/` and its tests in `spec/`.
 - Binary and font assets stay next to the config that consumes them, for example `dot_config/sketchybar/helpers/`.
 
@@ -15,7 +25,7 @@
 - Use `chezmoi diff` to preview what a change will write to the home directory.
 - Use `chezmoi apply` to apply the current source tree locally, but only apply changed files.
 - Run `chezmoi status` before committing generated or accidental drift.
-- For Lua formatting, use `stylua dot_config/nvim dot_config/nvim-pure`.
+- For Lua formatting, use `stylua dot_config/nvim-lazy dot_config/nvim-pure`.
 - For the bundled PaperWM spoon, run `cd dot_hammerspoon/Spoons/PaperWM.spoon && lua-language-server --check .` for static checks.
 - For the bundled PaperWM spoon, run `cd dot_hammerspoon/Spoons/PaperWM.spoon && busted` for unit tests.
 
@@ -42,9 +52,9 @@
 ## Neovim
 
 - There are 2 configs for Neovim.
-- `nvim` uses a LazyVim setup.
+- `nvim-lazy` uses a LazyVim setup.
 - `nvim-pure` is a bare Neovim 0.12 setup.
-- Whenever you're asked to add a feature to `nvim-pure`, check how `nvim` and LazyVim implement it.
+- Whenever you're asked to add a feature to `nvim-pure`, check how `nvim-lazy` and LazyVim implement it.
 - Try built-in Neovim 0.12 functionality before adding the same plugin used by LazyVim.
 - Keep `nvim-pure/init.lua` focused on bootstrap, global options, and wiring.
 - When a feature grows beyond a small block, move it into `dot_config/nvim-pure/lua/config/` as its own module, similar to `config.buffers` and `config.pickers`.
@@ -59,5 +69,3 @@
 - Actual keymaps should stay in their feature modules instead of moving into `config.which-key`.
 - `config.copilot` uses the `nvim-lspconfig` `copilot` definition, so keep that module aligned with upstream rather than hardcoding the server command unless there is a concrete reason.
 - `config.sidekick` assumes Copilot LSP is enabled and uses the README-style `<Tab>` fallback flow: Sidekick NES first, then native inline completion, then a normal tab.
-
-@RTK.md
