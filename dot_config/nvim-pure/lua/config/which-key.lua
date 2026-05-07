@@ -51,6 +51,9 @@ function M.setup()
     { "<leader>q", desc = "Open diagnostic [Q]uickfix list", mode = "n" },
     { "<leader>R", desc = "Restart Neovim", mode = "n" },
 
+    { "<leader>p", group = "Packages" },
+    { "<leader>pu", desc = "Update Packages", mode = "n" },
+
     { "<leader>s", group = "Search" },
     { "<leader>sB", desc = "Grep Open Buffers", mode = "n" },
     { "<leader>sb", desc = "Buffer Lines", mode = "n" },
