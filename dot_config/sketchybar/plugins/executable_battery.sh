@@ -8,15 +8,19 @@ if [ "$PERCENTAGE" = "" ]; then
 fi
 
 ICON="󰁹"
+CHARGING=0
 
 case "$BATTERY_INFO" in
 	*"; charging;"*)
 		ICON="󰂄"
+		CHARGING=1
 		;;
 esac
 
 COLOR=0xffffffff
-if [ "$PERCENTAGE" -le 20 ]; then
+if [ "$CHARGING" -eq 1 ]; then
+	COLOR=0xffa3be8c
+elif [ "$PERCENTAGE" -le 20 ]; then
 	COLOR=0xffeb6f92
 elif [ "$PERCENTAGE" -le 50 ]; then
 	COLOR=0xfff6c177
