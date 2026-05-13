@@ -82,6 +82,8 @@ sketchybar --add item clock right \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
+           --add item disk right \
+           --set disk update_freq=60 script="$PLUGIN_DIR/disk.sh" \
            --add item memory right \
            --set memory update_freq=10 script="$PLUGIN_DIR/memory.sh" \
            --add item temperature right \
