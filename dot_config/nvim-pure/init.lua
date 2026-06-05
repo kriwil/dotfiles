@@ -80,7 +80,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.pack.add({
   {
     src = "https://github.com/nvim-treesitter/nvim-treesitter",
-    version = "master",
+    version = "main",
   },
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/nvim-mini/mini.nvim", -- mini.diff, mini.git, mini.icons, mini.statusline
