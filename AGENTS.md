@@ -9,6 +9,8 @@
 
 # Repository Guidelines
 
+Never update dotfiles directly. Update this repository then use `chezmoi apply`.
+
 ## Project Structure & Module Organization
 
 - This repository is a `chezmoi` source tree for macOS dotfiles.
