@@ -124,6 +124,9 @@ python.setup()
 local nix = require("config.nix")
 nix.setup()
 
+local json = require("config.json")
+json.setup()
+
 local lua_support = require("config.lua")
 lua_support.setup()
 
