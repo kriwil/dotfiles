@@ -16,7 +16,6 @@ function M.setup()
     "ninja",
     "rst",
     "json",
-    "jsonc",
   })
 
   vim.api.nvim_create_autocmd("FileType", {
