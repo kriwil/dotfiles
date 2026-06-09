@@ -1,21 +1,22 @@
 local M = {}
 
 function M.setup()
-  local ok, treesitter = pcall(require, "nvim-treesitter")
+  local ok, configs = pcall(require, "nvim-treesitter.configs")
   if not ok then
     return
   end
 
-  treesitter.setup({})
-  treesitter.install({
-    "lua",
-    "luadoc",
-    "luap",
-    "nix",
-    "python",
-    "ninja",
-    "rst",
-    "json",
+  configs.setup({
+    ensure_installed = {
+      "lua",
+      "luadoc",
+      "luap",
+      "nix",
+      "python",
+      "ninja",
+      "rst",
+      "json",
+    },
   })
 
   vim.api.nvim_create_autocmd("FileType", {
